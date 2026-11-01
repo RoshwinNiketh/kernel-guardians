@@ -1,0 +1,3852 @@
+{
+  "duration": 474.92,
+  "chapters": [
+    {
+      "id": 1,
+      "title": "The Message",
+      "topic": "OS City",
+      "location": "OS City / Aerial",
+      "start": 0,
+      "end": 15.55
+    },
+    {
+      "id": 2,
+      "title": "The Security Problem",
+      "topic": "The Security Problem",
+      "location": "Command Central",
+      "start": 15.55,
+      "end": 63.42
+    },
+    {
+      "id": 3,
+      "title": "The Gift",
+      "topic": "Program Threats",
+      "location": "Program District",
+      "start": 63.42,
+      "end": 123.18
+    },
+    {
+      "id": 4,
+      "title": "Outside the Gates",
+      "topic": "System & Network Threats",
+      "location": "Public Gateway",
+      "start": 123.18,
+      "end": 184.93
+    },
+    {
+      "id": 5,
+      "title": "Behind the Files",
+      "topic": "Consequences",
+      "location": "Mira’s Apartment",
+      "start": 184.93,
+      "end": 221.61
+    },
+    {
+      "id": 6,
+      "title": "Patch’s Plan",
+      "topic": "Implementing Defenses",
+      "location": "Command Central",
+      "start": 221.61,
+      "end": 283.82
+    },
+    {
+      "id": 7,
+      "title": "The Gatekeeper",
+      "topic": "Firewalling",
+      "location": "Public Gateway",
+      "start": 283.82,
+      "end": 333.21
+    },
+    {
+      "id": 8,
+      "title": "The Last Packet",
+      "topic": "Coordinated Response",
+      "location": "Multiple Locations",
+      "start": 333.21,
+      "end": 413.42
+    },
+    {
+      "id": 9,
+      "title": "After the Blackout",
+      "topic": "Historical TCSEC",
+      "location": "OS City / Dawn",
+      "start": 413.42,
+      "end": 474.92
+    }
+  ],
+  "narrativeCuts": [
+    {
+      "time": 63.42,
+      "skip": 16.4912,
+      "label": "Program District"
+    },
+    {
+      "time": 123.18,
+      "skip": 22.6754,
+      "label": "Public Gateway"
+    },
+    {
+      "time": 184.93,
+      "skip": 14.4298,
+      "label": "Mira’s Apartment"
+    },
+    {
+      "time": 221.61,
+      "skip": 12.3684,
+      "label": "Command Central"
+    },
+    {
+      "time": 283.82,
+      "skip": 18.552599999999998,
+      "label": "Public Gateway"
+    },
+    {
+      "time": 333.21,
+      "skip": 12.3684,
+      "label": "Multiple Locations"
+    },
+    {
+      "time": 382.48,
+      "skip": 6.1842,
+      "label": "The last ten seconds"
+    }
+  ],
+  "climaxStart": 382.48,
+  "blackoutAt": 392.48,
+  "shots": [
+    {
+      "id": "S1_establish",
+      "scene": 1,
+      "start": 0,
+      "end": 3,
+      "location": "city",
+      "framing": "city",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 1000,
+          "y": 510,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 925,
+          "y": 515,
+          "zoom": 1.13
+        }
+      },
+      "note": "Establish OS City / Aerial",
+      "threat": 0.08
+    },
+    {
+      "id": "S01_NARRATOR_001",
+      "scene": 1,
+      "start": 3,
+      "end": 11.25,
+      "location": "city",
+      "framing": "city",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 1000,
+          "y": 510,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 925,
+          "y": 515,
+          "zoom": 1.13
+        }
+      },
+      "note": "Aerial push; ordinary city life before a district goes dark",
+      "threat": 0.15
+    },
+    {
+      "id": "S01_VEX_002",
+      "scene": 1,
+      "start": 11.25,
+      "end": 15.55,
+      "location": "city",
+      "framing": "broadcast",
+      "focus": "vex",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "First deliberate reveal through a public transmission",
+      "threat": 0.7
+    },
+    {
+      "id": "S2_establish",
+      "scene": 2,
+      "start": 15.55,
+      "end": 16.75,
+      "location": "command",
+      "framing": "wide",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Establish Command Central",
+      "threat": 0.08
+    },
+    {
+      "id": "S02_KERNEL_001",
+      "scene": 2,
+      "start": 16.75,
+      "end": 21.15,
+      "location": "command",
+      "framing": "two-shot",
+      "focus": "kernel",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 930,
+          "y": 560,
+          "zoom": 1.04
+        },
+        "to": {
+          "x": 945,
+          "y": 555,
+          "zoom": 1.07
+        }
+      },
+      "note": "Kernel left, Patch right; establish command geography",
+      "threat": 0.08
+    },
+    {
+      "id": "S02_PATCH_000",
+      "scene": 2,
+      "start": 21.15,
+      "end": 22.51,
+      "location": "command",
+      "framing": "two-shot",
+      "focus": "patch",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 930,
+          "y": 560,
+          "zoom": 1.04
+        },
+        "to": {
+          "x": 945,
+          "y": 555,
+          "zoom": 1.07
+        }
+      },
+      "note": "Patch confirms the deadline before Firewall reacts",
+      "threat": 0.08
+    },
+    {
+      "id": "S02_FIREWALL_002",
+      "scene": 2,
+      "start": 22.51,
+      "end": 26.47,
+      "location": "command",
+      "framing": "split",
+      "focus": "firewall",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Gateway comms opens; Kernel holds a serious reaction",
+      "threat": 0.08
+    },
+    {
+      "id": "S02_PATCH_003",
+      "scene": 2,
+      "start": 26.47,
+      "end": 32.95,
+      "location": "command",
+      "framing": "wide",
+      "focus": "patch",
+      "concept": "cia",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Three-person composition, Firewall on comms",
+      "threat": 0.08
+    },
+    {
+      "id": "S02_KERNEL_004",
+      "scene": 2,
+      "start": 32.95,
+      "end": 34.37,
+      "location": "command",
+      "framing": "close",
+      "focus": "kernel",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 620,
+          "y": 500,
+          "zoom": 1.4
+        },
+        "to": {
+          "x": 620,
+          "y": 500,
+          "zoom": 1.46
+        }
+      },
+      "note": "A brief controlled reaction from Kernel",
+      "threat": 0.08
+    },
+    {
+      "id": "S02_PATCH_005_a",
+      "scene": 2,
+      "start": 34.37,
+      "end": 39.382799999999996,
+      "location": "command",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "cia",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "CIA pillars illuminate sequentially",
+      "threat": 0.08
+    },
+    {
+      "id": "S02_PATCH_005_b",
+      "scene": 2,
+      "start": 39.382799999999996,
+      "end": 44.25,
+      "location": "command",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "cia",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "Detail/reaction: CIA pillars illuminate sequentially",
+      "threat": 0.08
+    },
+    {
+      "id": "S02_NARRATOR_006_a",
+      "scene": 2,
+      "start": 44.25,
+      "end": 49.7204,
+      "location": "command",
+      "framing": "insert",
+      "concept": "threat",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [],
+      "note": "Potential violation versus attempted breach; no narrator actor",
+      "threat": 0.08
+    },
+    {
+      "id": "S02_NARRATOR_006_b",
+      "scene": 2,
+      "start": 49.7204,
+      "end": 55.17,
+      "location": "command",
+      "framing": "insert",
+      "concept": "threat",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [],
+      "note": "Detail/reaction: Potential violation versus attempted breach; no narrator actor",
+      "threat": 0.08
+    },
+    {
+      "id": "S02_VEX_007",
+      "scene": 2,
+      "start": 55.17,
+      "end": 59.03,
+      "location": "command",
+      "framing": "broadcast",
+      "focus": "vex",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Vex interrupts the same established room",
+      "threat": 0.75
+    },
+    {
+      "id": "S02_KERNEL_008",
+      "scene": 2,
+      "start": 59.03,
+      "end": 63.42,
+      "location": "command",
+      "framing": "wide",
+      "focus": "kernel",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Kernel points toward the established Patch and gateway link",
+      "threat": 0.08
+    },
+    {
+      "id": "S3_establish",
+      "scene": 3,
+      "start": 63.42,
+      "end": 64.92,
+      "location": "street",
+      "framing": "wide",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Establish Program District",
+      "threat": 0.08
+    },
+    {
+      "id": "S03_MIRA_001",
+      "scene": 3,
+      "start": 64.92,
+      "end": 70.52,
+      "location": "street",
+      "framing": "split",
+      "focus": "mira",
+      "concept": "updater",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Emergency call beside the deceptive update",
+      "threat": 0.08
+    },
+    {
+      "id": "S03_PATCH_002_a",
+      "scene": 3,
+      "start": 70.52,
+      "end": 75.55359999999999,
+      "location": "street",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "trojan",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "Updater shell reveals a permission-abusing payload",
+      "threat": 0.08
+    },
+    {
+      "id": "S03_PATCH_002_b",
+      "scene": 3,
+      "start": 75.55359999999999,
+      "end": 80.8,
+      "location": "street",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "trojan",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "Detail/reaction: Updater shell reveals a permission-abusing payload",
+      "threat": 0.08
+    },
+    {
+      "id": "S03_VEX_003",
+      "scene": 3,
+      "start": 80.8,
+      "end": 84.48,
+      "location": "street",
+      "framing": "broadcast",
+      "focus": "vex",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "A short intrusion, not a standing conversational partner",
+      "threat": 0.7
+    },
+    {
+      "id": "S03_KERNEL_004",
+      "scene": 3,
+      "start": 84.48,
+      "end": 88.12,
+      "location": "street",
+      "framing": "close",
+      "focus": "kernel",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 590,
+          "y": 500,
+          "zoom": 1.4
+        },
+        "to": {
+          "x": 590,
+          "y": 500,
+          "zoom": 1.46
+        }
+      },
+      "note": "Kernel sets a serious boundary",
+      "threat": 0.08
+    },
+    {
+      "id": "S03_NARRATOR_005_a",
+      "scene": 3,
+      "start": 88.12,
+      "end": 93.50720000000001,
+      "location": "street",
+      "framing": "insert",
+      "concept": "malware",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [],
+      "note": "Separate theft, encryption and delayed-trigger consequences",
+      "threat": 0.08
+    },
+    {
+      "id": "S03_NARRATOR_005_b",
+      "scene": 3,
+      "start": 93.50720000000001,
+      "end": 98.88,
+      "location": "street",
+      "framing": "insert",
+      "concept": "malware",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [],
+      "note": "Detail/reaction: Separate theft, encryption and delayed-trigger consequences",
+      "threat": 0.08
+    },
+    {
+      "id": "S03_PATCH_006",
+      "scene": 3,
+      "start": 98.88,
+      "end": 106.58,
+      "location": "street",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "virus",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "Host-bound virus versus independent worm",
+      "threat": 0.08
+    },
+    {
+      "id": "S03_PATCH_007_a",
+      "scene": 3,
+      "start": 106.58,
+      "end": 110.80239999999999,
+      "location": "street",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "buffer",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "Unchecked input crosses a marked buffer boundary",
+      "threat": 0.08
+    },
+    {
+      "id": "S03_PATCH_007_b",
+      "scene": 3,
+      "start": 110.80239999999999,
+      "end": 115.4,
+      "location": "street",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "buffer",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "Detail/reaction: Unchecked input crosses a marked buffer boundary",
+      "threat": 0.08
+    },
+    {
+      "id": "S03_KERNEL_008",
+      "scene": 3,
+      "start": 115.4,
+      "end": 123.18,
+      "location": "street",
+      "framing": "wide",
+      "focus": "kernel",
+      "concept": "containment",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Contain the program while the real actors hold their places",
+      "threat": 0.08
+    },
+    {
+      "id": "S4_establish",
+      "scene": 4,
+      "start": 123.18,
+      "end": 124.58,
+      "location": "gateway",
+      "framing": "wide",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Establish Public Gateway",
+      "threat": 0.4
+    },
+    {
+      "id": "S04_PATCH_001",
+      "scene": 4,
+      "start": 124.58,
+      "end": 132.14,
+      "location": "gateway",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "ports",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "Scan for services, then follow worm propagation",
+      "threat": 0.4
+    },
+    {
+      "id": "S04_KERNEL_002",
+      "scene": 4,
+      "start": 132.14,
+      "end": 136.34,
+      "location": "gateway",
+      "framing": "split",
+      "focus": "kernel",
+      "concept": "worm",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Kernel speaks from command, not from Firewall’s position",
+      "threat": 0.4
+    },
+    {
+      "id": "S04_NARRATOR_003_a",
+      "scene": 4,
+      "start": 136.34,
+      "end": 140.6248,
+      "location": "gateway",
+      "framing": "insert",
+      "concept": "worm",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [],
+      "note": "Independent propagation and dual-use scanning",
+      "threat": 0.4
+    },
+    {
+      "id": "S04_NARRATOR_003_b",
+      "scene": 4,
+      "start": 140.6248,
+      "end": 144.98,
+      "location": "gateway",
+      "framing": "insert",
+      "concept": "worm",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [],
+      "note": "Detail/reaction: Independent propagation and dual-use scanning",
+      "threat": 0.4
+    },
+    {
+      "id": "S04_VEX_004",
+      "scene": 4,
+      "start": 144.98,
+      "end": 149.7,
+      "location": "gateway",
+      "framing": "broadcast",
+      "focus": "vex",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Compromised machines answer the attacker",
+      "threat": 0.8
+    },
+    {
+      "id": "S04_FIREWALL_005",
+      "scene": 4,
+      "start": 149.7,
+      "end": 153.68,
+      "location": "gateway",
+      "framing": "close",
+      "focus": "firewall",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 700,
+          "y": 500,
+          "zoom": 1.4
+        },
+        "to": {
+          "x": 700,
+          "y": 500,
+          "zoom": 1.46
+        }
+      },
+      "note": "Relaxed Firewall as distant traffic gathers",
+      "threat": 0.4
+    },
+    {
+      "id": "S04_PATCH_006",
+      "scene": 4,
+      "start": 153.68,
+      "end": 161.37,
+      "location": "gateway",
+      "framing": "split",
+      "focus": "patch",
+      "concept": "botnet",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Patch diagnoses the flood through the command link",
+      "threat": 0.4
+    },
+    {
+      "id": "S04_FIREWALL_007",
+      "scene": 4,
+      "start": 161.37,
+      "end": 165.65,
+      "location": "gateway",
+      "framing": "close",
+      "focus": "firewall",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 700,
+          "y": 500,
+          "zoom": 1.4
+        },
+        "to": {
+          "x": 700,
+          "y": 500,
+          "zoom": 1.46
+        }
+      },
+      "note": "Same feet; alert pose and tighter camera",
+      "threat": 0.9
+    },
+    {
+      "id": "S04_NARRATOR_008_a",
+      "scene": 4,
+      "start": 165.65,
+      "end": 171.68200000000002,
+      "location": "gateway",
+      "framing": "insert",
+      "concept": "identity",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [],
+      "note": "Identity deception, intercepted traffic, stolen sessions",
+      "threat": 0.4
+    },
+    {
+      "id": "S04_NARRATOR_008_b",
+      "scene": 4,
+      "start": 171.68200000000002,
+      "end": 177.65,
+      "location": "gateway",
+      "framing": "insert",
+      "concept": "identity",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [],
+      "note": "Detail/reaction: Identity deception, intercepted traffic, stolen sessions",
+      "threat": 0.4
+    },
+    {
+      "id": "S04_KERNEL_009",
+      "scene": 4,
+      "start": 177.65,
+      "end": 184.93,
+      "location": "gateway",
+      "framing": "split",
+      "focus": "kernel",
+      "concept": "containment",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Coordinate separation of critical services",
+      "threat": 0.7
+    },
+    {
+      "id": "S5_establish",
+      "scene": 5,
+      "start": 184.93,
+      "end": 186.53,
+      "location": "apartment",
+      "framing": "wide",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Establish Mira’s Apartment",
+      "threat": 0.4
+    },
+    {
+      "id": "S05_MIRA_001",
+      "scene": 5,
+      "start": 186.53,
+      "end": 194.88,
+      "location": "apartment",
+      "framing": "close",
+      "focus": "mira",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 630,
+          "y": 500,
+          "zoom": 1.4
+        },
+        "to": {
+          "x": 630,
+          "y": 500,
+          "zoom": 1.46
+        }
+      },
+      "note": "A personal apartment scene, locked files and a failed portal",
+      "threat": 0.4
+    },
+    {
+      "id": "S05_PATCH_002",
+      "scene": 5,
+      "start": 194.88,
+      "end": 200.47,
+      "location": "apartment",
+      "framing": "split",
+      "focus": "patch",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Patch listens and reassures through a named communication link",
+      "threat": 0.4
+    },
+    {
+      "id": "S05_ELARA_003",
+      "scene": 5,
+      "start": 200.47,
+      "end": 209.99,
+      "location": "apartment",
+      "framing": "crt",
+      "focus": "elara",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "elara"
+      ],
+      "note": "Push into the physical CRT; recording stays inside its glass",
+      "threat": 0.4
+    },
+    {
+      "id": "S05_KERNEL_004",
+      "scene": 5,
+      "start": 209.99,
+      "end": 213.99,
+      "location": "apartment",
+      "framing": "split",
+      "focus": "kernel",
+      "concept": "chain",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Trace the compromised trusted update service",
+      "threat": 0.4
+    },
+    {
+      "id": "S05_NARRATOR_005",
+      "scene": 5,
+      "start": 213.99,
+      "end": 221.61,
+      "location": "apartment",
+      "framing": "wide",
+      "concept": "chain",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Mira and the frozen archive; no narrator substitution",
+      "threat": 0.4
+    },
+    {
+      "id": "S6_establish",
+      "scene": 6,
+      "start": 221.61,
+      "end": 222.81,
+      "location": "command",
+      "framing": "wide",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Establish Command Central",
+      "threat": 0.4
+    },
+    {
+      "id": "S06_PATCH_001",
+      "scene": 6,
+      "start": 222.81,
+      "end": 230.45,
+      "location": "command",
+      "framing": "two-shot",
+      "focus": "patch",
+      "concept": "policy",
+      "camera": {
+        "from": {
+          "x": 930,
+          "y": 560,
+          "zoom": 1.04
+        },
+        "to": {
+          "x": 945,
+          "y": 555,
+          "zoom": 1.07
+        }
+      },
+      "note": "Return to the established command geography",
+      "threat": 0.4
+    },
+    {
+      "id": "S06_KERNEL_002",
+      "scene": 6,
+      "start": 230.45,
+      "end": 235.65,
+      "location": "command",
+      "framing": "close",
+      "focus": "kernel",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 620,
+          "y": 500,
+          "zoom": 1.4
+        },
+        "to": {
+          "x": 620,
+          "y": 500,
+          "zoom": 1.46
+        }
+      },
+      "note": "Consider the gap between policy and the actual system",
+      "threat": 0.4
+    },
+    {
+      "id": "S06_PATCH_003",
+      "scene": 6,
+      "start": 235.65,
+      "end": 243.77,
+      "location": "command",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "containment",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "Isolation, credential revocation and patching become visible actions",
+      "threat": 0.4
+    },
+    {
+      "id": "S06_NARRATOR_004",
+      "scene": 6,
+      "start": 243.77,
+      "end": 248.73,
+      "location": "command",
+      "framing": "insert",
+      "concept": "layers",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [],
+      "note": "Separate defense layers engage",
+      "threat": 0.4
+    },
+    {
+      "id": "S06_PATCH_005_a",
+      "scene": 6,
+      "start": 248.73,
+      "end": 253.6388,
+      "location": "command",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "ids",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "Known patterns versus unusual behavior",
+      "threat": 0.4
+    },
+    {
+      "id": "S06_PATCH_005_b",
+      "scene": 6,
+      "start": 253.6388,
+      "end": 258.41,
+      "location": "command",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "ids",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "Detail/reaction: Known patterns versus unusual behavior",
+      "threat": 0.4
+    },
+    {
+      "id": "S06_FIREWALL_006",
+      "scene": 6,
+      "start": 258.41,
+      "end": 263.86,
+      "location": "command",
+      "framing": "split",
+      "focus": "firewall",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "A dry comms aside while the work continues",
+      "threat": 0.4
+    },
+    {
+      "id": "S06_PATCH_007",
+      "scene": 6,
+      "start": 263.86,
+      "end": 270.34,
+      "location": "command",
+      "framing": "insert",
+      "focus": "patch",
+      "concept": "ids",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "patch"
+      ],
+      "note": "Concrete false-positive and false-negative cases",
+      "threat": 0.4
+    },
+    {
+      "id": "S06_KERNEL_008_a",
+      "scene": 6,
+      "start": 270.34,
+      "end": 276.3096,
+      "location": "command",
+      "framing": "wide",
+      "focus": "kernel",
+      "concept": "backups",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Protected backups and monitoring support the layered response",
+      "threat": 0.4
+    },
+    {
+      "id": "S06_KERNEL_008_b",
+      "scene": 6,
+      "start": 276.3096,
+      "end": 283.82,
+      "location": "command",
+      "framing": "insert",
+      "focus": "kernel",
+      "concept": "backups",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "kernel"
+      ],
+      "note": "Detail/reaction: Protected backups and monitoring support the layered response",
+      "threat": 0.4
+    },
+    {
+      "id": "S7_establish",
+      "scene": 7,
+      "start": 283.82,
+      "end": 285.42,
+      "location": "gateway",
+      "framing": "wide",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Establish Public Gateway",
+      "threat": 0.4
+    },
+    {
+      "id": "S07_FIREWALL_001",
+      "scene": 7,
+      "start": 285.42,
+      "end": 292.14,
+      "location": "gateway",
+      "framing": "wide",
+      "focus": "firewall",
+      "concept": "filter",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Establish the detailed physical gate and filtering paths",
+      "threat": 0.4
+    },
+    {
+      "id": "S07_PATCH_002",
+      "scene": 7,
+      "start": 292.14,
+      "end": 298.62,
+      "location": "gateway",
+      "framing": "split",
+      "focus": "patch",
+      "concept": "filter",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Network boundary versus individual-host protection",
+      "threat": 0.4
+    },
+    {
+      "id": "S07_FIREWALL_003_a",
+      "scene": 7,
+      "start": 298.62,
+      "end": 303.7992,
+      "location": "gateway",
+      "framing": "insert",
+      "focus": "firewall",
+      "concept": "proxy",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "firewall"
+      ],
+      "note": "Protocol-aware proxy and system-call controls are separate tools",
+      "threat": 0.4
+    },
+    {
+      "id": "S07_FIREWALL_003_b",
+      "scene": 7,
+      "start": 303.7992,
+      "end": 308.82,
+      "location": "gateway",
+      "framing": "insert",
+      "focus": "firewall",
+      "concept": "proxy",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "firewall"
+      ],
+      "note": "Detail/reaction: Protocol-aware proxy and system-call controls are separate tools",
+      "threat": 0.4
+    },
+    {
+      "id": "S07_VEX_004",
+      "scene": 7,
+      "start": 308.82,
+      "end": 313.32,
+      "location": "gateway",
+      "framing": "broadcast",
+      "focus": "vex",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "A permitted connection carries concealed danger",
+      "threat": 0.8
+    },
+    {
+      "id": "S07_FIREWALL_005_a",
+      "scene": 7,
+      "start": 313.32,
+      "end": 318.1872,
+      "location": "gateway",
+      "framing": "close",
+      "focus": "firewall",
+      "concept": "tunnel",
+      "camera": {
+        "from": {
+          "x": 700,
+          "y": 500,
+          "zoom": 1.4
+        },
+        "to": {
+          "x": 700,
+          "y": 500,
+          "zoom": 1.46
+        }
+      },
+      "note": "Same actor location, serious pose and controlled close-up",
+      "threat": 0.8
+    },
+    {
+      "id": "S07_FIREWALL_005_b",
+      "scene": 7,
+      "start": 318.1872,
+      "end": 323.03,
+      "location": "gateway",
+      "framing": "insert",
+      "focus": "firewall",
+      "concept": "tunnel",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "firewall"
+      ],
+      "note": "Detail/reaction: Same actor location, serious pose and controlled close-up",
+      "threat": 0.8
+    },
+    {
+      "id": "S07_PATCH_006",
+      "scene": 7,
+      "start": 323.03,
+      "end": 328.75,
+      "location": "gateway",
+      "framing": "split",
+      "focus": "patch",
+      "concept": "containment",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Patch works inside while Firewall holds the boundary",
+      "threat": 0.4
+    },
+    {
+      "id": "S07_FIREWALL_007",
+      "scene": 7,
+      "start": 328.75,
+      "end": 333.21,
+      "location": "gateway",
+      "framing": "wide",
+      "focus": "firewall",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "The gate strains under the flood",
+      "threat": 0.8
+    },
+    {
+      "id": "S8_establish",
+      "scene": 8,
+      "start": 333.21,
+      "end": 334.21,
+      "location": "command",
+      "framing": "wide",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Establish Multiple Locations",
+      "threat": 0.4
+    },
+    {
+      "id": "S08_VEX_001",
+      "scene": 8,
+      "start": 334.21,
+      "end": 340.41,
+      "location": "command",
+      "framing": "broadcast",
+      "focus": "vex",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Threaten the compromised internal service",
+      "threat": 1
+    },
+    {
+      "id": "S08_PATCH_002",
+      "scene": 8,
+      "start": 340.41,
+      "end": 346.21,
+      "location": "command",
+      "framing": "two-shot",
+      "focus": "patch",
+      "concept": "response",
+      "camera": {
+        "from": {
+          "x": 930,
+          "y": 560,
+          "zoom": 1.04
+        },
+        "to": {
+          "x": 945,
+          "y": 555,
+          "zoom": 1.07
+        }
+      },
+      "note": "Explain the internal access path in command",
+      "threat": 0.4
+    },
+    {
+      "id": "S08_KERNEL_003_a",
+      "scene": 8,
+      "start": 346.21,
+      "end": 352.1588,
+      "location": "command",
+      "framing": "wide",
+      "focus": "kernel",
+      "concept": "response",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Three-person coordinated command without slot swapping",
+      "threat": 0.4
+    },
+    {
+      "id": "S08_KERNEL_003_b",
+      "scene": 8,
+      "start": 352.1588,
+      "end": 357.89,
+      "location": "command",
+      "framing": "insert",
+      "focus": "kernel",
+      "concept": "response",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "kernel"
+      ],
+      "note": "Detail/reaction: Three-person coordinated command without slot swapping",
+      "threat": 0.4
+    },
+    {
+      "id": "S08_FIREWALL_004",
+      "scene": 8,
+      "start": 357.89,
+      "end": 362.01,
+      "location": "gateway",
+      "framing": "close",
+      "focus": "firewall",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 720,
+          "y": 500,
+          "zoom": 1.4
+        },
+        "to": {
+          "x": 720,
+          "y": 500,
+          "zoom": 1.46
+        }
+      },
+      "note": "Cross-cut to the responsible gatekeeper",
+      "threat": 0.8
+    },
+    {
+      "id": "S08_NARRATOR_005_a",
+      "scene": 8,
+      "start": 362.01,
+      "end": 367.7092,
+      "location": "command",
+      "framing": "insert",
+      "concept": "response",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [],
+      "note": "Containment, upstream control and verified backup montage",
+      "threat": 0.4
+    },
+    {
+      "id": "S08_NARRATOR_005_b",
+      "scene": 8,
+      "start": 367.7092,
+      "end": 373.37,
+      "location": "command",
+      "framing": "insert",
+      "concept": "response",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [],
+      "note": "Detail/reaction: Containment, upstream control and verified backup montage",
+      "threat": 0.4
+    },
+    {
+      "id": "S08_VEX_006",
+      "scene": 8,
+      "start": 373.37,
+      "end": 375.84,
+      "location": "command",
+      "framing": "broadcast",
+      "focus": "vex",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "A tighter unstable transmission as Vex loses control",
+      "threat": 1
+    },
+    {
+      "id": "S08_PATCH_007",
+      "scene": 8,
+      "start": 375.84,
+      "end": 382.48,
+      "location": "command",
+      "framing": "close",
+      "focus": "patch",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 1250,
+          "y": 500,
+          "zoom": 1.4
+        },
+        "to": {
+          "x": 1250,
+          "y": 500,
+          "zoom": 1.46
+        }
+      },
+      "note": "Commit to containment and recovery rather than instant reversal",
+      "threat": 0.4
+    },
+    {
+      "id": "S08_last10_gate",
+      "scene": 8,
+      "start": 382.48,
+      "end": 385.68,
+      "location": "gateway",
+      "framing": "climax",
+      "focus": "firewall",
+      "concept": "response",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Hold the gate under the final traffic surge",
+      "threat": 1
+    },
+    {
+      "id": "S08_last10_service",
+      "scene": 8,
+      "start": 385.68,
+      "end": 389.28000000000003,
+      "location": "command",
+      "framing": "climax",
+      "focus": "patch",
+      "concept": "containment",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Isolate the service and prepare standby",
+      "threat": 1
+    },
+    {
+      "id": "S08_last10_standby",
+      "scene": 8,
+      "start": 389.28000000000003,
+      "end": 392.48,
+      "location": "command",
+      "framing": "climax",
+      "focus": "kernel",
+      "concept": "standby",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Standby switches at zero; a brief blackout",
+      "threat": 0.9
+    },
+    {
+      "id": "S08_MIRA_008",
+      "scene": 8,
+      "start": 392.48,
+      "end": 395.43,
+      "location": "command",
+      "framing": "split",
+      "focus": "mira",
+      "concept": "standby",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "The portal returns; personal files remain unresolved",
+      "threat": 0.4
+    },
+    {
+      "id": "S08_KERNEL_009",
+      "scene": 8,
+      "start": 395.43,
+      "end": 401.76,
+      "location": "command",
+      "framing": "two-shot",
+      "focus": "kernel",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 930,
+          "y": 560,
+          "zoom": 1.04
+        },
+        "to": {
+          "x": 945,
+          "y": 555,
+          "zoom": 1.07
+        }
+      },
+      "note": "Refuse a premature victory claim",
+      "threat": 0.4
+    },
+    {
+      "id": "S08_VEX_010",
+      "scene": 8,
+      "start": 401.76,
+      "end": 404.89,
+      "location": "command",
+      "framing": "broadcast",
+      "focus": "vex",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "One last threat and then a dead carrier",
+      "threat": 0.45
+    },
+    {
+      "id": "S08_KERNEL_011",
+      "scene": 8,
+      "start": 404.89,
+      "end": 408.65,
+      "location": "command",
+      "framing": "wide",
+      "focus": "kernel",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Resume monitoring and backup protection",
+      "threat": 0.4
+    },
+    {
+      "id": "S08_FIREWALL_012",
+      "scene": 8,
+      "start": 408.65,
+      "end": 413.42,
+      "location": "command",
+      "framing": "split",
+      "focus": "firewall",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "A restrained release of tension over comms",
+      "threat": 0.4
+    },
+    {
+      "id": "S9_establish",
+      "scene": 9,
+      "start": 413.42,
+      "end": 415.42,
+      "location": "dawn",
+      "framing": "wide",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Establish OS City / Dawn",
+      "threat": 0.08
+    },
+    {
+      "id": "S09_AXIOM_001_a",
+      "scene": 9,
+      "start": 415.42,
+      "end": 423.09520000000003,
+      "location": "dawn",
+      "framing": "wide",
+      "focus": "axiom",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Four people at dawn; repair work continues",
+      "threat": 0.08
+    },
+    {
+      "id": "S09_AXIOM_001_b",
+      "scene": 9,
+      "start": 423.09520000000003,
+      "end": 430.42,
+      "location": "dawn",
+      "framing": "wide",
+      "focus": "axiom",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "note": "Detail/reaction: Four people at dawn; repair work continues",
+      "threat": 0.08
+    },
+    {
+      "id": "S09_AXIOM_002_a",
+      "scene": 9,
+      "start": 430.42,
+      "end": 442.35400000000004,
+      "location": "dawn",
+      "framing": "insert",
+      "focus": "axiom",
+      "concept": "tcsec",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "axiom"
+      ],
+      "note": "Historical classifications unfold; no modern guarantee",
+      "threat": 0.08
+    },
+    {
+      "id": "S09_AXIOM_002_b",
+      "scene": 9,
+      "start": 442.35400000000004,
+      "end": 453.61,
+      "location": "dawn",
+      "framing": "insert",
+      "focus": "axiom",
+      "concept": "tcsec",
+      "camera": {
+        "from": {
+          "x": 960,
+          "y": 540,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 975,
+          "y": 535,
+          "zoom": 1.055
+        }
+      },
+      "visible": [
+        "axiom"
+      ],
+      "note": "Detail/reaction: Historical classifications unfold; no modern guarantee",
+      "threat": 0.08
+    },
+    {
+      "id": "S09_PATCH_003",
+      "scene": 9,
+      "start": 453.61,
+      "end": 458.89,
+      "location": "dawn",
+      "framing": "two-shot",
+      "focus": "patch",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 930,
+          "y": 560,
+          "zoom": 1.04
+        },
+        "to": {
+          "x": 945,
+          "y": 555,
+          "zoom": 1.07
+        }
+      },
+      "note": "Patch puts the historic classes into context",
+      "threat": 0.08
+    },
+    {
+      "id": "S09_NARRATOR_004",
+      "scene": 9,
+      "start": 458.89,
+      "end": 465.97,
+      "location": "dawn",
+      "framing": "aftermath",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 1000,
+          "y": 510,
+          "zoom": 1.03
+        },
+        "to": {
+          "x": 925,
+          "y": 515,
+          "zoom": 1.13
+        }
+      },
+      "visible": [],
+      "note": "Return to ordinary city life and continued repairs",
+      "threat": 0.08
+    },
+    {
+      "id": "S09_FIREWALL_005",
+      "scene": 9,
+      "start": 465.97,
+      "end": 468.44,
+      "location": "dawn",
+      "framing": "close",
+      "focus": "firewall",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 940,
+          "y": 500,
+          "zoom": 1.4
+        },
+        "to": {
+          "x": 940,
+          "y": 500,
+          "zoom": 1.46
+        }
+      },
+      "note": "A quietly self-satisfied joke",
+      "threat": 0.08
+    },
+    {
+      "id": "S09_KERNEL_006",
+      "scene": 9,
+      "start": 468.44,
+      "end": 474.92,
+      "location": "dawn",
+      "framing": "close",
+      "focus": "kernel",
+      "concept": "none",
+      "camera": {
+        "from": {
+          "x": 550,
+          "y": 500,
+          "zoom": 1.4
+        },
+        "to": {
+          "x": 550,
+          "y": 500,
+          "zoom": 1.46
+        }
+      },
+      "note": "A dry response, then return to the working team",
+      "threat": 0.08
+    }
+  ],
+  "actorTracks": [
+    {
+      "id": "scene-2-kernel-physical",
+      "actor": "kernel",
+      "scene": 2,
+      "start": 15.67,
+      "end": 63.42,
+      "location": "command",
+      "x": 420,
+      "footY": 1020,
+      "height": 790,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "left",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-2-patch-physical",
+      "actor": "patch",
+      "scene": 2,
+      "start": 15.55,
+      "end": 63.42,
+      "location": "command",
+      "x": 1450,
+      "footY": 1020,
+      "height": 760,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-2-firewall-comms",
+      "actor": "firewall",
+      "scene": 2,
+      "start": 15.55,
+      "end": 63.42,
+      "location": "gateway",
+      "x": 1560,
+      "footY": 535,
+      "height": 390,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-3-kernel-physical",
+      "actor": "kernel",
+      "scene": 3,
+      "start": 63.42,
+      "end": 123.18,
+      "location": "street",
+      "x": 390,
+      "footY": 1020,
+      "height": 790,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-3-patch-physical",
+      "actor": "patch",
+      "scene": 3,
+      "start": 63.42,
+      "end": 123.18,
+      "location": "street",
+      "x": 1440,
+      "footY": 1020,
+      "height": 760,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-3-mira-comms",
+      "actor": "mira",
+      "scene": 3,
+      "start": 63.42,
+      "end": 123.18,
+      "location": "apartment",
+      "x": 1540,
+      "footY": 565,
+      "height": 400,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-3-citizen-physical",
+      "actor": "citizen",
+      "scene": 3,
+      "start": 63.42,
+      "end": 123.18,
+      "location": "street",
+      "x": 925,
+      "footY": 885,
+      "height": 365,
+      "depth": 0,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-3-technician-physical",
+      "actor": "technician",
+      "scene": 3,
+      "start": 63.42,
+      "end": 123.18,
+      "location": "street",
+      "x": 1650,
+      "footY": 870,
+      "height": 340,
+      "depth": 0,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-4-firewall-physical",
+      "actor": "firewall",
+      "scene": 4,
+      "start": 123.18,
+      "end": 184.93,
+      "location": "gateway",
+      "x": 500,
+      "footY": 1020,
+      "height": 800,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-4-patch-comms",
+      "actor": "patch",
+      "scene": 4,
+      "start": 123.18,
+      "end": 184.93,
+      "location": "command",
+      "x": 1500,
+      "footY": 535,
+      "height": 390,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-4-kernel-comms",
+      "actor": "kernel",
+      "scene": 4,
+      "start": 123.18,
+      "end": 184.93,
+      "location": "command",
+      "x": 1160,
+      "footY": 535,
+      "height": 390,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-5-mira-physical",
+      "actor": "mira",
+      "scene": 5,
+      "start": 184.93,
+      "end": 221.61,
+      "location": "apartment",
+      "x": 430,
+      "footY": 1020,
+      "height": 810,
+      "depth": 2,
+      "pose": "worried",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-5-patch-comms",
+      "actor": "patch",
+      "scene": 5,
+      "start": 184.93,
+      "end": 221.61,
+      "location": "command",
+      "x": 1540,
+      "footY": 520,
+      "height": 380,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-5-kernel-comms",
+      "actor": "kernel",
+      "scene": 5,
+      "start": 184.93,
+      "end": 221.61,
+      "location": "command",
+      "x": 1530,
+      "footY": 520,
+      "height": 380,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-5-elara-crt",
+      "actor": "elara",
+      "scene": 5,
+      "start": 184.93,
+      "end": 221.61,
+      "location": "apartment",
+      "x": 1160,
+      "footY": 850,
+      "height": 670,
+      "depth": 2,
+      "pose": "recording",
+      "mode": "crt",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-6-kernel-physical",
+      "actor": "kernel",
+      "scene": 6,
+      "start": 221.61,
+      "end": 283.82,
+      "location": "command",
+      "x": 420,
+      "footY": 1020,
+      "height": 790,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-6-patch-physical",
+      "actor": "patch",
+      "scene": 6,
+      "start": 221.61,
+      "end": 283.82,
+      "location": "command",
+      "x": 1450,
+      "footY": 1020,
+      "height": 760,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-6-firewall-comms",
+      "actor": "firewall",
+      "scene": 6,
+      "start": 221.61,
+      "end": 283.82,
+      "location": "gateway",
+      "x": 1550,
+      "footY": 535,
+      "height": 400,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-6-technician-physical",
+      "actor": "technician",
+      "scene": 6,
+      "start": 221.61,
+      "end": 283.82,
+      "location": "command",
+      "x": 1040,
+      "footY": 825,
+      "height": 340,
+      "depth": 0,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-7-firewall-physical",
+      "actor": "firewall",
+      "scene": 7,
+      "start": 283.82,
+      "end": 333.21,
+      "location": "gateway",
+      "x": 500,
+      "footY": 1020,
+      "height": 800,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-7-patch-comms",
+      "actor": "patch",
+      "scene": 7,
+      "start": 283.82,
+      "end": 333.21,
+      "location": "command",
+      "x": 1490,
+      "footY": 550,
+      "height": 410,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-8-kernel-physical",
+      "actor": "kernel",
+      "scene": 8,
+      "start": 333.21,
+      "end": 413.42,
+      "location": "command",
+      "x": 420,
+      "footY": 1020,
+      "height": 790,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-8-patch-physical",
+      "actor": "patch",
+      "scene": 8,
+      "start": 333.21,
+      "end": 413.42,
+      "location": "command",
+      "x": 1450,
+      "footY": 1020,
+      "height": 760,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-8-firewall-physical",
+      "actor": "firewall",
+      "scene": 8,
+      "start": 333.21,
+      "end": 413.42,
+      "location": "gateway",
+      "x": 520,
+      "footY": 1020,
+      "height": 800,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-8-firewall-comms",
+      "actor": "firewall",
+      "scene": 8,
+      "start": 333.21,
+      "end": 413.42,
+      "location": "gateway",
+      "x": 1550,
+      "footY": 535,
+      "height": 390,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-8-mira-comms",
+      "actor": "mira",
+      "scene": 8,
+      "start": 392.28000000000003,
+      "end": 413.42,
+      "location": "apartment",
+      "x": 1490,
+      "footY": 550,
+      "height": 410,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-9-kernel-physical",
+      "actor": "kernel",
+      "scene": 9,
+      "start": 413.42,
+      "end": 474.92,
+      "location": "dawn",
+      "x": 350,
+      "footY": 1020,
+      "height": 740,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-9-patch-physical",
+      "actor": "patch",
+      "scene": 9,
+      "start": 413.42,
+      "end": 474.92,
+      "location": "dawn",
+      "x": 770,
+      "footY": 1020,
+      "height": 710,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-9-firewall-physical",
+      "actor": "firewall",
+      "scene": 9,
+      "start": 413.42,
+      "end": 474.92,
+      "location": "dawn",
+      "x": 1140,
+      "footY": 1020,
+      "height": 740,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-9-axiom-hologram",
+      "actor": "axiom",
+      "scene": 9,
+      "start": 413.82,
+      "end": 474.92,
+      "location": "dawn",
+      "x": 1560,
+      "footY": 1020,
+      "height": 780,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "hologram",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-9-technician-physical",
+      "actor": "technician",
+      "scene": 9,
+      "start": 413.42,
+      "end": 474.92,
+      "location": "dawn",
+      "x": 1000,
+      "footY": 870,
+      "height": 300,
+      "depth": 0,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-9-citizen-physical",
+      "actor": "citizen",
+      "scene": 9,
+      "start": 413.42,
+      "end": 474.92,
+      "location": "dawn",
+      "x": 600,
+      "footY": 890,
+      "height": 320,
+      "depth": 0,
+      "pose": "idle",
+      "mode": "physical",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "right"
+    },
+    {
+      "id": "scene-1-vex-comms",
+      "actor": "vex",
+      "scene": 1,
+      "start": 10.7,
+      "end": 14.25,
+      "location": "city",
+      "x": 960,
+      "footY": 1020,
+      "height": 900,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-2-vex-comms",
+      "actor": "vex",
+      "scene": 2,
+      "start": 54.620000000000005,
+      "end": 58.93,
+      "location": "city",
+      "x": 960,
+      "footY": 1020,
+      "height": 900,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-3-vex-comms",
+      "actor": "vex",
+      "scene": 3,
+      "start": 80.25,
+      "end": 84.64,
+      "location": "city",
+      "x": 960,
+      "footY": 1020,
+      "height": 900,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-4-vex-comms",
+      "actor": "vex",
+      "scene": 4,
+      "start": 144.42999999999998,
+      "end": 148.9,
+      "location": "city",
+      "x": 960,
+      "footY": 1020,
+      "height": 900,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-7-vex-comms",
+      "actor": "vex",
+      "scene": 7,
+      "start": 308.27,
+      "end": 313.02,
+      "location": "city",
+      "x": 960,
+      "footY": 1020,
+      "height": 900,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    },
+    {
+      "id": "scene-8-vex-comms",
+      "actor": "vex",
+      "scene": 8,
+      "start": 333.65999999999997,
+      "end": 404.64,
+      "location": "city",
+      "x": 960,
+      "footY": 1020,
+      "height": 900,
+      "depth": 2,
+      "pose": "idle",
+      "mode": "comms",
+      "entrance": "cut",
+      "arrivalDuration": 1,
+      "gaze": "left"
+    }
+  ],
+  "soundCues": [
+    {
+      "id": "score-1",
+      "kind": "score",
+      "file": "score-city.wav",
+      "start": 0,
+      "end": 15.55,
+      "gain": 1,
+      "bus": "music",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "ambience-1",
+      "kind": "city",
+      "file": "city.wav",
+      "start": 0,
+      "end": 15.55,
+      "gain": 0.58,
+      "bus": "sfx",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "opening-district-blackout",
+      "kind": "impact",
+      "file": "impact.wav",
+      "start": 8.1,
+      "end": 9,
+      "gain": 0.5,
+      "bus": "sfx",
+      "pan": -0.4,
+      "duck": true
+    },
+    {
+      "id": "S01_VEX_002-carrier",
+      "kind": "intrusion",
+      "file": "intrusion.wav",
+      "start": 10.9,
+      "end": 12.200000000000001,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": -0.15,
+      "duck": true
+    },
+    {
+      "id": "S01_VEX_002-carrier-end",
+      "kind": "message",
+      "file": "message.wav",
+      "start": 13.85,
+      "end": 14.5,
+      "gain": 0.25,
+      "bus": "sfx",
+      "pan": 0.1,
+      "duck": true
+    },
+    {
+      "id": "score-2",
+      "kind": "score",
+      "file": "score-investigation.wav",
+      "start": 15.55,
+      "end": 63.42,
+      "gain": 1,
+      "bus": "music",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "ambience-2",
+      "kind": "room",
+      "file": "room.wav",
+      "start": 15.55,
+      "end": 63.42,
+      "gain": 0.58,
+      "bus": "sfx",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "S02_PATCH_003-scan",
+      "kind": "scan",
+      "file": "scan.wav",
+      "start": 26.669999999999998,
+      "end": 27.569999999999997,
+      "gain": 0.35,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S02_PATCH_005-scan",
+      "kind": "scan",
+      "file": "scan.wav",
+      "start": 37.57,
+      "end": 38.47,
+      "gain": 0.25,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S02_VEX_007-carrier",
+      "kind": "intrusion",
+      "file": "intrusion.wav",
+      "start": 54.82,
+      "end": 56.12,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": -0.15,
+      "duck": true
+    },
+    {
+      "id": "S02_VEX_007-carrier-end",
+      "kind": "message",
+      "file": "message.wav",
+      "start": 58.53,
+      "end": 59.18,
+      "gain": 0.25,
+      "bus": "sfx",
+      "pan": 0.1,
+      "duck": true
+    },
+    {
+      "id": "score-3",
+      "kind": "score",
+      "file": "score-investigation.wav",
+      "start": 63.42,
+      "end": 123.18,
+      "gain": 1,
+      "bus": "music",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "ambience-3",
+      "kind": "city",
+      "file": "city.wav",
+      "start": 63.42,
+      "end": 123.18,
+      "gain": 0.58,
+      "bus": "sfx",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "S03_MIRA_001-click",
+      "kind": "click",
+      "file": "click.wav",
+      "start": 65.22,
+      "end": 65.38,
+      "gain": 0.4,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S03_PATCH_002-lock",
+      "kind": "lock",
+      "file": "lock.wav",
+      "start": 73.32,
+      "end": 73.77,
+      "gain": 0.5,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S03_VEX_003-carrier",
+      "kind": "intrusion",
+      "file": "intrusion.wav",
+      "start": 80.45,
+      "end": 81.75,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": -0.15,
+      "duck": true
+    },
+    {
+      "id": "S03_VEX_003-carrier-end",
+      "kind": "message",
+      "file": "message.wav",
+      "start": 84.24,
+      "end": 84.89,
+      "gain": 0.25,
+      "bus": "sfx",
+      "pan": 0.1,
+      "duck": true
+    },
+    {
+      "id": "S03_NARRATOR_005-lock",
+      "kind": "lock",
+      "file": "lock.wav",
+      "start": 92.92,
+      "end": 93.37,
+      "gain": 0.4,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S03_PATCH_006-scan",
+      "kind": "scan",
+      "file": "scan.wav",
+      "start": 99.67999999999999,
+      "end": 100.58,
+      "gain": 0.3,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S03_PATCH_007-impact",
+      "kind": "impact",
+      "file": "impact.wav",
+      "start": 110.58,
+      "end": 111.48,
+      "gain": 0.42,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S03_KERNEL_008-contain",
+      "kind": "contain",
+      "file": "contain.wav",
+      "start": 119.80000000000001,
+      "end": 120.95000000000002,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "score-4",
+      "kind": "score",
+      "file": "score-pressure.wav",
+      "start": 123.18,
+      "end": 184.93,
+      "gain": 1,
+      "bus": "music",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "ambience-4",
+      "kind": "gateway",
+      "file": "gateway.wav",
+      "start": 123.18,
+      "end": 184.93,
+      "gain": 0.58,
+      "bus": "sfx",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "S04_PATCH_001-scan",
+      "kind": "scan",
+      "file": "scan.wav",
+      "start": 124.67999999999999,
+      "end": 125.58,
+      "gain": 0.35,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S04_VEX_004-carrier",
+      "kind": "intrusion",
+      "file": "intrusion.wav",
+      "start": 144.63,
+      "end": 145.93,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": -0.15,
+      "duck": true
+    },
+    {
+      "id": "S04_VEX_004-carrier-end",
+      "kind": "message",
+      "file": "message.wav",
+      "start": 148.5,
+      "end": 149.15,
+      "gain": 0.25,
+      "bus": "sfx",
+      "pan": 0.1,
+      "duck": true
+    },
+    {
+      "id": "S04_FIREWALL_005-flood",
+      "kind": "flood",
+      "file": "flood.wav",
+      "start": 151.2,
+      "end": 154.2,
+      "gain": 0.4,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S04_FIREWALL_007-alarm",
+      "kind": "alarm",
+      "file": "alarm.wav",
+      "start": 161.67000000000002,
+      "end": 162.87,
+      "gain": 0.35,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "score-5",
+      "kind": "score",
+      "file": "score-empathy.wav",
+      "start": 184.93,
+      "end": 221.61,
+      "gain": 1,
+      "bus": "music",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "ambience-5",
+      "kind": "apartment",
+      "file": "apartment.wav",
+      "start": 184.93,
+      "end": 221.61,
+      "gain": 0.58,
+      "bus": "sfx",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "S05_MIRA_001-lock",
+      "kind": "lock",
+      "file": "lock.wav",
+      "start": 186.73,
+      "end": 187.17999999999998,
+      "gain": 0.3,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "archive-start",
+      "kind": "crt",
+      "file": "crt.wav",
+      "start": 199.67,
+      "end": 200.76999999999998,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": 0.25,
+      "duck": true
+    },
+    {
+      "id": "archive-corruption",
+      "kind": "static",
+      "file": "static.wav",
+      "start": 204.83,
+      "end": 205.18,
+      "gain": 0.24,
+      "bus": "sfx",
+      "pan": 0.25,
+      "duck": true
+    },
+    {
+      "id": "archive-stop",
+      "kind": "static",
+      "file": "static.wav",
+      "start": 209.19,
+      "end": 209.54,
+      "gain": 0.32,
+      "bus": "sfx",
+      "pan": 0.25,
+      "duck": true
+    },
+    {
+      "id": "score-6",
+      "kind": "score",
+      "file": "score-investigation.wav",
+      "start": 221.61,
+      "end": 283.82,
+      "gain": 1,
+      "bus": "music",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "ambience-6",
+      "kind": "room",
+      "file": "room.wav",
+      "start": 221.61,
+      "end": 283.82,
+      "gain": 0.58,
+      "bus": "sfx",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "S06_PATCH_003-contain",
+      "kind": "contain",
+      "file": "contain.wav",
+      "start": 237.45000000000002,
+      "end": 238.60000000000002,
+      "gain": 0.42,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S06_PATCH_005-scan",
+      "kind": "scan",
+      "file": "scan.wav",
+      "start": 251.13,
+      "end": 252.03,
+      "gain": 0.25,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S06_PATCH_007-message",
+      "kind": "message",
+      "file": "message.wav",
+      "start": 264.36,
+      "end": 265.01,
+      "gain": 0.2,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "score-7",
+      "kind": "score",
+      "file": "score-pressure.wav",
+      "start": 283.82,
+      "end": 333.21,
+      "gain": 1,
+      "bus": "music",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "ambience-7",
+      "kind": "gateway",
+      "file": "gateway.wav",
+      "start": 283.82,
+      "end": 333.21,
+      "gain": 0.58,
+      "bus": "sfx",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "S07_FIREWALL_001-gate",
+      "kind": "gate",
+      "file": "gate.wav",
+      "start": 285.52000000000004,
+      "end": 287.12000000000006,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S07_VEX_004-carrier",
+      "kind": "intrusion",
+      "file": "intrusion.wav",
+      "start": 308.46999999999997,
+      "end": 309.77,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": -0.15,
+      "duck": true
+    },
+    {
+      "id": "S07_VEX_004-lock",
+      "kind": "lock",
+      "file": "lock.wav",
+      "start": 310.92,
+      "end": 311.37,
+      "gain": 0.25,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S07_VEX_004-carrier-end",
+      "kind": "message",
+      "file": "message.wav",
+      "start": 312.62,
+      "end": 313.27,
+      "gain": 0.25,
+      "bus": "sfx",
+      "pan": 0.1,
+      "duck": true
+    },
+    {
+      "id": "S07_FIREWALL_005-flood",
+      "kind": "flood",
+      "file": "flood.wav",
+      "start": 313.92,
+      "end": 316.92,
+      "gain": 0.45,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "score-8",
+      "kind": "score",
+      "file": "score-response.wav",
+      "start": 333.21,
+      "end": 413.42,
+      "gain": 1,
+      "bus": "music",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "ambience-8",
+      "kind": "room",
+      "file": "room.wav",
+      "start": 333.21,
+      "end": 413.42,
+      "gain": 0.58,
+      "bus": "sfx",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "S08_VEX_001-carrier",
+      "kind": "intrusion",
+      "file": "intrusion.wav",
+      "start": 333.85999999999996,
+      "end": 335.15999999999997,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": -0.15,
+      "duck": true
+    },
+    {
+      "id": "S08_VEX_001-carrier-end",
+      "kind": "message",
+      "file": "message.wav",
+      "start": 340.17,
+      "end": 340.82,
+      "gain": 0.25,
+      "bus": "sfx",
+      "pan": 0.1,
+      "duck": true
+    },
+    {
+      "id": "S08_KERNEL_003-click",
+      "kind": "click",
+      "file": "click.wav",
+      "start": 347.21,
+      "end": 347.37,
+      "gain": 0.35,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S08_NARRATOR_005-contain",
+      "kind": "contain",
+      "file": "contain.wav",
+      "start": 364.51,
+      "end": 365.65999999999997,
+      "gain": 0.4,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    },
+    {
+      "id": "S08_VEX_006-carrier",
+      "kind": "intrusion",
+      "file": "intrusion.wav",
+      "start": 373.02,
+      "end": 374.32,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": -0.15,
+      "duck": true
+    },
+    {
+      "id": "S08_VEX_006-carrier-end",
+      "kind": "message",
+      "file": "message.wav",
+      "start": 375.49,
+      "end": 376.14,
+      "gain": 0.25,
+      "bus": "sfx",
+      "pan": 0.1,
+      "duck": true
+    },
+    {
+      "id": "final-gate-strain",
+      "kind": "gate",
+      "file": "gate.wav",
+      "start": 382.48,
+      "end": 384.08000000000004,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": -0.3,
+      "duck": true
+    },
+    {
+      "id": "last-tick-0",
+      "kind": "tick",
+      "file": "tick.wav",
+      "start": 382.48,
+      "end": 382.62,
+      "gain": 0.35,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": false
+    },
+    {
+      "id": "last-tick-1",
+      "kind": "tick",
+      "file": "tick.wav",
+      "start": 383.48,
+      "end": 383.62,
+      "gain": 0.37,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": false
+    },
+    {
+      "id": "last-tick-2",
+      "kind": "tick",
+      "file": "tick.wav",
+      "start": 384.48,
+      "end": 384.62,
+      "gain": 0.38999999999999996,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": false
+    },
+    {
+      "id": "last-tick-3",
+      "kind": "tick",
+      "file": "tick.wav",
+      "start": 385.48,
+      "end": 385.62,
+      "gain": 0.41,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": false
+    },
+    {
+      "id": "final-isolation",
+      "kind": "contain",
+      "file": "contain.wav",
+      "start": 385.88,
+      "end": 387.03,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": 0.3,
+      "duck": true
+    },
+    {
+      "id": "last-tick-4",
+      "kind": "tick",
+      "file": "tick.wav",
+      "start": 386.48,
+      "end": 386.62,
+      "gain": 0.43,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": false
+    },
+    {
+      "id": "last-tick-5",
+      "kind": "tick",
+      "file": "tick.wav",
+      "start": 387.48,
+      "end": 387.62,
+      "gain": 0.44999999999999996,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": false
+    },
+    {
+      "id": "last-tick-6",
+      "kind": "tick",
+      "file": "tick.wav",
+      "start": 388.48,
+      "end": 388.62,
+      "gain": 0.47,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": false
+    },
+    {
+      "id": "final-transfer",
+      "kind": "scan",
+      "file": "scan.wav",
+      "start": 389.48,
+      "end": 390.38,
+      "gain": 0.5,
+      "bus": "sfx",
+      "pan": 0.2,
+      "duck": true
+    },
+    {
+      "id": "last-tick-7",
+      "kind": "tick",
+      "file": "tick.wav",
+      "start": 389.48,
+      "end": 389.62,
+      "gain": 0.49,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": false
+    },
+    {
+      "id": "last-tick-8",
+      "kind": "tick",
+      "file": "tick.wav",
+      "start": 390.48,
+      "end": 390.62,
+      "gain": 0.51,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": false
+    },
+    {
+      "id": "last-tick-9",
+      "kind": "tick",
+      "file": "tick.wav",
+      "start": 391.48,
+      "end": 391.62,
+      "gain": 0.53,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": false
+    },
+    {
+      "id": "essential-services-restored",
+      "kind": "restore",
+      "file": "restore.wav",
+      "start": 392.48,
+      "end": 394.18,
+      "gain": 0.55,
+      "bus": "sfx",
+      "pan": 0.1,
+      "duck": true
+    },
+    {
+      "id": "S08_VEX_010-carrier",
+      "kind": "intrusion",
+      "file": "intrusion.wav",
+      "start": 401.40999999999997,
+      "end": 402.71,
+      "gain": 0.6,
+      "bus": "sfx",
+      "pan": -0.15,
+      "duck": true
+    },
+    {
+      "id": "S08_VEX_010-carrier-end",
+      "kind": "message",
+      "file": "message.wav",
+      "start": 404.24,
+      "end": 404.89,
+      "gain": 0.25,
+      "bus": "sfx",
+      "pan": 0.1,
+      "duck": true
+    },
+    {
+      "id": "score-9",
+      "kind": "score",
+      "file": "score-dawn.wav",
+      "start": 413.42,
+      "end": 474.92,
+      "gain": 1,
+      "bus": "music",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "ambience-9",
+      "kind": "dawn",
+      "file": "dawn.wav",
+      "start": 413.42,
+      "end": 474.92,
+      "gain": 0.58,
+      "bus": "sfx",
+      "loop": true,
+      "duck": true
+    },
+    {
+      "id": "S09_AXIOM_002-scan",
+      "kind": "scan",
+      "file": "scan.wav",
+      "start": 430.52000000000004,
+      "end": 431.42,
+      "gain": 0.2,
+      "bus": "sfx",
+      "pan": 0,
+      "duck": true
+    }
+  ]
+}

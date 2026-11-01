@@ -1,0 +1,52 @@
+{
+  "review_date": "2026-11-02",
+  "base_revision": "1d26f2f",
+  "revision_state": "uncommitted cinematic changes on rn/main-story-build-v1",
+  "unit_tests": {
+    "command": "npm test",
+    "passed": 15
+  },
+  "build": {
+    "command": "npm run build",
+    "typescript": "passed",
+    "vite": "passed"
+  },
+  "full_browser_suite": {
+    "command": "KG_FULL_PLAYBACK=1 npm run test:browser -- --workers=1",
+    "passed": 8,
+    "wall_minutes": 7.5,
+    "uninterrupted_story": {
+      "playback_rate": 1.25,
+      "reached_seconds": 473.56,
+      "observed_cues": 65,
+      "javascript_errors": 0
+    }
+  },
+  "focused_final_browser_suite": {
+    "command": "npm run test:browser -- tests/production.spec.ts --workers=1",
+    "passed": 5,
+    "includes_exact_voice_offsets": true
+  },
+  "visual_review": {
+    "shot_count": 92,
+    "contact_sheets": 6,
+    "final_rechecks": [
+      "S3_establish",
+      "S05_ELARA_003",
+      "S08_last10_standby"
+    ]
+  },
+  "audio_validation": {
+    "wav_files": 90,
+    "ffmpeg_decode_errors": 0,
+    "full_scale_samples": 0,
+    "waveform_review_flags": 16,
+    "human_listening_approved": false,
+    "default_mix_peak_before_compressor": 0.5150452256202698
+  },
+  "privacy": {
+    "private_media_in_build": false,
+    "audio_committed": false,
+    "deployed": false
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-11-02",
+  "tool": "image_gen.imagegen",
+  "note": "Detailed production illustrations. Original approved hero artwork retained without byte changes. Prompts for the four environments were not persisted by the first generation batch; descriptions are in the shot/asset report, not reconstructed verbatim.",
+  "assets": [
+    {
+      "name": "command-center",
+      "prompt": null,
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-5afab2ca-f8ef-4598-8223-244c2ba481be.png"
+    },
+    {
+      "name": "gateway",
+      "prompt": null,
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-0e6d3346-f441-4c96-82a0-7732f1366f94.png"
+    },
+    {
+      "name": "mira-apartment",
+      "prompt": null,
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-db447e21-1569-4085-900a-5196a8bbc84e.png"
+    },
+    {
+      "name": "city-dawn",
+      "prompt": null,
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-1dccfb32-c4f8-4bfe-8da5-99bda3f29a0e.png"
+    },
+    {
+      "name": "vex-idle",
+      "prompt": "Use case: illustration-story. Asset: ONE independently exported high-resolution transparent character sprite, portrait canvas 1024x1536 or larger, genuine alpha. Vex Null: calculating masked antagonist with a completely featureless dark face, ONLY two glowing purple eyes (no visible human face), purple and magenta angular layered hood and glitch-edge cloak, dark detailed armored tactical clothing. Full body including boots, relaxed menacing stance, one hand partly concealed, looking threequarter toward viewer. Quiet intimidation, no grin. Match ONLY the identity and costume in the attached approved supporting-cast reference boards. Premium detailed comic illustration matching Kernel Guardians: confident black linework, detailed anatomy and fabric, fine halftone and rich cel-shaded color, subtle cyan/gold/magenta rim light. The figure must fill 85-90% canvas height with complete silhouette and 6% clear alpha margin. A SINGLE figure, no duplicated poses, no sheet, no text, no framing, no setting, no floor or cast shadow. Do not bake labels or make flat/vector artwork; maintain high fine-detail illustration quality at 800px on-screen height. Clean separated alpha edges, no low-opacity confetti beyond silhouette.",
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-c1890035-1e57-49b0-8cee-70ef1beb3cf2.png"
+    },
+    {
+      "name": "mira-worried",
+      "prompt": "Use case: illustration-story. Asset: ONE independently exported high-resolution transparent character sprite, portrait canvas 1024x1536 or larger, genuine alpha. Mira Vale: recognizable red-haired bespectacled civilian in white coat with teal seams over dark underlayer. Full body including boots, holds a personal tablet close to chest, worried and vulnerable but dignified, tense shoulders, eyes toward the viewer's right, anxious mouth. NOT cheerful, NOT smiling. Exactly the redhair glasses face costume from approved boards. Match ONLY the identity and costume in the attached approved supporting-cast reference boards. Premium detailed comic illustration matching Kernel Guardians: confident black linework, detailed anatomy and fabric, fine halftone and rich cel-shaded color, subtle cyan/gold/magenta rim light. The figure must fill 85-90% canvas height with complete silhouette and 6% clear alpha margin. A SINGLE figure, no duplicated poses, no sheet, no text, no framing, no setting, no floor or cast shadow. Do not bake labels or make flat/vector artwork; maintain high fine-detail illustration quality at 800px on-screen height. Clean separated alpha edges, no low-opacity confetti beyond silhouette.",
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-ea38fe68-9ea2-4370-a395-93ce2cecdf7f.png"
+    },
+    {
+      "name": "elara-recording",
+      "prompt": "Use case: illustration-story. Asset: ONE independently exported high-resolution transparent character sprite, portrait canvas 1024x1536 or larger, genuine alpha. Dr Elara Trace: recognizable dark-haired researcher with hair tied back in a loose bun, black tactical/research jumpsuit with gold-yellow seams, same face from board. Waist-up archival recording portrait looking at camera, one hand urgent open palm and other rests near console below frame, concerned serious expression, clearly alive during recording. Do NOT add screen/TV/scanlines; those will be layered separately. Match ONLY the identity and costume in the attached approved supporting-cast reference boards. Premium detailed comic illustration matching Kernel Guardians: confident black linework, detailed anatomy and fabric, fine halftone and rich cel-shaded color, subtle cyan/gold/magenta rim light. The figure must fill 85-90% canvas height with complete silhouette and 6% clear alpha margin. A SINGLE figure, no duplicated poses, no sheet, no text, no framing, no setting, no floor or cast shadow. Do not bake labels or make flat/vector artwork; maintain high fine-detail illustration quality at 800px on-screen height. Clean separated alpha edges, no low-opacity confetti beyond silhouette.",
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-5e92df68-2f6d-4501-93f4-5efb2670aac2.png"
+    },
+    {
+      "name": "axiom-idle",
+      "prompt": "Use case: illustration-story. Asset: ONE independently exported high-resolution transparent character sprite, portrait canvas 1024x1536 or larger, genuine alpha. Auditor Axiom: precise stern evaluator with short blond hair and black-and-gold formal tactical uniform with geometric gold crest from approved boards. Full body including boots, composed neutral posture with hands held behind back, head slightly threequarter toward left. Refined, authoritative, NOT a generic superhero and not a hero from the main cast. Match ONLY the identity and costume in the attached approved supporting-cast reference boards. Premium detailed comic illustration matching Kernel Guardians: confident black linework, detailed anatomy and fabric, fine halftone and rich cel-shaded color, subtle cyan/gold/magenta rim light. The figure must fill 85-90% canvas height with complete silhouette and 6% clear alpha margin. A SINGLE figure, no duplicated poses, no sheet, no text, no framing, no setting, no floor or cast shadow. Do not bake labels or make flat/vector artwork; maintain high fine-detail illustration quality at 800px on-screen height. Clean separated alpha edges, no low-opacity confetti beyond silhouette.",
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-d1189915-fba2-4d48-be2d-b3bbeeacc64b.png"
+    },
+    {
+      "name": "vex-command",
+      "prompt": "Use case: identity-preserve illustration-story. Create ONE pose variant of the supplied character, with a genuine transparent background, portrait 1024x1536. Same Vex Null character, same hood, cloak, armor, featureless dark face and purple eyes. Full body standing, controlled menacing gesture with one gloved hand extended toward the viewer as if taking control, shoulders composed, no yelling or cartoon expression. Preserve identity exactly. Detailed premium comic art, confident black inks, subtle fine halftone, intricate fabric/armor cel shading, navy/cyan/magenta/gold rim highlights consistent with input. Single character, complete silhouette with clear 5% margin, no sheet or multiple views, no text, no floor or setting, no big glow cloud, alpha outside silhouette. Do NOT simplify or switch to flat/vector style. This asset must remain sharp and detailed at 800px tall on screen.",
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-d83f1a91-d585-4086-8a17-170957f0eb5d.png"
+    },
+    {
+      "name": "mira-relieved",
+      "prompt": "Use case: identity-preserve illustration-story. Create ONE pose variant of the supplied character, with a genuine transparent background, portrait 1024x1536. Same Mira Vale character, red hair glasses white coat teal seams and dark underlayer. Full body, shoulders easing with cautious relief, tablet held at waist, small hopeful expression but NO broad comedy smile. Same head size, feet position and outfit as source. This is after essential service is restored but her files are still at risk. Preserve identity exactly. Detailed premium comic art, confident black inks, subtle fine halftone, intricate fabric/armor cel shading, navy/cyan/magenta/gold rim highlights consistent with input. Single character, complete silhouette with clear 5% margin, no sheet or multiple views, no text, no floor or setting, no big glow cloud, alpha outside silhouette. Do NOT simplify or switch to flat/vector style. This asset must remain sharp and detailed at 800px tall on screen.",
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-f0d55a69-6b9b-4170-9220-68fe8589859e.png"
+    },
+    {
+      "name": "elara-alert",
+      "prompt": "Use case: identity-preserve illustration-story. Create ONE pose variant of the supplied character, with a genuine transparent background, portrait 1024x1536. Same Dr Elara Trace face, tied-back dark hair, black research tactical suit with gold trim. Waist-up front-facing archival recording portrait, more focused/concerned expression, one hand pointing discreetly toward an offscreen console, urgent clear warning. No screen or scanline effect, no TV. Keep identical proportions and outfit. Preserve identity exactly. Detailed premium comic art, confident black inks, subtle fine halftone, intricate fabric/armor cel shading, navy/cyan/magenta/gold rim highlights consistent with input. Single character, complete silhouette with clear 5% margin, no sheet or multiple views, no text, no floor or setting, no big glow cloud, alpha outside silhouette. Do NOT simplify or switch to flat/vector style. This asset must remain sharp and detailed at 800px tall on screen.",
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-96b6753e-3234-4bd6-89e7-4cdda117eb67.png"
+    },
+    {
+      "name": "axiom-explain",
+      "prompt": "Use case: identity-preserve illustration-story. Create ONE pose variant of the supplied character, with a genuine transparent background, portrait 1024x1536. Same Auditor Axiom blond short hair black-and-gold evaluator uniform. Full body, composed measured expression, one gloved hand gesturing to the LEFT while the other holds a small dark tablet low, same face/outfit/head scale and baseline as source. Preserve identity exactly. Detailed premium comic art, confident black inks, subtle fine halftone, intricate fabric/armor cel shading, navy/cyan/magenta/gold rim highlights consistent with input. Single character, complete silhouette with clear 5% margin, no sheet or multiple views, no text, no floor or setting, no big glow cloud, alpha outside silhouette. Do NOT simplify or switch to flat/vector style. This asset must remain sharp and detailed at 800px tall on screen.",
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-4c43f9a4-e0f6-4655-ba48-7bbaf902a94a.png"
+    },
+    {
+      "name": "crt-television",
+      "prompt": "A single substantial vintage cathode ray television, front-facing orthographic view, wide 4:3 body. Thick charcoal/navy plastic housing with subtle warm bronze trim, convex dark glass screen taking LEFT 76% of front face, chunky speaker grille and two tuning dials on RIGHT 20%, physical power button with tiny amber light, vents and carefully inked wear. Screen is a blank nearly black clean rectangle, no picture/text/characters/static baked in. Entire TV including casing, feet and small carrying handle fully within canvas, clear alpha margins. Genuine transparent background and no room or floor. Premium detailed Kernel Guardians comic art: black linework, fine halftone, cel-shaded rich textures, cyan magenta reflected edges. Not flat icon or CSS-looking rectangle. This is a practical prop that will hold an independently animated portrait. Landscape canvas 1536x1024.",
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-e9080df4-55f6-45ce-9513-79dffd904e14.png"
+    },
+    {
+      "name": "citizen",
+      "prompt": "One ordinary OS City civilian woman, short dark bob hair, modern teal jacket over navy tunic and trousers, messenger bag, practical shoes. Full body, attentive slightly worried posture looking right while holding a closed data tablet at her side. Not a hero, not armored, clearly a background citizen with grounded ordinary proportions, no resemblance to the main supporting cast. Single separate figure on genuinely transparent background, no floor, words, framing, sheet or large glow. Premium detailed comic ink and rich cel shading matching reference city, fine halftone and cyan/gold rim highlights. Portrait 1024x1536 complete shoes/head, 8% alpha margins.",
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-21e5c5aa-2a5d-4dee-8533-bed6eb9e8cb9.png"
+    },
+    {
+      "name": "technician",
+      "prompt": "One ordinary OS City maintenance technician man with warm brown skin, short curly black hair, navy utility jumpsuit with orange safety seams, small tool belt, gloves and work boots. Full body standing slightly threequarter left with a handheld repair device, calm focused posture. NOT a superhero or generic silhouette; believable silent background worker. Genuinely transparent background, single figure, no scene/floor/words or multiple poses. Premium detailed comic linework and fine halftone, celshaded material detail, cyan/magenta/gold rim highlights consistent with reference city. Portrait 1024x1536 complete head and feet with 8% transparent margins.",
+      "sourceImage": "C:\\Users\\roshw\\.codex\\generated_images\\01a1963e-0631-7c81-bf6f-0843464a80d6\\exec-ce39b5c6-8d89-4e31-9111-dccdea85f3d6.png"
+    }
+  ],
+  "approved_references": [
+    {
+      "file": "kg-master-handoff\\reference-images\\new_cast_approved_ref_01.png",
+      "sha256": "831692890d0c6fa718972a70c87f0c149d42bb0b7015c15b5451dd0c23046d05"
+    },
+    {
+      "file": "kg-master-handoff\\reference-images\\new_cast_approved_ref_02.png",
+      "sha256": "a62827b7011c6e309958561122a05097245eea0f0bfd06aec82360654dfe8ecb"
+    },
+    {
+      "file": "kg-master-handoff\\reference-images\\new_cast_approved_ref_03.png",
+      "sha256": "ad34d0a2c3a376c9a8ab5c551204e237dec1b881eb0a93760a940f0e1dac5ac8"
+    }
+  ]
+}

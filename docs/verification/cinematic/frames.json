@@ -1,0 +1,833 @@
+{
+  "errors": [],
+  "frames": [
+    {
+      "index": 1,
+      "time": 1.5,
+      "shot": "S1_establish",
+      "framing": "city",
+      "location": "city",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/001-S1_establish.png"
+    },
+    {
+      "index": 2,
+      "time": 7.125,
+      "shot": "S01_NARRATOR_001",
+      "framing": "city",
+      "location": "city",
+      "cue": "S01_NARRATOR_001",
+      "file": "docs/verification/cinematic/frames/002-S01_NARRATOR_001.png"
+    },
+    {
+      "index": 3,
+      "time": 13.4,
+      "shot": "S01_VEX_002",
+      "framing": "broadcast",
+      "location": "city",
+      "cue": "S01_VEX_002",
+      "file": "docs/verification/cinematic/frames/003-S01_VEX_002.png"
+    },
+    {
+      "index": 4,
+      "time": 16.15,
+      "shot": "S2_establish",
+      "framing": "wide",
+      "location": "command",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/004-S2_establish.png"
+    },
+    {
+      "index": 5,
+      "time": 18.95,
+      "shot": "S02_KERNEL_001",
+      "framing": "two-shot",
+      "location": "command",
+      "cue": "S02_KERNEL_001",
+      "file": "docs/verification/cinematic/frames/005-S02_KERNEL_001.png"
+    },
+    {
+      "index": 6,
+      "time": 23.13,
+      "shot": "S02_FIREWALL_002",
+      "framing": "split",
+      "location": "command",
+      "cue": "S02_FIREWALL_002",
+      "file": "docs/verification/cinematic/frames/006-S02_FIREWALL_002.png"
+    },
+    {
+      "index": 7,
+      "time": 28.35,
+      "shot": "S02_PATCH_003",
+      "framing": "wide",
+      "location": "command",
+      "cue": "S02_PATCH_003",
+      "file": "docs/verification/cinematic/frames/007-S02_PATCH_003.png"
+    },
+    {
+      "index": 8,
+      "time": 32.3,
+      "shot": "S02_KERNEL_004",
+      "framing": "close",
+      "location": "command",
+      "cue": "S02_KERNEL_004",
+      "file": "docs/verification/cinematic/frames/008-S02_KERNEL_004.png"
+    },
+    {
+      "index": 9,
+      "time": 35.516,
+      "shot": "S02_PATCH_005_a",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S02_PATCH_005",
+      "file": "docs/verification/cinematic/frames/009-S02_PATCH_005_a.png"
+    },
+    {
+      "index": 10,
+      "time": 40.456,
+      "shot": "S02_PATCH_005_b",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S02_PATCH_005",
+      "file": "docs/verification/cinematic/frames/010-S02_PATCH_005_b.png"
+    },
+    {
+      "index": 11,
+      "time": 45.625,
+      "shot": "S02_NARRATOR_006_a",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S02_NARRATOR_006",
+      "file": "docs/verification/cinematic/frames/011-S02_NARRATOR_006_a.png"
+    },
+    {
+      "index": 12,
+      "time": 51.085,
+      "shot": "S02_NARRATOR_006_b",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S02_NARRATOR_006",
+      "file": "docs/verification/cinematic/frames/012-S02_NARRATOR_006_b.png"
+    },
+    {
+      "index": 13,
+      "time": 55.74,
+      "shot": "S02_VEX_007",
+      "framing": "broadcast",
+      "location": "command",
+      "cue": "S02_VEX_007",
+      "file": "docs/verification/cinematic/frames/013-S02_VEX_007.png"
+    },
+    {
+      "index": 14,
+      "time": 59.865,
+      "shot": "S02_KERNEL_008",
+      "framing": "wide",
+      "location": "command",
+      "cue": "S02_KERNEL_008",
+      "file": "docs/verification/cinematic/frames/014-S02_KERNEL_008.png"
+    },
+    {
+      "index": 15,
+      "time": 62.81,
+      "shot": "S3_establish",
+      "framing": "wide",
+      "location": "street",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/015-S3_establish.png"
+    },
+    {
+      "index": 16,
+      "time": 66.36,
+      "shot": "S03_MIRA_001",
+      "framing": "split",
+      "location": "street",
+      "cue": "S03_MIRA_001",
+      "file": "docs/verification/cinematic/frames/016-S03_MIRA_001.png"
+    },
+    {
+      "index": 17,
+      "time": 71.677,
+      "shot": "S03_PATCH_002_a",
+      "framing": "insert",
+      "location": "street",
+      "cue": "S03_PATCH_002",
+      "file": "docs/verification/cinematic/frames/017-S03_PATCH_002_a.png"
+    },
+    {
+      "index": 18,
+      "time": 76.817,
+      "shot": "S03_PATCH_002_b",
+      "framing": "insert",
+      "location": "street",
+      "cue": "S03_PATCH_002",
+      "file": "docs/verification/cinematic/frames/018-S03_PATCH_002_b.png"
+    },
+    {
+      "index": 19,
+      "time": 81.28,
+      "shot": "S03_VEX_003",
+      "framing": "broadcast",
+      "location": "street",
+      "cue": "S03_VEX_003",
+      "file": "docs/verification/cinematic/frames/019-S03_VEX_003.png"
+    },
+    {
+      "index": 20,
+      "time": 84.94,
+      "shot": "S03_KERNEL_004",
+      "framing": "close",
+      "location": "street",
+      "cue": "S03_KERNEL_004",
+      "file": "docs/verification/cinematic/frames/020-S03_KERNEL_004.png"
+    },
+    {
+      "index": 21,
+      "time": 89.454,
+      "shot": "S03_NARRATOR_005_a",
+      "framing": "insert",
+      "location": "street",
+      "cue": "S03_NARRATOR_005",
+      "file": "docs/verification/cinematic/frames/021-S03_NARRATOR_005_a.png"
+    },
+    {
+      "index": 22,
+      "time": 94.834,
+      "shot": "S03_NARRATOR_005_b",
+      "framing": "insert",
+      "location": "street",
+      "cue": "S03_NARRATOR_005",
+      "file": "docs/verification/cinematic/frames/022-S03_NARRATOR_005_b.png"
+    },
+    {
+      "index": 23,
+      "time": 101.37,
+      "shot": "S03_PATCH_006",
+      "framing": "insert",
+      "location": "street",
+      "cue": "S03_PATCH_006",
+      "file": "docs/verification/cinematic/frames/023-S03_PATCH_006.png"
+    },
+    {
+      "index": 24,
+      "time": 107.331,
+      "shot": "S03_PATCH_007_a",
+      "framing": "insert",
+      "location": "street",
+      "cue": "S03_PATCH_007",
+      "file": "docs/verification/cinematic/frames/024-S03_PATCH_007_a.png"
+    },
+    {
+      "index": 25,
+      "time": 111.741,
+      "shot": "S03_PATCH_007_b",
+      "framing": "insert",
+      "location": "street",
+      "cue": "S03_PATCH_007",
+      "file": "docs/verification/cinematic/frames/025-S03_PATCH_007_b.png"
+    },
+    {
+      "index": 26,
+      "time": 117.93,
+      "shot": "S03_KERNEL_008",
+      "framing": "wide",
+      "location": "street",
+      "cue": "S03_KERNEL_008",
+      "file": "docs/verification/cinematic/frames/026-S03_KERNEL_008.png"
+    },
+    {
+      "index": 27,
+      "time": 122.52,
+      "shot": "S4_establish",
+      "framing": "wide",
+      "location": "gateway",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/027-S4_establish.png"
+    },
+    {
+      "index": 28,
+      "time": 127,
+      "shot": "S04_PATCH_001",
+      "framing": "insert",
+      "location": "gateway",
+      "cue": "S04_PATCH_001",
+      "file": "docs/verification/cinematic/frames/028-S04_PATCH_001.png"
+    },
+    {
+      "index": 29,
+      "time": 132.88,
+      "shot": "S04_KERNEL_002",
+      "framing": "split",
+      "location": "gateway",
+      "cue": "S04_KERNEL_002",
+      "file": "docs/verification/cinematic/frames/029-S04_KERNEL_002.png"
+    },
+    {
+      "index": 30,
+      "time": 137.122,
+      "shot": "S04_NARRATOR_003_a",
+      "framing": "insert",
+      "location": "gateway",
+      "cue": "S04_NARRATOR_003",
+      "file": "docs/verification/cinematic/frames/030-S04_NARRATOR_003_a.png"
+    },
+    {
+      "index": 31,
+      "time": 141.442,
+      "shot": "S04_NARRATOR_003_b",
+      "framing": "insert",
+      "location": "gateway",
+      "cue": "S04_NARRATOR_003",
+      "file": "docs/verification/cinematic/frames/031-S04_NARRATOR_003_b.png"
+    },
+    {
+      "index": 32,
+      "time": 145.98,
+      "shot": "S04_VEX_004",
+      "framing": "broadcast",
+      "location": "gateway",
+      "cue": "S04_VEX_004",
+      "file": "docs/verification/cinematic/frames/032-S04_VEX_004.png"
+    },
+    {
+      "index": 33,
+      "time": 150.33,
+      "shot": "S04_FIREWALL_005",
+      "framing": "close",
+      "location": "gateway",
+      "cue": "S04_FIREWALL_005",
+      "file": "docs/verification/cinematic/frames/033-S04_FIREWALL_005.png"
+    },
+    {
+      "index": 34,
+      "time": 156.165,
+      "shot": "S04_PATCH_006",
+      "framing": "split",
+      "location": "gateway",
+      "cue": "S04_PATCH_006",
+      "file": "docs/verification/cinematic/frames/034-S04_PATCH_006.png"
+    },
+    {
+      "index": 35,
+      "time": 162.15,
+      "shot": "S04_FIREWALL_007",
+      "framing": "close",
+      "location": "gateway",
+      "cue": "S04_FIREWALL_007",
+      "file": "docs/verification/cinematic/frames/035-S04_FIREWALL_007.png"
+    },
+    {
+      "index": 36,
+      "time": 167.306,
+      "shot": "S04_NARRATOR_008_a",
+      "framing": "insert",
+      "location": "gateway",
+      "cue": "S04_NARRATOR_008",
+      "file": "docs/verification/cinematic/frames/036-S04_NARRATOR_008_a.png"
+    },
+    {
+      "index": 37,
+      "time": 173.306,
+      "shot": "S04_NARRATOR_008_b",
+      "framing": "insert",
+      "location": "gateway",
+      "cue": "S04_NARRATOR_008",
+      "file": "docs/verification/cinematic/frames/037-S04_NARRATOR_008_b.png"
+    },
+    {
+      "index": 38,
+      "time": 179.93,
+      "shot": "S04_KERNEL_009",
+      "framing": "split",
+      "location": "gateway",
+      "cue": "S04_KERNEL_009",
+      "file": "docs/verification/cinematic/frames/038-S04_KERNEL_009.png"
+    },
+    {
+      "index": 39,
+      "time": 184.37,
+      "shot": "S5_establish",
+      "framing": "wide",
+      "location": "apartment",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/039-S5_establish.png"
+    },
+    {
+      "index": 40,
+      "time": 189.345,
+      "shot": "S05_MIRA_001",
+      "framing": "close",
+      "location": "apartment",
+      "cue": "S05_MIRA_001",
+      "file": "docs/verification/cinematic/frames/040-S05_MIRA_001.png"
+    },
+    {
+      "index": 41,
+      "time": 196.315,
+      "shot": "S05_PATCH_002",
+      "framing": "split",
+      "location": "apartment",
+      "cue": "S05_PATCH_002",
+      "file": "docs/verification/cinematic/frames/041-S05_PATCH_002.png"
+    },
+    {
+      "index": 42,
+      "time": 203.87,
+      "shot": "S05_ELARA_003",
+      "framing": "crt",
+      "location": "apartment",
+      "cue": "S05_ELARA_003",
+      "file": "docs/verification/cinematic/frames/042-S05_ELARA_003.png"
+    },
+    {
+      "index": 43,
+      "time": 210.63,
+      "shot": "S05_KERNEL_004",
+      "framing": "split",
+      "location": "apartment",
+      "cue": "S05_KERNEL_004",
+      "file": "docs/verification/cinematic/frames/043-S05_KERNEL_004.png"
+    },
+    {
+      "index": 44,
+      "time": 216.44,
+      "shot": "S05_NARRATOR_005",
+      "framing": "wide",
+      "location": "apartment",
+      "cue": "S05_NARRATOR_005",
+      "file": "docs/verification/cinematic/frames/044-S05_NARRATOR_005.png"
+    },
+    {
+      "index": 45,
+      "time": 220.85,
+      "shot": "S6_establish",
+      "framing": "wide",
+      "location": "command",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/045-S6_establish.png"
+    },
+    {
+      "index": 46,
+      "time": 225.27,
+      "shot": "S06_PATCH_001",
+      "framing": "two-shot",
+      "location": "command",
+      "cue": "S06_PATCH_001",
+      "file": "docs/verification/cinematic/frames/046-S06_PATCH_001.png"
+    },
+    {
+      "index": 47,
+      "time": 231.69,
+      "shot": "S06_KERNEL_002",
+      "framing": "close",
+      "location": "command",
+      "cue": "S06_KERNEL_002",
+      "file": "docs/verification/cinematic/frames/047-S06_KERNEL_002.png"
+    },
+    {
+      "index": 48,
+      "time": 238.35,
+      "shot": "S06_PATCH_003",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S06_PATCH_003",
+      "file": "docs/verification/cinematic/frames/048-S06_PATCH_003.png"
+    },
+    {
+      "index": 49,
+      "time": 244.89,
+      "shot": "S06_NARRATOR_004",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S06_NARRATOR_004",
+      "file": "docs/verification/cinematic/frames/049-S06_NARRATOR_004.png"
+    },
+    {
+      "index": 50,
+      "time": 249.824,
+      "shot": "S06_PATCH_005_a",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S06_PATCH_005",
+      "file": "docs/verification/cinematic/frames/050-S06_PATCH_005_a.png"
+    },
+    {
+      "index": 51,
+      "time": 254.664,
+      "shot": "S06_PATCH_005_b",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S06_PATCH_005",
+      "file": "docs/verification/cinematic/frames/051-S06_PATCH_005_b.png"
+    },
+    {
+      "index": 52,
+      "time": 259.775,
+      "shot": "S06_FIREWALL_006",
+      "framing": "split",
+      "location": "command",
+      "cue": "S06_FIREWALL_006",
+      "file": "docs/verification/cinematic/frames/052-S06_FIREWALL_006.png"
+    },
+    {
+      "index": 53,
+      "time": 265.74,
+      "shot": "S06_PATCH_007",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S06_PATCH_007",
+      "file": "docs/verification/cinematic/frames/053-S06_PATCH_007.png"
+    },
+    {
+      "index": 54,
+      "time": 271.965,
+      "shot": "S06_KERNEL_008_a",
+      "framing": "wide",
+      "location": "command",
+      "cue": "S06_KERNEL_008",
+      "file": "docs/verification/cinematic/frames/054-S06_KERNEL_008_a.png"
+    },
+    {
+      "index": 55,
+      "time": 278.705,
+      "shot": "S06_KERNEL_008_b",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S06_KERNEL_008",
+      "file": "docs/verification/cinematic/frames/055-S06_KERNEL_008_b.png"
+    },
+    {
+      "index": 56,
+      "time": 283.26,
+      "shot": "S7_establish",
+      "framing": "wide",
+      "location": "gateway",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/056-S7_establish.png"
+    },
+    {
+      "index": 57,
+      "time": 287.42,
+      "shot": "S07_FIREWALL_001",
+      "framing": "wide",
+      "location": "gateway",
+      "cue": "S07_FIREWALL_001",
+      "file": "docs/verification/cinematic/frames/057-S07_FIREWALL_001.png"
+    },
+    {
+      "index": 58,
+      "time": 294.02,
+      "shot": "S07_PATCH_002",
+      "framing": "split",
+      "location": "gateway",
+      "cue": "S07_PATCH_002",
+      "file": "docs/verification/cinematic/frames/058-S07_PATCH_002.png"
+    },
+    {
+      "index": 59,
+      "time": 299.85,
+      "shot": "S07_FIREWALL_003_a",
+      "framing": "insert",
+      "location": "gateway",
+      "cue": "S07_FIREWALL_003",
+      "file": "docs/verification/cinematic/frames/059-S07_FIREWALL_003_a.png"
+    },
+    {
+      "index": 60,
+      "time": 304.95,
+      "shot": "S07_FIREWALL_003_b",
+      "framing": "insert",
+      "location": "gateway",
+      "cue": "S07_FIREWALL_003",
+      "file": "docs/verification/cinematic/frames/060-S07_FIREWALL_003_b.png"
+    },
+    {
+      "index": 61,
+      "time": 309.71,
+      "shot": "S07_VEX_004",
+      "framing": "broadcast",
+      "location": "gateway",
+      "cue": "S07_VEX_004",
+      "file": "docs/verification/cinematic/frames/061-S07_VEX_004.png"
+    },
+    {
+      "index": 62,
+      "time": 314.394,
+      "shot": "S07_FIREWALL_005_a",
+      "framing": "close",
+      "location": "gateway",
+      "cue": "S07_FIREWALL_005",
+      "file": "docs/verification/cinematic/frames/062-S07_FIREWALL_005_a.png"
+    },
+    {
+      "index": 63,
+      "time": 319.249,
+      "shot": "S07_FIREWALL_005_b",
+      "framing": "insert",
+      "location": "gateway",
+      "cue": "S07_FIREWALL_005",
+      "file": "docs/verification/cinematic/frames/063-S07_FIREWALL_005_b.png"
+    },
+    {
+      "index": 64,
+      "time": 324.53,
+      "shot": "S07_PATCH_006",
+      "framing": "split",
+      "location": "gateway",
+      "cue": "S07_PATCH_006",
+      "file": "docs/verification/cinematic/frames/064-S07_PATCH_006.png"
+    },
+    {
+      "index": 65,
+      "time": 329.62,
+      "shot": "S07_FIREWALL_007",
+      "framing": "wide",
+      "location": "gateway",
+      "cue": "S07_FIREWALL_007",
+      "file": "docs/verification/cinematic/frames/065-S07_FIREWALL_007.png"
+    },
+    {
+      "index": 66,
+      "time": 332.35,
+      "shot": "S8_establish",
+      "framing": "wide",
+      "location": "command",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/066-S8_establish.png"
+    },
+    {
+      "index": 67,
+      "time": 335.95,
+      "shot": "S08_VEX_001",
+      "framing": "broadcast",
+      "location": "command",
+      "cue": "S08_VEX_001",
+      "file": "docs/verification/cinematic/frames/067-S08_VEX_001.png"
+    },
+    {
+      "index": 68,
+      "time": 341.95,
+      "shot": "S08_PATCH_002",
+      "framing": "two-shot",
+      "location": "command",
+      "cue": "S08_PATCH_002",
+      "file": "docs/verification/cinematic/frames/068-S08_PATCH_002.png"
+    },
+    {
+      "index": 69,
+      "time": 347.824,
+      "shot": "S08_KERNEL_003_a",
+      "framing": "wide",
+      "location": "command",
+      "cue": "S08_KERNEL_003",
+      "file": "docs/verification/cinematic/frames/069-S08_KERNEL_003_a.png"
+    },
+    {
+      "index": 70,
+      "time": 353.664,
+      "shot": "S08_KERNEL_003_b",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S08_KERNEL_003",
+      "file": "docs/verification/cinematic/frames/070-S08_KERNEL_003_b.png"
+    },
+    {
+      "index": 71,
+      "time": 358.59,
+      "shot": "S08_FIREWALL_004",
+      "framing": "close",
+      "location": "gateway",
+      "cue": "S08_FIREWALL_004",
+      "file": "docs/verification/cinematic/frames/071-S08_FIREWALL_004.png"
+    },
+    {
+      "index": 72,
+      "time": 363.5,
+      "shot": "S08_NARRATOR_005_a",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S08_NARRATOR_005",
+      "file": "docs/verification/cinematic/frames/072-S08_NARRATOR_005_a.png"
+    },
+    {
+      "index": 73,
+      "time": 369.18,
+      "shot": "S08_NARRATOR_005_b",
+      "framing": "insert",
+      "location": "command",
+      "cue": "S08_NARRATOR_005",
+      "file": "docs/verification/cinematic/frames/073-S08_NARRATOR_005_b.png"
+    },
+    {
+      "index": 74,
+      "time": 373.245,
+      "shot": "S08_VEX_006",
+      "framing": "broadcast",
+      "location": "command",
+      "cue": "S08_VEX_006",
+      "file": "docs/verification/cinematic/frames/074-S08_VEX_006.png"
+    },
+    {
+      "index": 75,
+      "time": 377.8,
+      "shot": "S08_PATCH_007",
+      "framing": "close",
+      "location": "command",
+      "cue": "S08_PATCH_007",
+      "file": "docs/verification/cinematic/frames/075-S08_PATCH_007.png"
+    },
+    {
+      "index": 76,
+      "time": 382.72,
+      "shot": "S08_last10_gate",
+      "framing": "climax",
+      "location": "gateway",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/076-S08_last10_gate.png"
+    },
+    {
+      "index": 77,
+      "time": 386.12,
+      "shot": "S08_last10_service",
+      "framing": "climax",
+      "location": "command",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/077-S08_last10_service.png"
+    },
+    {
+      "index": 78,
+      "time": 389.52,
+      "shot": "S08_last10_standby",
+      "framing": "climax",
+      "location": "command",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/078-S08_last10_standby.png"
+    },
+    {
+      "index": 79,
+      "time": 392.595,
+      "shot": "S08_MIRA_008",
+      "framing": "split",
+      "location": "command",
+      "cue": "S08_MIRA_008",
+      "file": "docs/verification/cinematic/frames/079-S08_MIRA_008.png"
+    },
+    {
+      "index": 80,
+      "time": 397.235,
+      "shot": "S08_KERNEL_009",
+      "framing": "two-shot",
+      "location": "command",
+      "cue": "S08_KERNEL_009",
+      "file": "docs/verification/cinematic/frames/080-S08_KERNEL_009.png"
+    },
+    {
+      "index": 81,
+      "time": 401.965,
+      "shot": "S08_VEX_010",
+      "framing": "broadcast",
+      "location": "command",
+      "cue": "S08_VEX_010",
+      "file": "docs/verification/cinematic/frames/081-S08_VEX_010.png"
+    },
+    {
+      "index": 82,
+      "time": 405.41,
+      "shot": "S08_KERNEL_011",
+      "framing": "wide",
+      "location": "command",
+      "cue": "S08_KERNEL_011",
+      "file": "docs/verification/cinematic/frames/082-S08_KERNEL_011.png"
+    },
+    {
+      "index": 83,
+      "time": 409.675,
+      "shot": "S08_FIREWALL_012",
+      "framing": "split",
+      "location": "command",
+      "cue": "S08_FIREWALL_012",
+      "file": "docs/verification/cinematic/frames/083-S08_FIREWALL_012.png"
+    },
+    {
+      "index": 84,
+      "time": 413.06,
+      "shot": "S9_establish",
+      "framing": "wide",
+      "location": "dawn",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/084-S9_establish.png"
+    },
+    {
+      "index": 85,
+      "time": 417.898,
+      "shot": "S09_AXIOM_001_a",
+      "framing": "wide",
+      "location": "dawn",
+      "cue": "S09_AXIOM_001",
+      "file": "docs/verification/cinematic/frames/085-S09_AXIOM_001_a.png"
+    },
+    {
+      "index": 86,
+      "time": 425.398,
+      "shot": "S09_AXIOM_001_b",
+      "framing": "wide",
+      "location": "dawn",
+      "cue": "S09_AXIOM_001",
+      "file": "docs/verification/cinematic/frames/086-S09_AXIOM_001_b.png"
+    },
+    {
+      "index": 87,
+      "time": 435.027,
+      "shot": "S09_AXIOM_002_a",
+      "framing": "insert",
+      "location": "dawn",
+      "cue": "S09_AXIOM_002",
+      "file": "docs/verification/cinematic/frames/087-S09_AXIOM_002_a.png"
+    },
+    {
+      "index": 88,
+      "time": 446.622,
+      "shot": "S09_AXIOM_002_b",
+      "framing": "insert",
+      "location": "dawn",
+      "cue": "S09_AXIOM_002",
+      "file": "docs/verification/cinematic/frames/088-S09_AXIOM_002_b.png"
+    },
+    {
+      "index": 89,
+      "time": 454.89,
+      "shot": "S09_PATCH_003",
+      "framing": "two-shot",
+      "location": "dawn",
+      "cue": "S09_PATCH_003",
+      "file": "docs/verification/cinematic/frames/089-S09_PATCH_003.png"
+    },
+    {
+      "index": 90,
+      "time": 461.07,
+      "shot": "S09_NARRATOR_004",
+      "framing": "aftermath",
+      "location": "dawn",
+      "cue": "S09_NARRATOR_004",
+      "file": "docs/verification/cinematic/frames/090-S09_NARRATOR_004.png"
+    },
+    {
+      "index": 91,
+      "time": 465.845,
+      "shot": "S09_FIREWALL_005",
+      "framing": "close",
+      "location": "dawn",
+      "cue": "S09_FIREWALL_005",
+      "file": "docs/verification/cinematic/frames/091-S09_FIREWALL_005.png"
+    },
+    {
+      "index": 92,
+      "time": 470.32,
+      "shot": "S09_KERNEL_006",
+      "framing": "close",
+      "location": "dawn",
+      "cue": null,
+      "file": "docs/verification/cinematic/frames/092-S09_KERNEL_006.png"
+    }
+  ]
+}

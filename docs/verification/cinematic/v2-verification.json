@@ -1,0 +1,17 @@
+{
+  "branch": "rn/master-story-build-v2",
+  "cues": 66,
+  "shots": 93,
+  "duration": 474.92,
+  "unit_tests_passed": 15,
+  "focused_browser_checks_passed": 5,
+  "ffmpeg_validated_wavs": 91,
+  "clipped_samples": 0,
+  "private_audio_committed": false,
+  "changes": [
+    "Patch confirms Eight minutes before Firewall",
+    "remote feeds labeled by location",
+    "CRT present before archive discovery",
+    "older editions removed"
+  ]
+}

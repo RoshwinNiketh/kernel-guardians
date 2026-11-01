@@ -1,0 +1,666 @@
+{
+  "version": "1.0",
+  "script": "script/FINAL_LOCKED_SCREENPLAY.md",
+  "cues": [
+    {
+      "id": "S01_NARRATOR_001",
+      "scene": 1,
+      "character": "narrator",
+      "voice_preset": "Fraser",
+      "spoken_text": "OS City. Millions of processes, files and connections, all working together. Tonight, someone wants it to stop.",
+      "delivery": "warm, then ominous",
+      "output_relative": "audio/dialogue/S01_NARRATOR_001.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S01_VEX_002",
+      "scene": 1,
+      "character": "vex",
+      "voice_preset": "Reid",
+      "spoken_text": "Eight minutes until everything goes dark.",
+      "delivery": "through public broadcast, soft",
+      "output_relative": "audio/dialogue/S01_VEX_002.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S02_KERNEL_001",
+      "scene": 2,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "Patch, status report. How long until the attack reaches the core?",
+      "delivery": "serious",
+      "output_relative": "audio/dialogue/S02_KERNEL_001.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S02_PATCH_000",
+      "scene": 2,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "Eight minutes.",
+      "delivery": "brief, clear confirmation",
+      "output_relative": "audio/dialogue/S02_PATCH_000.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S02_FIREWALL_002",
+      "scene": 2,
+      "character": "firewall",
+      "voice_preset": "John",
+      "spoken_text": "Eight minutes? Perfect. I was just about to take a break.",
+      "delivery": "over comms, amused",
+      "output_relative": "audio/dialogue/S02_FIREWALL_002.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S02_PATCH_003",
+      "scene": 2,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "Commander, he is targeting the system itself. We need to protect three things: confidentiality, integrity and availability.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S02_PATCH_003.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S02_KERNEL_004",
+      "scene": 2,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "In plain language?",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S02_KERNEL_004.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S02_PATCH_005",
+      "scene": 2,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "Confidentiality means strangers cannot read private data. Integrity means nobody changes it without permission. Availability means legitimate users can still reach their services.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S02_PATCH_005.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S02_NARRATOR_006",
+      "scene": 2,
+      "character": "narrator",
+      "voice_preset": "Fraser",
+      "spoken_text": "A threat is a possible security violation. An attack is the attempt to make it happen. Stolen information, altered records and denied services are different ways to break trust.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S02_NARRATOR_006.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S02_VEX_007",
+      "scene": 2,
+      "character": "vex",
+      "voice_preset": "Reid",
+      "spoken_text": "Why choose one, Commander? I'll take all three.",
+      "delivery": "interrupting",
+      "output_relative": "audio/dialogue/S02_VEX_007.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S02_KERNEL_008",
+      "scene": 2,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "Patch, trace that signal. Firewall, watch the entrances.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S02_KERNEL_008.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S03_MIRA_001",
+      "scene": 3,
+      "character": "mira",
+      "voice_preset": "Ginger",
+      "spoken_text": "A system helper asked me to update. I clicked it, and my files started disappearing!",
+      "delivery": "over emergency call",
+      "output_relative": "audio/dialogue/S03_MIRA_001.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S03_PATCH_002",
+      "scene": 3,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "That was a Trojan horse: a program that looks useful but secretly abuses the access you give it. The update installed spyware to collect information and a hidden trapdoor for later access.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S03_PATCH_002.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S03_VEX_003",
+      "scene": 3,
+      "character": "vex",
+      "voice_preset": "Reid",
+      "spoken_text": "Such polite citizens. They open the door themselves.",
+      "delivery": "amused",
+      "output_relative": "audio/dialogue/S03_VEX_003.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S03_KERNEL_004",
+      "scene": 3,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "An invitation to one room isn't permission to own the building.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S03_KERNEL_004.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S03_NARRATOR_005",
+      "scene": 3,
+      "character": "narrator",
+      "voice_preset": "Fraser",
+      "spoken_text": "Malware can steal data, corrupt programs or lock files. Ransomware encrypts files and demands payment. A logic bomb waits for a trigger before acting.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S03_NARRATOR_005.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S03_PATCH_006",
+      "scene": 3,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "And that's a virus: code that attaches to a host program and can spread when the infected program runs. It isn't the same as a standalone worm.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S03_PATCH_006.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S03_PATCH_007",
+      "scene": 3,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "There's another weakness: unchecked input can overflow a buffer and corrupt memory. If exploitable, that can let malicious code take control of a process.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S03_PATCH_007.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S03_KERNEL_008",
+      "scene": 3,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "Then we limit every program to the permissions it actually needs. First, contain that Trojan.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S03_KERNEL_008.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S04_PATCH_001",
+      "scene": 4,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "The attacker scanned our ports to find listening services. Now a worm is exploiting a vulnerable network service and copying itself between machines.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S04_PATCH_001.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S04_KERNEL_002",
+      "scene": 4,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "Unlike that virus, the worm doesn't need to hide inside another program.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S04_KERNEL_002.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S04_NARRATOR_003",
+      "scene": 4,
+      "character": "narrator",
+      "voice_preset": "Fraser",
+      "spoken_text": "A worm is a standalone, self-propagating program. Port scanning can be legitimate testing, but attackers use it to discover exposed services.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S04_NARRATOR_003.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S04_VEX_004",
+      "scene": 4,
+      "character": "vex",
+      "voice_preset": "Reid",
+      "spoken_text": "And those machines are no longer taking orders from their owners.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S04_VEX_004.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S04_FIREWALL_005",
+      "scene": 4,
+      "character": "firewall",
+      "voice_preset": "John",
+      "spoken_text": "Wow. Busy night. Did everyone decide to visit at once?",
+      "delivery": "lightly",
+      "output_relative": "audio/dialogue/S04_FIREWALL_005.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S04_PATCH_006",
+      "scene": 4,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "It's a botnet. Thousands of compromised systems sending traffic together. A distributed denial-of-service attack is overwhelming our service.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S04_PATCH_006.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S04_FIREWALL_007",
+      "scene": 4,
+      "character": "firewall",
+      "voice_preset": "John",
+      "spoken_text": "Right. That's not a crowd. That's a flood.",
+      "delivery": "tone changes",
+      "output_relative": "audio/dialogue/S04_FIREWALL_007.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S04_NARRATOR_008",
+      "scene": 4,
+      "character": "narrator",
+      "voice_preset": "Fraser",
+      "spoken_text": "Attackers may also masquerade as trusted users, replay captured messages, intercept communications or hijack sessions. A network address alone is not proof of identity.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S04_NARRATOR_008.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S04_KERNEL_009",
+      "scene": 4,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "Keep the public service separated from critical systems. We cannot let a traffic flood become a citywide collapse.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S04_KERNEL_009.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S05_MIRA_001",
+      "scene": 5,
+      "character": "mira",
+      "voice_preset": "Ginger",
+      "spoken_text": "My documents are locked. The emergency portal won't load. I thought it was just an update. How could one click do this?",
+      "delivery": "holding back tears",
+      "output_relative": "audio/dialogue/S05_MIRA_001.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S05_PATCH_002",
+      "scene": 5,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "You were deceived. But the system should also limit how much damage one program can cause.",
+      "delivery": "gently",
+      "output_relative": "audio/dialogue/S05_PATCH_002.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S05_ELARA_003",
+      "scene": 5,
+      "character": "elara",
+      "voice_preset": "Talia",
+      "spoken_text": "If you're watching this, check the trusted update service. I found a hidden maintenance task opening a backdoor. My alerts vanished before I could report it.",
+      "delivery": "recording; filtered, with brief static",
+      "output_relative": "audio/dialogue/S05_ELARA_003.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S05_KERNEL_004",
+      "scene": 5,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "So it wasn't only the fake update. Someone exploited the trust behind it.",
+      "delivery": "quiet",
+      "output_relative": "audio/dialogue/S05_KERNEL_004.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S05_NARRATOR_005",
+      "scene": 5,
+      "character": "narrator",
+      "voice_preset": "Fraser",
+      "spoken_text": "Security fails at its weakest link: people, programs, operating systems and networks must all be considered.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S05_NARRATOR_005.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S06_PATCH_001",
+      "scene": 6,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "Elara's clue fits the audit logs. Our security policy says who may access the vault. The compromised update service has permissions it shouldn't need.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S06_PATCH_001.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S06_KERNEL_002",
+      "scene": 6,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "And a vulnerability assessment tells us where the real system falls short of that policy.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S06_KERNEL_002.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S06_PATCH_003",
+      "scene": 6,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "Exactly. Isolate infected hosts. Disable the exposed service. Revoke the stolen credentials, patch the flaw, and enforce least privilege.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S06_PATCH_003.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S06_NARRATOR_004",
+      "scene": 6,
+      "character": "narrator",
+      "voice_preset": "Fraser",
+      "spoken_text": "Defense in depth uses several controls, because no single defense is perfect.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S06_NARRATOR_004.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S06_PATCH_005",
+      "scene": 6,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "Our intrusion detection system has two approaches: signatures recognize known attack patterns; anomaly detection flags unusual behavior, including some previously unseen attacks.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S06_PATCH_005.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S06_FIREWALL_006",
+      "scene": 6,
+      "character": "firewall",
+      "voice_preset": "John",
+      "spoken_text": "And sometimes it screams at a perfectly innocent packet. Charming personality.",
+      "delivery": "over comms",
+      "output_relative": "audio/dialogue/S06_FIREWALL_006.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S06_PATCH_007",
+      "scene": 6,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "That's a false positive. Missing a real attack is a false negative. Alerts need investigation, not blind trust.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S06_PATCH_007.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S06_KERNEL_008",
+      "scene": 6,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "Antivirus scans, sandboxing, logging and audits help us detect and contain threats. Clean, protected backups help us recover. No magic fix. Just layers that work together.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S06_KERNEL_008.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S07_FIREWALL_001",
+      "scene": 7,
+      "character": "firewall",
+      "voice_preset": "John",
+      "spoken_text": "Welcome to my gate. I check traffic against the rules: allowed through, everyone else gets the scenic route home.",
+      "delivery": "grinning",
+      "output_relative": "audio/dialogue/S07_FIREWALL_001.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S07_PATCH_002",
+      "scene": 7,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "A network firewall separates trusted and untrusted networks. A personal firewall controls traffic on an individual computer.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S07_PATCH_002.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S07_FIREWALL_003",
+      "scene": 7,
+      "character": "firewall",
+      "voice_preset": "John",
+      "spoken_text": "Application proxies can understand specific protocols, and system-call filters can restrict what operations programs request. Different tools, different jobs.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S07_FIREWALL_003.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S07_VEX_004",
+      "scene": 7,
+      "character": "vex",
+      "voice_preset": "Reid",
+      "spoken_text": "And what if my attack travels inside a connection you already allow?",
+      "delivery": "over the intercom",
+      "output_relative": "audio/dialogue/S07_VEX_004.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S07_FIREWALL_005",
+      "scene": 7,
+      "character": "firewall",
+      "voice_preset": "John",
+      "spoken_text": "Then my rules might not recognize the danger. Tunneling and spoofing can complicate filtering. I can't promise to stop every malicious action just because it crosses my gate.",
+      "delivery": "drops the joke",
+      "output_relative": "audio/dialogue/S07_FIREWALL_005.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S07_PATCH_006",
+      "scene": 7,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "That's why the internal systems need their own defenses. Keep the critical vault segmented while I close the backdoor.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S07_PATCH_006.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S07_FIREWALL_007",
+      "scene": 7,
+      "character": "firewall",
+      "voice_preset": "John",
+      "spoken_text": "Consider it done. Gate is holding. For now.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S07_FIREWALL_007.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_VEX_001",
+      "scene": 8,
+      "character": "vex",
+      "voice_preset": "Reid",
+      "spoken_text": "You're blocking packets while my code is already inside. The clock doesn't care how brave you are.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S08_VEX_001.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_PATCH_002",
+      "scene": 8,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "He is right about one thing. The backdoor runs through the trusted update process. Firewall can't repair that from outside.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S08_PATCH_002.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_KERNEL_003",
+      "scene": 8,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "Then we repair it from inside. Patch, isolate and disable the compromised service. Rotate the stolen credentials. Firewall, maintain the boundary and throttle the flood upstream where possible.",
+      "delivery": "focused",
+      "output_relative": "audio/dialogue/S08_KERNEL_003.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_FIREWALL_004",
+      "scene": 8,
+      "character": "firewall",
+      "voice_preset": "John",
+      "spoken_text": "On it. And for the record, I was really looking forward to that break.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S08_FIREWALL_004.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_NARRATOR_005",
+      "scene": 8,
+      "character": "narrator",
+      "voice_preset": "Fraser",
+      "spoken_text": "The team contains the infected machines, closes the unauthorized access path and coordinates traffic defenses with the network operator. Meanwhile, verified clean backups are readied for recovery.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S08_NARRATOR_005.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_VEX_006",
+      "scene": 8,
+      "character": "vex",
+      "voice_preset": "Reid",
+      "spoken_text": "You can't reverse everything I've done!",
+      "delivery": "losing patience",
+      "output_relative": "audio/dialogue/S08_VEX_006.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_PATCH_007",
+      "scene": 8,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "Not instantly. But we can stop the damage, investigate it, and restore what we can from clean backups.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S08_PATCH_007.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_MIRA_008",
+      "scene": 8,
+      "character": "mira",
+      "voice_preset": "Ginger",
+      "spoken_text": "The portal's back. And my files?",
+      "delivery": "relieved",
+      "output_relative": "audio/dialogue/S08_MIRA_008.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_KERNEL_009",
+      "scene": 8,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "Recovery is still underway. We're not calling this a victory until we've checked what survived and what changed.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S08_KERNEL_009.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_VEX_010",
+      "scene": 8,
+      "character": "vex",
+      "voice_preset": "Reid",
+      "spoken_text": "This isn't over.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S08_VEX_010.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_KERNEL_011",
+      "scene": 8,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "Then we'll be ready. Maintain monitoring and protect the backups.",
+      "delivery": "composed",
+      "output_relative": "audio/dialogue/S08_KERNEL_011.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S08_FIREWALL_012",
+      "scene": 8,
+      "character": "firewall",
+      "voice_preset": "John",
+      "spoken_text": "Good. Because I'm not doing this twice before dinner.",
+      "delivery": "wry",
+      "output_relative": "audio/dialogue/S08_FIREWALL_012.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S09_AXIOM_001",
+      "scene": 9,
+      "character": "axiom",
+      "voice_preset": "Cillian",
+      "spoken_text": "One final lesson: evaluating system security is not the same as stopping an attack. The historical Trusted Computer System Evaluation Criteria, or TCSEC, used four divisions.",
+      "delivery": "precise",
+      "output_relative": "audio/dialogue/S09_AXIOM_001.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S09_AXIOM_002",
+      "scene": 9,
+      "character": "axiom",
+      "voice_preset": "Cillian",
+      "spoken_text": "D meant minimal evaluated protection. C introduced discretionary protection: C1 provided basic controls; C2 strengthened individual access control and auditing. B added mandatory protection and sensitivity labels, with increasing requirements from B1 through B3. A required formal design and verification for the highest assurance.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S09_AXIOM_002.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S09_PATCH_003",
+      "scene": 9,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "Those are historical evaluation classes, not a modern guarantee that software cannot be breached.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S09_PATCH_003.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S09_NARRATOR_004",
+      "scene": 9,
+      "character": "narrator",
+      "voice_preset": "Fraser",
+      "spoken_text": "OS City survives through careful design, detection, firewalls, least privilege, patched systems and prepared recovery.",
+      "delivery": "neutral",
+      "output_relative": "audio/dialogue/S09_NARRATOR_004.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S09_FIREWALL_005",
+      "scene": 9,
+      "character": "firewall",
+      "voice_preset": "John",
+      "spoken_text": "And a very handsome gatekeeper.",
+      "delivery": "back to playful",
+      "output_relative": "audio/dialogue/S09_FIREWALL_005.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
+      "id": "S09_KERNEL_006",
+      "scene": 9,
+      "character": "kernel",
+      "voice_preset": "Grady",
+      "spoken_text": "Don't push it.",
+      "delivery": "dryly",
+      "output_relative": "audio/dialogue/S09_KERNEL_006.wav",
+      "status": "not_generated_local_chatterbox"
+    }
+  ]
+}

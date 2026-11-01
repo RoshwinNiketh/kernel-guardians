@@ -147,3 +147,17 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Pilot tooling output
+.taste-skill/
+test-results/
+playwright-report/
+
+# Private local voice media must never enter a public bundle
+.local-media/
+public/private-audio/
+kg-master-handoff/
+
+# Regenerable frame-by-frame visual review sheets
+docs/verification/cinematic/frames/
+docs/verification/cinematic/contact-*.jpg
