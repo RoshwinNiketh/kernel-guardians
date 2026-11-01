@@ -33,6 +33,16 @@
       "status": "not_generated_local_chatterbox"
     },
     {
+      "id": "S02_PATCH_000",
+      "scene": 2,
+      "character": "patch",
+      "voice_preset": "Juno",
+      "spoken_text": "Eight minutes.",
+      "delivery": "brief, clear confirmation",
+      "output_relative": "audio/dialogue/S02_PATCH_000.wav",
+      "status": "not_generated_local_chatterbox"
+    },
+    {
       "id": "S02_FIREWALL_002",
       "scene": 2,
       "character": "firewall",

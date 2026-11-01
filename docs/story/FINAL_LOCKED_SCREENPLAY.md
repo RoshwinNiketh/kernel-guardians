@@ -31,6 +31,8 @@
 
 **KERNEL (serious):** Patch, status report. How long until the attack reaches the core?
 
+**PATCH:** Eight minutes.
+
 **FIREWALL (over comms, amused):** Eight minutes? Perfect. I was just about to take a break.
 
 **PATCH:** Commander, he is targeting the system itself. We need to protect three things: confidentiality, integrity and availability.

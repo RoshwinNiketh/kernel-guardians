@@ -1,0 +1,9 @@
+import {writeFileSync,mkdirSync} from 'node:fs';
+import {scheduled,chapters,duration,narrativeCuts,climaxStart,blackoutAt} from '../../src/cinematic/edit.ts';
+import {shots,actorTracks} from '../../src/cinematic/director.ts';
+import {soundCues} from '../../src/cinematic/soundDesign.ts';
+mkdirSync('.local-media',{recursive:true});
+writeFileSync('.local-media/cinematic-edit.json',JSON.stringify({scheduled,chapters,duration,narrativeCuts,climaxStart,blackoutAt,shots,actorTracks,soundCues},null,2)+'\n');
+mkdirSync('docs/verification/cinematic',{recursive:true});
+writeFileSync('docs/verification/cinematic/edit.json',JSON.stringify({duration,chapters,narrativeCuts,climaxStart,blackoutAt,shots,actorTracks,soundCues},null,2)+'\n');
+console.log('Exported',scheduled.length,'cues,',shots.length,'shots,',soundCues.length,'sound events; duration',duration);

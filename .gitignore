@@ -157,3 +157,7 @@ playwright-report/
 .local-media/
 public/private-audio/
 kg-master-handoff/
+
+# Regenerable frame-by-frame visual review sheets
+docs/verification/cinematic/frames/
+docs/verification/cinematic/contact-*.jpg
