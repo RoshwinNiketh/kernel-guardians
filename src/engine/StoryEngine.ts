@@ -2,14 +2,15 @@ import { gsap } from 'gsap';
 
 /** One clock for visuals, virtual scroll, idle motion and future audio. */
 export class StoryEngine {
-  readonly duration = 30;
+  readonly duration: number;
   private clock = { t: 0 };
   private listeners = new Set<() => void>();
   private timeline: gsap.core.Timeline;
   private playing = false;
   private revision = 0;
   audio: AudioSync | null = null;
-  constructor() {
+  constructor(duration = 30) {
+    this.duration = duration;
     this.timeline = gsap.timeline({ paused: true, onUpdate: () => this.emit(), onComplete: () => { this.playing = false; this.emit(); } });
     this.timeline.to(this.clock, { t: this.duration, duration: this.duration, ease: 'none' });
   }
@@ -21,6 +22,7 @@ export class StoryEngine {
   play() { if (this.time >= this.duration) return; this.playing = true; this.timeline.play(); this.emit(); }
   pause() { this.playing = false; this.timeline.pause(); this.emit(); }
   seek(t: number) {
+    this.audio?.stop();
     const wasPlaying = this.playing;
     this.timeline.time(Math.max(0, Math.min(this.duration, t)), false);
     if (!wasPlaying || this.time >= this.duration) this.pause();

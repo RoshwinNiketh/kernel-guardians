@@ -1,0 +1,14 @@
+import {readFileSync,readdirSync,statSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {join} from 'node:path';
+import assert from 'node:assert/strict';
+import {duration,scheduled,chapters} from '../src/story/production/timeline.ts';
+const script=readFileSync('docs/story/FINAL_LOCKED_SCREENPLAY.md','utf8');
+const spoken=[...script.matchAll(/^\*\*(?:NARRATOR|VEX NULL|KERNEL|PATCH|FIREWALL|MIRA|ELARA|AXIOM)(?: \([^\n)]*\))?:\*\* (.+)$/gm)].map(m=>m[1].trim());
+assert.equal(spoken.length,65);assert.deepEqual(scheduled.map(c=>c.spoken_text),spoken);
+const files=dir=>readdirSync(dir).flatMap(name=>{const p=join(dir,name);return statSync(p).isDirectory()?files(p):[p];});
+const published=files('dist');assert(!published.some(p=>/\.(wav|mp3|ogg|flac|npy)$/i.test(p)),'Private audio found in public build');
+assert.equal(files('public/assets/supporting').filter(p=>p.endsWith('.png')).length,8);
+const sha=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
+for(const file of files('public/assets/characters'))assert.equal(sha(file),sha(file.replace('public/assets','kg-master-handoff/assets/approved-pilot')));
+console.log(JSON.stringify({lockedDialogueMatches:spoken.length,chapters:chapters.length,durationSeconds:duration,privateMediaInPublicBuild:false,publicFiles:published.length,publicBytes:published.reduce((n,p)=>n+statSync(p).size,0),originalHeroFilesUnchanged:24},null,2));

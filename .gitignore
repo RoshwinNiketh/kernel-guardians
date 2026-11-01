@@ -152,3 +152,8 @@ vite.config.ts.timestamp-*
 .taste-skill/
 test-results/
 playwright-report/
+
+# Private local voice media must never enter a public bundle
+.local-media/
+public/private-audio/
+kg-master-handoff/

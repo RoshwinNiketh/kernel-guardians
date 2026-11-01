@@ -5,13 +5,17 @@ import { Dialog } from './components/Dialog';
 import { SettingsIcon, FullscreenIcon } from './components/Icons';
 import manifest from './story/asset_manifest.json';
 import { renderAt } from './engine/renderAt';
+import { ProductionStage } from './components/ProductionStage';
+import { DialogueAudio } from './engine/DialogueAudio';
+import { duration, frameAt, names } from './story/production/timeline';
+const pilot = new URLSearchParams(location.search).get('pilot') === '1';
 
 type Settings = { narration: number; sfx: number; music: number; subtitles: boolean; speed: number; reduced: boolean };
 const initial: Settings = { narration: 80, sfx: 70, music: 40, subtitles: true, speed: 1, reduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches };
-const format = (t: number) => `0:${String(Math.floor(t)).padStart(2, '0')}`;
+const format = (t: number) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
 
 export default function App() {
-  const [engine] = useState(() => new StoryEngine());
+  const [engine] = useState(() => new StoryEngine(pilot ? 30 : duration));
   useSyncExternalStore(engine.subscribe, engine.snapshot);
   const [screen, setScreen] = useState<'menu' | 'story'>('menu');
   const [modal, setModal] = useState<'settings' | 'credits' | null>(null);
@@ -24,8 +28,14 @@ export default function App() {
   const stageRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const [fullscreenError, setFullscreenError] = useState('');
+  const [audioState, setAudioState] = useState('Silent fallback');
+  const [audioLoading, setAudioLoading] = useState(false);
+  const bus = useRef<DialogueAudio | null>(null);
+  const total = engine.duration;
   const t = engine.time;
-  const finished = screen === 'story' && t >= 30;
+  const fullFrame = frameAt(t);
+  useEffect(() => { if(bus.current) bus.current.voice.gain.value = settings.narration / 100; }, [settings.narration]);
+  const finished = screen === 'story' && t >= total;
   useEffect(() => {
     let active = true;
     setLoaded(0); setFailed(false);
@@ -46,7 +56,7 @@ export default function App() {
   }, [engine]);
   const openSettings = () => { resumeAfterModal.current = engine.isPlaying; engine.pause(); setConfirm(null); setModal('settings'); };
   const closeModal = () => { setModal(null); setConfirm(null); if (resumeAfterModal.current && screen === 'story') engine.play(); };
-  const start = () => { engine.pause(); setScreen('story'); engine.restart(); };
+  const start = async () => { engine.pause(); setScreen('story'); engine.seek(0); if(!pilot){ setAudioLoading(true); if(!bus.current){bus.current=new DialogueAudio();engine.audio=bus.current;await bus.current.load();} bus.current.voice.gain.value=settings.narration/100;setAudioState(bus.current.failures.length ? ('Captions fallback: '+bus.current.failures.length+' voice files unavailable') : 'Local narration · 65 cues');setAudioLoading(false);} engine.restart(); };
   const mainMenu = () => { engine.pause(); engine.seek(0); setScreen('menu'); setModal(null); setConfirm(null); resumeAfterModal.current = false; };
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
@@ -60,33 +70,32 @@ export default function App() {
   const set = <K extends keyof Settings>(key: K, value: Settings[K]) => setSettings(prev => ({ ...prev, [key]: value }));
   const fullscreen = async () => { try { if (document.fullscreenElement) await document.exitFullscreen(); else await document.documentElement.requestFullscreen(); setFullscreenError(''); } catch { setFullscreenError('Fullscreen is unavailable in this browser. The story still fits your window.'); } };
   const ready = loaded === Object.keys(manifest.assets).length && !failed;
-  return <main className={`app ${settings.reduced ? 'reduced' : ''} ${modal ? 'modal-open' : ''}`}>
+  return <main className={`app production-app ${settings.reduced ? 'reduced' : ''} ${modal ? 'modal-open' : ''}`}>
     {screen === 'menu' ? <section className="menu" aria-label="Main menu">
       <img className="menu-art" src="/assets/backgrounds/menu_poster.png" alt="Commander Kernel, Agent Patch and Captain Firewall overlooking OS City" />
       <div className="menu-scrim" />
       <header className="menu-header"><a href="#" onClick={e => { e.preventDefault(); mainMenu(); }} className="brand"><span className="brand-emblem">K<span>G</span></span><span>KERNEL<br />GUARDIANS</span></a><span className="edition">An operating system security story</span><button className="icon-button" aria-label="Open settings" onClick={openSettings}><SettingsIcon /></button></header>
-      <div className="menu-content"><h1><span>OS CITY</span><strong>UNDER ATTACK</strong></h1><p>A digital world. Three guardians.<br />The security of an entire system.</p>
-        <div className="menu-actions"><button className="start-button" disabled={!ready} onClick={start}><span>{ready ? 'START STORY' : failed ? 'ASSET LOAD FAILED' : `LOADING ${Math.round(loaded / 48 * 100)}%`}</span><span aria-hidden="true">▶</span></button>{failed && <button onClick={() => setLoadAttempt(n => n + 1)}>Retry loading artwork</button>}<div className="secondary-actions"><button onClick={openSettings}>Settings</button><span>/</span><button onClick={() => setModal('credits')}>Credits</button></div></div>
-        <div className="pilot-note"><span className="signal" />30-second pilot <span>·</span> Silent preview</div>
+      <div className="menu-content"><h1><span>OS CITY</span><strong>{pilot ? 'UNDER ATTACK' : 'EIGHT MINUTES TO BLACKOUT'}</strong></h1><p>A digital world. Three guardians.<br />The security of an entire system.</p>
+        <div className="menu-actions"><button className="start-button" disabled={!ready || audioLoading} onClick={start}><span>{ready ? 'START STORY' : failed ? 'ASSET LOAD FAILED' : `LOADING ${Math.round(loaded / 48 * 100)}%`}</span><span aria-hidden="true">▶</span></button>{failed && <button onClick={() => setLoadAttempt(n => n + 1)}>Retry loading artwork</button>}<div className="secondary-actions"><a href={pilot ? "/" : "/?pilot=1"}>{pilot ? "Full story" : "Original pilot"}</a><span>/</span><button onClick={openSettings}>Settings</button><span>/</span><button onClick={() => setModal('credits')}>Credits</button></div></div>
+        <div className="pilot-note"><span className="signal" />{pilot ? '30-second pilot · Silent preview' : 'Eight Minutes to Blackout · Local narrated story'}</div>
       </div>
       <footer className="menu-footer"><span>Learn the system. Protect the city.</span><span>Best experienced in fullscreen <button className="text-button" onClick={fullscreen} aria-label="Toggle fullscreen"><FullscreenIcon /></button></span></footer>
     </section> : <section className="player" aria-label="OS City cutscene">
-      <div className="stage-container" ref={stageRef}><div className="scaled-stage" style={{ width: 1920, height: 1080, transform: `scale(${scale})` }}><Stage time={t} reduced={settings.reduced} subtitles={settings.subtitles} /></div></div>
-      <div className="mobile-story"><span>The security problem</span>{settings.subtitles && <><h2>{renderAt(t).beat.speaker === 'narrator' ? 'Welcome to OS City' : renderAt(t).beat.speaker === 'kernel' ? 'Commander Kernel' : 'Agent Patch'}</h2><p aria-live="polite">{renderAt(t).beat.text}</p></>}<span className="mobile-status">{engine.isPlaying ? 'Story playing' : finished ? 'Pilot complete' : 'Story paused'} · {format(t)} / 0:30</span></div>
-      <div className="player-top"><button className="icon-button" onClick={openSettings} aria-label="Open settings and pause"><SettingsIcon /></button></div>
-      {finished && !modal && <div className="end-overlay"><div><span className="end-label">Transmission interrupted</span><h2>The city needs<br />its guardians.</h2><p>Pilot complete. The story is just beginning.</p><button className="primary" onClick={() => engine.restart()}>Replay pilot ↻</button><button className="text-button" onClick={mainMenu}>Main menu</button></div></div>}
-      <div className="playback"><div className="playback-row"><div className="transport"><button aria-label="Rewind 5 seconds" onClick={() => engine.seek(t - 5)}>↶ <span>5s</span></button><button className="play-toggle" aria-label={engine.isPlaying ? 'Pause' : 'Play'} disabled={finished} onClick={() => engine.isPlaying ? engine.pause() : engine.play()}>{engine.isPlaying ? 'Ⅱ' : '▶'}</button><button aria-label="Forward 5 seconds" onClick={() => engine.seek(t + 5)}><span>5s</span> ↷</button></div><span className="time">{format(t)} <span>/ 0:30</span></span><span className="playback-caption">{finished ? 'Pilot complete' : 'The security problem'}</span><button className="text-button fullscreen" onClick={fullscreen} aria-label="Toggle fullscreen"><FullscreenIcon /></button></div><input className="timeline" aria-label="Story timeline" type="range" min="0" max="30" step="0.001" value={t} aria-valuetext={`${t.toFixed(1)} seconds of 30`} onChange={e => engine.seek(Number(e.target.value))} style={{ '--progress': `${t / 30 * 100}%` } as React.CSSProperties} /><div className="keyboard-hint"><span>← → Seek 5s <span> / </span> Space Pause <span> / </span> Esc Settings</span><span>Silent preview · No recorded audio</span></div></div>
+      <div className="stage-container" ref={stageRef}><div className="scaled-stage" style={{ width: 1920, height: 1080, transform: `scale(${scale})` }}>{pilot ? <Stage time={t} reduced={settings.reduced} subtitles={settings.subtitles} /> : <ProductionStage time={t} reduced={settings.reduced} subtitles={settings.subtitles || audioState.startsWith("Captions fallback")} />}</div></div>
+      <div className="mobile-story"><span>{pilot ? 'The security problem' : fullFrame.chapter.title}</span>{settings.subtitles && <><h2>{pilot ? (renderAt(t).beat.speaker === 'kernel' ? 'Commander Kernel' : 'Agent Patch') : names[fullFrame.cue?.character ?? 'narrator']}</h2><p aria-live="polite">{pilot ? renderAt(t).beat.text : fullFrame.cue?.spoken_text ?? 'Watching the city. Preparing the next move.'}</p></>}<span className="mobile-status">{engine.isPlaying ? 'Story playing' : finished ? 'Pilot complete' : 'Story paused'} · {format(t)} / {format(total)}</span></div>
+      {audioLoading && <div className="audio-loading" role="status">Preparing local narration…</div>}<div className="player-top"><button className="icon-button" onClick={openSettings} aria-label="Open settings and pause"><SettingsIcon /></button></div>
+      {finished && !modal && <div className="end-overlay"><div><span className="end-label">After-action review complete</span><h2>Security is a<br />continuous process.</h2><p>{pilot ? 'Pilot complete. The story is just beginning.' : 'Essential services restored. Recovery and monitoring continue.'}</p><button className="primary" onClick={() => engine.restart()}>{pilot ? 'Replay pilot ↻' : 'Replay story ↻'}</button><button className="text-button" onClick={mainMenu}>Main menu</button></div></div>}
+      <div className="playback"><div className="playback-row"><div className="transport"><button aria-label="Rewind 5 seconds" onClick={() => engine.seek(t - 5)}>↶ <span>5s</span></button><button className="play-toggle" aria-label={engine.isPlaying ? 'Pause' : 'Play'} disabled={finished} onClick={() => engine.isPlaying ? engine.pause() : engine.play()}>{engine.isPlaying ? 'Ⅱ' : '▶'}</button><button aria-label="Forward 5 seconds" onClick={() => engine.seek(t + 5)}><span>5s</span> ↷</button></div><span className="time">{format(t)} <span>/ {format(total)}</span></span><span className="playback-caption">{finished ? 'Story complete' : pilot ? 'The security problem' : fullFrame.chapter.title}</span><button className="text-button" aria-label={settings.narration ? "Mute narration" : "Unmute narration"} onClick={() => set("narration", settings.narration ? 0 : 80)}>{settings.narration ? "Sound on" : "Muted"}</button><button className="text-button fullscreen" onClick={fullscreen} aria-label="Toggle fullscreen"><FullscreenIcon /></button></div><input className="timeline" aria-label="Story timeline" type="range" min="0" max={total} step="0.001" value={t} aria-valuetext={`${t.toFixed(1)} seconds of ${total}`} onChange={e => engine.seek(Number(e.target.value))} style={{ '--progress': `${t / total * 100}%` } as React.CSSProperties} /><div className="keyboard-hint"><span>← → Seek 5s <span> / </span> Space Pause <span> / </span> Esc Settings</span><span>{pilot ? "Silent preview · No recorded audio" : audioState}</span></div></div>
     </section>}
     {fullscreenError && <button className="notice" onClick={() => setFullscreenError('')}>{fullscreenError} ×</button>}
     {modal === 'settings' && <Dialog title={screen === 'story' ? 'Story paused.' : 'Settings'} onClose={closeModal}>
       <p className="dialog-intro">{screen === 'story' ? `Holding your place at ${t.toFixed(2)} seconds.` : 'Make the city your own.'}</p>
       {confirm ? <div className="confirmation"><h3>{confirm === 'restart' ? 'Restart this pilot?' : 'Return to the main menu?'}</h3><p>Your current playback position will be reset.</p><div className="dialog-actions"><button className="primary" onClick={() => { if (confirm === 'menu') mainMenu(); else { setModal(null); setConfirm(null); engine.restart(); } }}>Confirm</button><button onClick={() => setConfirm(null)}>Cancel</button></div></div> : <>
-        <fieldset><legend>Playback</legend><label className="setting">Speed<select value={settings.speed} onChange={e => set('speed', Number(e.target.value))}><option value="0.75">0.75×</option><option value="1">1× Normal</option><option value="1.25">1.25×</option></select></label><label className="setting">Dialogue & subtitles<input type="checkbox" checked={settings.subtitles} onChange={e => set('subtitles', e.target.checked)} /></label><label className="setting">Reduced motion<input type="checkbox" checked={settings.reduced} onChange={e => set('reduced', e.target.checked)} /></label></fieldset>
-        <fieldset><legend>Audio</legend><p className="audio-note">Silent preview. Levels apply when recordings are added.</p>{(['narration', 'sfx', 'music'] as const).map(key => <label className="setting volume" key={key}><span>{key === 'sfx' ? 'Sound effects' : key === 'music' ? 'Background music' : 'Narration'}</span><input aria-label={`${key} volume`} type="range" min="0" max="100" value={settings[key]} onChange={e => set(key, Number(e.target.value))} /><output>{settings[key]}%</output></label>)}</fieldset>
+        <fieldset><legend>Playback</legend><label className="setting">Speed<select aria-label="Playback speed" value={settings.speed} onChange={e => set('speed', Number(e.target.value))}><option value="0.75">0.75×</option><option value="1">1× Normal</option><option value="1.25">1.25×</option></select></label><label className="setting">Dialogue & subtitles<input type="checkbox" checked={settings.subtitles} onChange={e => set('subtitles', e.target.checked)} /></label><label className="setting">Reduced motion<input type="checkbox" checked={settings.reduced} onChange={e => set('reduced', e.target.checked)} /></label></fieldset>
+        <fieldset><legend>Audio</legend><p className="audio-note">{pilot ? "Silent preview." : audioState}. No music or SFX track is included.</p>{(['narration', 'sfx', 'music'] as const).map(key => <label className="setting volume" key={key}><span>{key === 'sfx' ? 'Sound effects' : key === 'music' ? 'Background music' : 'Narration'}</span><input aria-label={`${key} volume`} disabled={key !== "narration"} type="range" min="0" max="100" value={settings[key]} onChange={e => set(key, Number(e.target.value))} /><output>{settings[key]}%</output></label>)}</fieldset>
         <div className="dialog-actions"><button className="primary" onClick={closeModal}>{screen === 'story' ? 'Resume story ▶' : 'Done'}</button>{screen === 'story' && <><button onClick={() => setConfirm('restart')}>Restart</button><button onClick={() => setConfirm('menu')}>Main menu</button></>}</div>
       </>}
     </Dialog>}
-    {modal === 'credits' && <Dialog title="Behind the city." onClose={closeModal}><p className="dialog-intro">OS City: Under Attack / Kernel Guardians</p><p>An educational motion comic exploring operating system security, starring Commander Kernel, Agent Patch, and Captain Firewall.</p><p>Comic artwork and source references supplied in the OS City Pilot Asset Kit. Built with React, TypeScript, Vite, and GSAP.</p><p>This 30-second concept uses provisional dialogue timing. Voiceover, sound effects, and music are not included.</p><button className="primary" onClick={closeModal}>Back to the city</button></Dialog>}
+    {modal === 'credits' && <Dialog title="Behind the city." onClose={closeModal}><p className="dialog-intro">OS City: Under Attack / Kernel Guardians</p><p>An educational motion comic exploring operating system security, starring Commander Kernel, Agent Patch, and Captain Firewall.</p><p>Comic artwork and source references supplied in the OS City Pilot Asset Kit. Built with React, TypeScript, Vite, and GSAP.</p><p>The complete locked screenplay uses local Chatterbox voices. Voice rights and performance approval remain outstanding. Supporting sprites are new provisional illustrations based on the three approved boards.</p><button className="primary" onClick={closeModal}>Back to the city</button></Dialog>}
   </main>;
 }
-

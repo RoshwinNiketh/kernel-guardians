@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 test('complete pilot, exact pause/resume, seeking, settings and replay', async ({ page }) => {
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.setViewportSize({ width: 1440, height: 900 });
-  await page.goto('/');
+  await page.goto('/?pilot=1');
   await expect(page.getByRole('button', { name: 'START STORY' })).toBeEnabled();
   await page.screenshot({ path: 'docs/verification/menu-desktop.png' });
   await page.getByRole('button', { name: 'START STORY' }).click();
@@ -48,7 +48,7 @@ test('complete pilot, exact pause/resume, seeking, settings and replay', async (
 test('mobile and reduced motion fallback', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('/');
+  await page.goto('/?pilot=1');
   await expect(page.getByRole('button', { name: 'START STORY' })).toBeEnabled();
   await page.screenshot({ path: 'docs/verification/menu-mobile.png' });
   await page.getByRole('button', { name: 'START STORY' }).click();
