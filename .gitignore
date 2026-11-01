@@ -147,3 +147,8 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Pilot tooling output
+.taste-skill/
+test-results/
+playwright-report/
