@@ -11,4 +11,4 @@ const timing={};
 let selected=0;
 for(const c of cues){const baseline=manifest.cues[c.id];const candidate=retakes[c.id];const audio=candidate?.status==='generated'&&candidate.selected?candidate:baseline;if(audio?.status!=='generated'||!existsSync(audio.path))throw Error(`Missing voice: ${c.id}`);if(c.spoken_text!==audio.spoken_text)throw Error(`Dialogue changed: ${c.id}`);copyFileSync(audio.path,join('.local-media/dialogue',`${c.id}.wav`));timing[c.id]=audio.duration;if(audio===candidate)selected++;}
 writeFileSync('src/story/production/timing.json',JSON.stringify(timing,null,2)+'\n');
-console.log(`Prepared ${cues.length} local-only voices (${selected} cinematic candidates); public builds never copy .local-media.`);
+console.log(`Prepared ${cues.length} local-only voices (${selected} cinematic candidates); run node scripts/publish-playback-media.mjs to update authorized published playback assets.`);

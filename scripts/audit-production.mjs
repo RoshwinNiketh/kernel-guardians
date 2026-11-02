@@ -10,9 +10,12 @@ const spoken=[...script.matchAll(/^\*\*(?:NARRATOR|VEX NULL|KERNEL|PATCH|FIREWAL
 assert.equal(spoken.length,66);assert.deepEqual(scheduled.map(c=>c.spoken_text),spoken);
 const files=dir=>readdirSync(dir).flatMap(name=>{const p=join(dir,name);return statSync(p).isDirectory()?files(p):[p];});
 const published=files('dist');
-const theme=join('dist','local-music','intro-theme.mp3');
-assert(!published.some(p=>/\.(wav|mp3|ogg|flac|npy)$/i.test(p)&&p!==theme),'Private audio found in public build');
-assert.equal(createHash('sha256').update(readFileSync(theme)).digest('hex'),'c97f0f8a344d619d383e83f8a126c8a2ef6524a0e8f0cd3dfaaae3f159b64a87','Unexpected menu theme');
+const media=JSON.parse(readFileSync('src/cinematic/playback-media.json','utf8')).files;
+const allowed=new Set(media.map(f=>join('dist',f.path)));
+assert(!published.some(p=>/\.(wav|mp3|ogg|flac|npy)$/i.test(p)&&!allowed.has(p)),'Unapproved media found in public build');
+for(const f of media){const bytes=readFileSync(join('dist',f.path));assert.equal(bytes.length,f.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),f.sha256,`Playback media changed: ${f.path}`);}
+for(const cue of scheduled)assert(allowed.has(join('dist','local-voices',`${cue.id}.wav`)),`Missing narration: ${cue.id}`);
+for(const cue of soundCues)assert(allowed.has(join('dist','local-sound',cue.file)),`Missing soundtrack: ${cue.file}`);
 assert.equal(files('public/assets/supporting').filter(p=>p.endsWith('.png')).length,8);
 const sha=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
 for(const file of files('public/assets/characters'))assert.equal(sha(file),sha(file.replace('public/assets','kg-master-handoff/assets/approved-pilot')));
@@ -20,5 +23,5 @@ const metrics=JSON.parse(readFileSync('src/cinematic/art-metrics.json','utf8'));
 for(const metric of Object.values(metrics))assert.equal(sha(`public${metric.file}`),metric.sha256,`Artwork changed: ${metric.file}`);
 for(const cue of scheduled)for(const actor of actorTracks.filter(a=>a.scene===cue.scene))assert(metrics[`${actor.actor}/${poseAt(actor,cue.start+.1)}`],`Missing pose for ${actor.actor}`);
 assert.equal(files('public/assets/cinematic').filter(p=>p.endsWith('.png')).length,15);
-const result={lockedDialogueMatches:spoken.length,chapters:chapters.length,authoredShots:shots.length,soundEvents:soundCues.length,measuredActorPoses:Object.keys(metrics).length,newIllustrations:15,durationSeconds:duration,privateMediaInPublicBuild:false,publicFiles:published.length,publicBytes:published.reduce((n,p)=>n+statSync(p).size,0),originalHeroFilesUnchanged:24};
+const result={lockedDialogueMatches:spoken.length,chapters:chapters.length,authoredShots:shots.length,soundEvents:soundCues.length,measuredActorPoses:Object.keys(metrics).length,newIllustrations:15,durationSeconds:duration,publishedPlaybackAssets:media.length,unapprovedMediaInPublicBuild:false,publicFiles:published.length,publicBytes:published.reduce((n,p)=>n+statSync(p).size,0),originalHeroFilesUnchanged:24};
 console.log(JSON.stringify(result,null,2));
