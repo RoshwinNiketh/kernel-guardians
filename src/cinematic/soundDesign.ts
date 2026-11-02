@@ -1,28 +1,67 @@
-import {chapters,scheduled,climaxStart,blackoutAt,cueById} from './edit.ts';
+import {chapters,scheduled,climaxStart,blackoutAt,cueById,duration} from './edit.ts';
+import {shots} from './director.ts';
 import soundAssets from './sound-assets.json' with {type:'json'};
 import type {SoundCue} from './types';
-export interface MixCue extends SoundCue {file:string}
+export interface MixCue extends SoundCue {file:string;purpose?:string}
 export const soundCues:MixCue[]=[];
 const assets=soundAssets as Record<string,{file:string;duration:number}>;
-const scores=['city','investigation','investigation','pressure','empathy','investigation','pressure','response','dawn'];
-const spaces=['city','room','city','gateway','apartment','room','gateway','room','dawn'];
-for(const c of chapters){
- soundCues.push({id:`score-${c.id}`,kind:'score',file:assets[`score-${scores[c.id-1]}`].file,start:c.start,end:c.end,gain:1,bus:'music',loop:true,duck:true});
- soundCues.push({id:`ambience-${c.id}`,kind:spaces[c.id-1] as SoundCue['kind'],file:assets[spaces[c.id-1]].file,start:c.start,end:c.end,gain:.58,bus:'sfx',loop:true,duck:true});
+function score(id:string,name:string,start:number,end:number,gain:number,purpose:string){
+ if(end-start>assets[`score-${name}`].duration)throw Error(`Score too short: ${id}`);
+ soundCues.push({id,kind:'score',file:assets[`score-${name}`].file,start,end,gain,bus:'music',duck:true,purpose});
 }
-function event(id:string,kind:SoundCue['kind'],t:number,gain=.6,pan=0){const asset=assets[kind];soundCues.push({id,kind,file:asset.file,start:Math.max(0,t),end:Math.max(0,t)+asset.duration,gain,bus:'sfx',pan,duck:kind!=='tick'});}
-for(const c of scheduled){
- if(c.character==='vex'){event(`${c.id}-carrier`,'intrusion',c.start-.35,.6,-.15);event(`${c.id}-carrier-end`,'message',c.end,.25,.1);}
- if(c.id==='S05_ELARA_003'){event('archive-start','crt',c.start-.8,.6,.25);event('archive-corruption','static',c.start+c.duration*.5,.24,.25);event('archive-stop','static',c.end,.32,.25);}
+const c=cueById;
+// Finite musical phrases. No chapter-wide looping and no music in the archive.
+score('score-opening','city',0,c('S01_VEX_002').end+.4,.75,'Ordinary city interrupted by a threat');
+score('score-first-intrusion','pressure',c('S02_VEX_007').start-.65,chapters[1].end,.58,'Threat interrupts command');
+score('score-deceptive-gift','investigation',chapters[2].start,c('S03_KERNEL_004').end+.25,.55,'Deceptive update and payload reveal');
+score('score-botnet-reveal','pressure',c('S04_VEX_004').start-.5,c('S04_FIREWALL_007').start-.2,.65,'Traffic grows; drop to room tone for the serious realization');
+score('score-containment','investigation',c('S06_PATCH_003').start,c('S06_PATCH_003').end+.4,.48,'First coordinated defensive action');
+score('score-permitted-danger','pressure',c('S07_VEX_004').start-.5,c('S07_FIREWALL_005').end+.3,.55,'Danger inside an allowed path');
+score('score-internal-threat','pressure',chapters[7].start,c('S08_PATCH_002').end+.2,.6,'Internal compromise becomes clear');
+score('score-last-response','response',c('S08_VEX_006').start-.35,blackoutAt-.22,.82,'Final response builds, then cuts with the blackout');
+score('score-city-survives','dawn',c('S09_NARRATOR_004').start-.3,duration,.62,'Restrained recovery; no instant-victory fanfare');
+
+// Ambience follows the physical shot location, including the gateway cross-cuts.
+const roomFor={city:'city',street:'city',command:'room',gateway:'gateway',apartment:'apartment',dawn:'dawn'};
+const runs:{file:string;start:number;end:number}[]=[];
+for(const shot of shots){const file=roomFor[shot.location];const previous=runs.at(-1);if(previous?.file===file&&Math.abs(previous.end-shot.start)<.002)previous.end=shot.end;else runs.push({file,start:shot.start,end:shot.end});}
+for(const [i,run]of runs.entries()){
+ const segments=run.start<blackoutAt+.35&&run.end>blackoutAt-.22?[[run.start,Math.min(run.end,blackoutAt-.22)],[Math.max(run.start,blackoutAt+.35),run.end]]:[[run.start,run.end]];
+ for(const [j,[start,end]]of segments.entries())if(end>start)soundCues.push({id:`ambience-${i}-${j}`,kind:run.file as SoundCue['kind'],file:assets[run.file].file,start,end,gain:run.file==='apartment'?.2:.3,bus:'sfx',loop:true,duck:true,purpose:`Physical ${run.file} room tone`});
 }
-const authored:[string,SoundCue['kind'],number,number][]=[
- ['S02_PATCH_003','scan',.2,.35],['S02_PATCH_005','scan',3.2,.25],['S03_MIRA_001','click',.3,.4],['S03_PATCH_002','lock',2.8,.5],['S03_NARRATOR_005','lock',4.8,.4],['S03_PATCH_006','scan',.8,.3],['S03_PATCH_007','impact',4,.42],['S03_KERNEL_008','contain',4.4,.6],
- ['S04_PATCH_001','scan',.1,.35],['S04_FIREWALL_005','flood',1.5,.4],['S04_FIREWALL_007','alarm',.3,.35],['S05_MIRA_001','lock',.2,.3],['S06_PATCH_003','contain',1.8,.42],['S06_PATCH_005','scan',2.4,.25],['S06_PATCH_007','message',.5,.2],['S07_FIREWALL_001','gate',.1,.6],['S07_VEX_004','lock',2.1,.25],['S07_FIREWALL_005','flood',.6,.45],['S08_KERNEL_003','click',1,.35],['S08_NARRATOR_005','contain',2.5,.4],['S09_AXIOM_002','scan',.1,.2],
- ];
-for(const[id,kind,offset,gain]of authored){const c=cueById(id);event(`${id}-${kind}`,kind,Math.min(c.end-.1,c.start+offset),gain);}
-event('opening-district-blackout','impact',8.1,.5,-.4);
-event('final-gate-strain','gate',climaxStart,.6,-.3);event('final-isolation','contain',climaxStart+3.4,.6,.3);event('final-transfer','scan',climaxStart+7,.5,.2);
-for(let i=0;i<10;i++)event(`last-tick-${i}`,'tick',climaxStart+i,.35+i*.02);
-event('essential-services-restored','restore',blackoutAt,.55,.1);
+function event(id:string,kind:SoundCue['kind'],time:number,gain:number,pan=0,purpose=''){
+ const start=Math.max(0,time);soundCues.push({id,kind,file:assets[kind].file,start,end:start+assets[kind].duration,gain,bus:'sfx',pan,duck:true,purpose});
+}
+for(const cue of scheduled.filter(q=>q.character==='vex'))event(`${cue.id}-carrier`,'intrusion',cue.start-.35,.37,-.1,'Incoming public carrier; avoid a notification after every sentence');
+event('district-power-loss','impact',7,.35,-.35,'Visible district outage begins');
+event('cia-integrity','scan',c('S02_PATCH_005').start+c('S02_PATCH_005').duration/3,.18,.05,'Second CIA pillar illuminates');
+event('cia-availability','scan',c('S02_PATCH_005').start+c('S02_PATCH_005').duration*2/3,.16,.2,'Third CIA pillar illuminates');
+event('updater-install','click',c('S03_MIRA_001').start+.3,.26,-.2,'Updater action');
+event('payload-reveal','lock',c('S03_PATCH_002').start+c('S03_PATCH_002').duration/3,.3,-.1,'Malicious payload is revealed');
+event('buffer-boundary-break','impact',c('S03_PATCH_007').start+c('S03_PATCH_007').duration*2/3,.27,-.15,'First cell beyond the seven-cell boundary fills');
+event('isolate-program','contain',c('S03_KERNEL_008').end+.15,.38,.1,'Containment after the instruction');
+event('service-scan','scan',c('S04_PATCH_001').start,.22,-.2,'Port scan begins');
+event('traffic-surge','flood',c('S04_FIREWALL_005').end-.8,.36,-.25,'Traffic gathers before Patch diagnoses the flood');
+const archive=c('S05_ELARA_003');
+event('archive-discovered','message',archive.start-1.85,.2,.35,'LOCAL ARCHIVE DETECTED appears on existing TV');
+event('archive-start','crt',archive.start-1.05,.4,.35,'CRT powers on at the exact screen boot');
+event('service-isolation','contain',c('S06_PATCH_003').start+1.8,.3,.1,'Isolation control engages');
+event('gate-filter-engage','gate',c('S07_FIREWALL_001').start,.35,-.3,'Gate establishes its filtering boundary');
+event('concealed-traffic','flood',c('S07_FIREWALL_005').start+.6,.24,-.25,'Traffic remains dangerous despite permitted connection');
+event('final-gate-strain','gate',climaxStart,.48,-.35,'Cut to Firewall holding the gate');
+event('final-isolation','contain',climaxStart+3.2,.42,.25,'Exact cut to Patch isolating the service');
+event('final-transfer','scan',climaxStart+6.8,.28,-.1,'Exact cut to standby preparation');
+for(let i=0;i<10;i++)event(`last-tick-${i}`,'tick',climaxStart+i,.22+i*.012,0,'One tick per displayed countdown second');
+event('essential-services-restored','restore',blackoutAt+.12,.26,.1,'Small relay confirmation; recovery is incomplete');
 soundCues.sort((a,b)=>a.start-b.start);
-export function mixEnvelope(c:MixCue,t:number,voiceActive:boolean){const fade=Math.min(1,Math.max(0,(t-c.start)/.05),Math.max(0,(c.end-t)/.12));const duck=c.duck&&voiceActive?(c.bus==='music'?.23:.45):1;return c.gain*fade*duck;}
+const clamp=(x:number)=>Math.max(0,Math.min(1,x));
+/** Playhead-derived anticipation, hold and release: small dialogue gaps never pump. */
+export function speechActivityAt(t:number){let activity=0;for(const cue of scheduled){if(t<cue.start-.12||t>cue.end+.85)continue;const a=t<cue.start?clamp((t-cue.start+.12)/.12):t<=cue.end+.15?1:clamp(1-(t-cue.end-.15)/.7);activity=Math.max(activity,a);}return activity;}
+export function mixEnvelope(c:MixCue,t:number,_voiceActive?:boolean){
+ const attack=c.bus==='music'?1.2:c.loop?.7:.006,release=c.bus==='music'?1.8:c.loop?.5:.05;
+ const fade=Math.min(clamp((t-c.start)/attack),clamp((c.end-t)/release));
+ const duck=c.duck?1-speechActivityAt(t)*(c.bus==='music'?.78:.48):1;
+ // The brief visible blackout is a deliberate effects/score dropout, never a voice cut.
+ const blackout=t>=blackoutAt-.22&&t<blackoutAt+.12?0:1;
+ return c.gain*fade*duck*blackout;
+}

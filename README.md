@@ -21,6 +21,10 @@ Only the current cinematic edition is served. The former pilot and v1 selectors 
 
 ## Playback
 
+Start Story now plays a **26-second cast intro**, with Skip Intro available, before the existing film. Total experience: **8:20.92**. Default-enabled menu music plays the supplied local theme; Start Story restarts it for the cards and fades it out before the story soundtrack. See [cast intro and local theme](docs/cast-intro.md). The supplied MP3 remains local and is absent from public builds.
+
+The selective sound pass uses music for 28.64% of the film. Personal scenes, Elara's archive and most teaching passages retain quiet room tone. Effects follow visible actions, with smooth dialogue ducking and a brief blackout dropout. See [sound direction, research and cue sheet](docs/sound-direction.md). The dedicated audio-enabled preview for this pass is http://127.0.0.1:5183/; set `KG_PORT=5183` when testing that server.
+
 Start Story preloads the cinematic artwork, then prepares local audio. Space toggles playback; left/right arrows and the transport buttons seek five seconds. The slider reconstructs any frame. Settings freezes actors, camera, effects, dialogue and every audio bus at the same master time, and resumes the prior playing/paused state.
 
 Settings provides narration, music and SFX levels, subtitles, reduced motion, and 0.75×/1×/1.25× playback. Mute affects all audio. Portrait phones show readable dialogue beneath the artwork. Leaving the browser pauses the story. Fullscreen remains browser dependent.

@@ -3046,37 +3046,39 @@
   ],
   "soundCues": [
     {
-      "id": "score-1",
+      "id": "score-opening",
       "kind": "score",
       "file": "score-city.wav",
       "start": 0,
-      "end": 15.55,
-      "gain": 1,
+      "end": 14.25,
+      "gain": 0.75,
       "bus": "music",
-      "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Ordinary city interrupted by a threat"
     },
     {
-      "id": "ambience-1",
+      "id": "ambience-0-0",
       "kind": "city",
       "file": "city.wav",
       "start": 0,
       "end": 15.55,
-      "gain": 0.58,
+      "gain": 0.3,
       "bus": "sfx",
       "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Physical city room tone"
     },
     {
-      "id": "opening-district-blackout",
+      "id": "district-power-loss",
       "kind": "impact",
       "file": "impact.wav",
-      "start": 8.1,
-      "end": 9,
-      "gain": 0.5,
+      "start": 7,
+      "end": 7.9,
+      "gain": 0.35,
       "bus": "sfx",
-      "pan": -0.4,
-      "duck": true
+      "pan": -0.35,
+      "duck": true,
+      "purpose": "Visible district outage begins"
     },
     {
       "id": "S01_VEX_002-carrier",
@@ -3084,65 +3086,58 @@
       "file": "intrusion.wav",
       "start": 10.9,
       "end": 12.200000000000001,
-      "gain": 0.6,
+      "gain": 0.37,
       "bus": "sfx",
-      "pan": -0.15,
-      "duck": true
+      "pan": -0.1,
+      "duck": true,
+      "purpose": "Incoming public carrier; avoid a notification after every sentence"
     },
     {
-      "id": "S01_VEX_002-carrier-end",
-      "kind": "message",
-      "file": "message.wav",
-      "start": 13.85,
-      "end": 14.5,
-      "gain": 0.25,
-      "bus": "sfx",
-      "pan": 0.1,
-      "duck": true
-    },
-    {
-      "id": "score-2",
-      "kind": "score",
-      "file": "score-investigation.wav",
-      "start": 15.55,
-      "end": 63.42,
-      "gain": 1,
-      "bus": "music",
-      "loop": true,
-      "duck": true
-    },
-    {
-      "id": "ambience-2",
+      "id": "ambience-1-0",
       "kind": "room",
       "file": "room.wav",
       "start": 15.55,
       "end": 63.42,
-      "gain": 0.58,
+      "gain": 0.3,
       "bus": "sfx",
       "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Physical room room tone"
     },
     {
-      "id": "S02_PATCH_003-scan",
+      "id": "cia-integrity",
       "kind": "scan",
       "file": "scan.wav",
-      "start": 26.669999999999998,
-      "end": 27.569999999999997,
-      "gain": 0.35,
+      "start": 37.58333333333333,
+      "end": 38.48333333333333,
+      "gain": 0.18,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": 0.05,
+      "duck": true,
+      "purpose": "Second CIA pillar illuminates"
     },
     {
-      "id": "S02_PATCH_005-scan",
+      "id": "cia-availability",
       "kind": "scan",
       "file": "scan.wav",
-      "start": 37.57,
-      "end": 38.47,
-      "gain": 0.25,
+      "start": 40.79666666666667,
+      "end": 41.696666666666665,
+      "gain": 0.16,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": 0.2,
+      "duck": true,
+      "purpose": "Third CIA pillar illuminates"
+    },
+    {
+      "id": "score-first-intrusion",
+      "kind": "score",
+      "file": "score-pressure.wav",
+      "start": 54.52,
+      "end": 63.42,
+      "gain": 0.58,
+      "bus": "music",
+      "duck": true,
+      "purpose": "Threat interrupts command"
     },
     {
       "id": "S02_VEX_007-carrier",
@@ -3150,65 +3145,58 @@
       "file": "intrusion.wav",
       "start": 54.82,
       "end": 56.12,
-      "gain": 0.6,
+      "gain": 0.37,
       "bus": "sfx",
-      "pan": -0.15,
-      "duck": true
+      "pan": -0.1,
+      "duck": true,
+      "purpose": "Incoming public carrier; avoid a notification after every sentence"
     },
     {
-      "id": "S02_VEX_007-carrier-end",
-      "kind": "message",
-      "file": "message.wav",
-      "start": 58.53,
-      "end": 59.18,
-      "gain": 0.25,
-      "bus": "sfx",
-      "pan": 0.1,
-      "duck": true
-    },
-    {
-      "id": "score-3",
+      "id": "score-deceptive-gift",
       "kind": "score",
       "file": "score-investigation.wav",
       "start": 63.42,
-      "end": 123.18,
-      "gain": 1,
+      "end": 88.13,
+      "gain": 0.55,
       "bus": "music",
-      "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Deceptive update and payload reveal"
     },
     {
-      "id": "ambience-3",
+      "id": "ambience-2-0",
       "kind": "city",
       "file": "city.wav",
       "start": 63.42,
       "end": 123.18,
-      "gain": 0.58,
+      "gain": 0.3,
       "bus": "sfx",
       "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Physical city room tone"
     },
     {
-      "id": "S03_MIRA_001-click",
+      "id": "updater-install",
       "kind": "click",
       "file": "click.wav",
       "start": 65.22,
       "end": 65.38,
-      "gain": 0.4,
+      "gain": 0.26,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": -0.2,
+      "duck": true,
+      "purpose": "Updater action"
     },
     {
-      "id": "S03_PATCH_002-lock",
+      "id": "payload-reveal",
       "kind": "lock",
       "file": "lock.wav",
-      "start": 73.32,
-      "end": 73.77,
-      "gain": 0.5,
+      "start": 73.74666666666667,
+      "end": 74.19666666666667,
+      "gain": 0.3,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": -0.1,
+      "duck": true,
+      "purpose": "Malicious payload is revealed"
     },
     {
       "id": "S03_VEX_003-carrier",
@@ -3216,98 +3204,70 @@
       "file": "intrusion.wav",
       "start": 80.45,
       "end": 81.75,
-      "gain": 0.6,
+      "gain": 0.37,
       "bus": "sfx",
-      "pan": -0.15,
-      "duck": true
+      "pan": -0.1,
+      "duck": true,
+      "purpose": "Incoming public carrier; avoid a notification after every sentence"
     },
     {
-      "id": "S03_VEX_003-carrier-end",
-      "kind": "message",
-      "file": "message.wav",
-      "start": 84.24,
-      "end": 84.89,
-      "gain": 0.25,
-      "bus": "sfx",
-      "pan": 0.1,
-      "duck": true
-    },
-    {
-      "id": "S03_NARRATOR_005-lock",
-      "kind": "lock",
-      "file": "lock.wav",
-      "start": 92.92,
-      "end": 93.37,
-      "gain": 0.4,
-      "bus": "sfx",
-      "pan": 0,
-      "duck": true
-    },
-    {
-      "id": "S03_PATCH_006-scan",
-      "kind": "scan",
-      "file": "scan.wav",
-      "start": 99.67999999999999,
-      "end": 100.58,
-      "gain": 0.3,
-      "bus": "sfx",
-      "pan": 0,
-      "duck": true
-    },
-    {
-      "id": "S03_PATCH_007-impact",
+      "id": "buffer-boundary-break",
       "kind": "impact",
       "file": "impact.wav",
-      "start": 110.58,
-      "end": 111.48,
-      "gain": 0.42,
+      "start": 111.99333333333333,
+      "end": 112.89333333333333,
+      "gain": 0.27,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": -0.15,
+      "duck": true,
+      "purpose": "First cell beyond the seven-cell boundary fills"
     },
     {
-      "id": "S03_KERNEL_008-contain",
+      "id": "isolate-program",
       "kind": "contain",
       "file": "contain.wav",
-      "start": 119.80000000000001,
-      "end": 120.95000000000002,
-      "gain": 0.6,
+      "start": 121.23,
+      "end": 122.38000000000001,
+      "gain": 0.38,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": 0.1,
+      "duck": true,
+      "purpose": "Containment after the instruction"
     },
     {
-      "id": "score-4",
-      "kind": "score",
-      "file": "score-pressure.wav",
-      "start": 123.18,
-      "end": 184.93,
-      "gain": 1,
-      "bus": "music",
-      "loop": true,
-      "duck": true
-    },
-    {
-      "id": "ambience-4",
+      "id": "ambience-3-0",
       "kind": "gateway",
       "file": "gateway.wav",
       "start": 123.18,
       "end": 184.93,
-      "gain": 0.58,
+      "gain": 0.3,
       "bus": "sfx",
       "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Physical gateway room tone"
     },
     {
-      "id": "S04_PATCH_001-scan",
+      "id": "service-scan",
       "kind": "scan",
       "file": "scan.wav",
-      "start": 124.67999999999999,
-      "end": 125.58,
-      "gain": 0.35,
+      "start": 124.58,
+      "end": 125.48,
+      "gain": 0.22,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": -0.2,
+      "duck": true,
+      "purpose": "Port scan begins"
+    },
+    {
+      "id": "score-botnet-reveal",
+      "kind": "score",
+      "file": "score-pressure.wav",
+      "start": 144.48,
+      "end": 161.17000000000002,
+      "gain": 0.65,
+      "bus": "music",
+      "duck": true,
+      "purpose": "Traffic grows; drop to room tone for the serious realization"
     },
     {
       "id": "S04_VEX_004-carrier",
@@ -3315,197 +3275,129 @@
       "file": "intrusion.wav",
       "start": 144.63,
       "end": 145.93,
-      "gain": 0.6,
+      "gain": 0.37,
       "bus": "sfx",
-      "pan": -0.15,
-      "duck": true
+      "pan": -0.1,
+      "duck": true,
+      "purpose": "Incoming public carrier; avoid a notification after every sentence"
     },
     {
-      "id": "S04_VEX_004-carrier-end",
-      "kind": "message",
-      "file": "message.wav",
-      "start": 148.5,
-      "end": 149.15,
-      "gain": 0.25,
-      "bus": "sfx",
-      "pan": 0.1,
-      "duck": true
-    },
-    {
-      "id": "S04_FIREWALL_005-flood",
+      "id": "traffic-surge",
       "kind": "flood",
       "file": "flood.wav",
-      "start": 151.2,
-      "end": 154.2,
-      "gain": 0.4,
+      "start": 152.57999999999998,
+      "end": 155.57999999999998,
+      "gain": 0.36,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": -0.25,
+      "duck": true,
+      "purpose": "Traffic gathers before Patch diagnoses the flood"
     },
     {
-      "id": "S04_FIREWALL_007-alarm",
-      "kind": "alarm",
-      "file": "alarm.wav",
-      "start": 161.67000000000002,
-      "end": 162.87,
-      "gain": 0.35,
-      "bus": "sfx",
-      "pan": 0,
-      "duck": true
-    },
-    {
-      "id": "score-5",
-      "kind": "score",
-      "file": "score-empathy.wav",
-      "start": 184.93,
-      "end": 221.61,
-      "gain": 1,
-      "bus": "music",
-      "loop": true,
-      "duck": true
-    },
-    {
-      "id": "ambience-5",
+      "id": "ambience-4-0",
       "kind": "apartment",
       "file": "apartment.wav",
       "start": 184.93,
       "end": 221.61,
-      "gain": 0.58,
+      "gain": 0.2,
       "bus": "sfx",
       "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Physical apartment room tone"
     },
     {
-      "id": "S05_MIRA_001-lock",
-      "kind": "lock",
-      "file": "lock.wav",
-      "start": 186.73,
-      "end": 187.17999999999998,
-      "gain": 0.3,
+      "id": "archive-discovered",
+      "kind": "message",
+      "file": "message.wav",
+      "start": 198.62,
+      "end": 199.27,
+      "gain": 0.2,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": 0.35,
+      "duck": true,
+      "purpose": "LOCAL ARCHIVE DETECTED appears on existing TV"
     },
     {
       "id": "archive-start",
       "kind": "crt",
       "file": "crt.wav",
-      "start": 199.67,
-      "end": 200.76999999999998,
-      "gain": 0.6,
+      "start": 199.42,
+      "end": 200.51999999999998,
+      "gain": 0.4,
       "bus": "sfx",
-      "pan": 0.25,
-      "duck": true
+      "pan": 0.35,
+      "duck": true,
+      "purpose": "CRT powers on at the exact screen boot"
     },
     {
-      "id": "archive-corruption",
-      "kind": "static",
-      "file": "static.wav",
-      "start": 204.83,
-      "end": 205.18,
-      "gain": 0.24,
-      "bus": "sfx",
-      "pan": 0.25,
-      "duck": true
-    },
-    {
-      "id": "archive-stop",
-      "kind": "static",
-      "file": "static.wav",
-      "start": 209.19,
-      "end": 209.54,
-      "gain": 0.32,
-      "bus": "sfx",
-      "pan": 0.25,
-      "duck": true
-    },
-    {
-      "id": "score-6",
-      "kind": "score",
-      "file": "score-investigation.wav",
-      "start": 221.61,
-      "end": 283.82,
-      "gain": 1,
-      "bus": "music",
-      "loop": true,
-      "duck": true
-    },
-    {
-      "id": "ambience-6",
+      "id": "ambience-5-0",
       "kind": "room",
       "file": "room.wav",
       "start": 221.61,
       "end": 283.82,
-      "gain": 0.58,
+      "gain": 0.3,
       "bus": "sfx",
       "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Physical room room tone"
     },
     {
-      "id": "S06_PATCH_003-contain",
+      "id": "score-containment",
+      "kind": "score",
+      "file": "score-investigation.wav",
+      "start": 235.65,
+      "end": 243.93,
+      "gain": 0.48,
+      "bus": "music",
+      "duck": true,
+      "purpose": "First coordinated defensive action"
+    },
+    {
+      "id": "service-isolation",
       "kind": "contain",
       "file": "contain.wav",
       "start": 237.45000000000002,
       "end": 238.60000000000002,
-      "gain": 0.42,
+      "gain": 0.3,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": 0.1,
+      "duck": true,
+      "purpose": "Isolation control engages"
     },
     {
-      "id": "S06_PATCH_005-scan",
-      "kind": "scan",
-      "file": "scan.wav",
-      "start": 251.13,
-      "end": 252.03,
-      "gain": 0.25,
-      "bus": "sfx",
-      "pan": 0,
-      "duck": true
-    },
-    {
-      "id": "S06_PATCH_007-message",
-      "kind": "message",
-      "file": "message.wav",
-      "start": 264.36,
-      "end": 265.01,
-      "gain": 0.2,
-      "bus": "sfx",
-      "pan": 0,
-      "duck": true
-    },
-    {
-      "id": "score-7",
-      "kind": "score",
-      "file": "score-pressure.wav",
-      "start": 283.82,
-      "end": 333.21,
-      "gain": 1,
-      "bus": "music",
-      "loop": true,
-      "duck": true
-    },
-    {
-      "id": "ambience-7",
+      "id": "ambience-6-0",
       "kind": "gateway",
       "file": "gateway.wav",
       "start": 283.82,
       "end": 333.21,
-      "gain": 0.58,
+      "gain": 0.3,
       "bus": "sfx",
       "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Physical gateway room tone"
     },
     {
-      "id": "S07_FIREWALL_001-gate",
+      "id": "gate-filter-engage",
       "kind": "gate",
       "file": "gate.wav",
-      "start": 285.52000000000004,
-      "end": 287.12000000000006,
-      "gain": 0.6,
+      "start": 285.42,
+      "end": 287.02000000000004,
+      "gain": 0.35,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": -0.3,
+      "duck": true,
+      "purpose": "Gate establishes its filtering boundary"
+    },
+    {
+      "id": "score-permitted-danger",
+      "kind": "score",
+      "file": "score-pressure.wav",
+      "start": 308.32,
+      "end": 322.98,
+      "gain": 0.55,
+      "bus": "music",
+      "duck": true,
+      "purpose": "Danger inside an allowed path"
     },
     {
       "id": "S07_VEX_004-carrier",
@@ -3513,65 +3405,46 @@
       "file": "intrusion.wav",
       "start": 308.46999999999997,
       "end": 309.77,
-      "gain": 0.6,
+      "gain": 0.37,
       "bus": "sfx",
-      "pan": -0.15,
-      "duck": true
+      "pan": -0.1,
+      "duck": true,
+      "purpose": "Incoming public carrier; avoid a notification after every sentence"
     },
     {
-      "id": "S07_VEX_004-lock",
-      "kind": "lock",
-      "file": "lock.wav",
-      "start": 310.92,
-      "end": 311.37,
-      "gain": 0.25,
-      "bus": "sfx",
-      "pan": 0,
-      "duck": true
-    },
-    {
-      "id": "S07_VEX_004-carrier-end",
-      "kind": "message",
-      "file": "message.wav",
-      "start": 312.62,
-      "end": 313.27,
-      "gain": 0.25,
-      "bus": "sfx",
-      "pan": 0.1,
-      "duck": true
-    },
-    {
-      "id": "S07_FIREWALL_005-flood",
+      "id": "concealed-traffic",
       "kind": "flood",
       "file": "flood.wav",
       "start": 313.92,
       "end": 316.92,
-      "gain": 0.45,
+      "gain": 0.24,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "pan": -0.25,
+      "duck": true,
+      "purpose": "Traffic remains dangerous despite permitted connection"
     },
     {
-      "id": "score-8",
+      "id": "score-internal-threat",
       "kind": "score",
-      "file": "score-response.wav",
+      "file": "score-pressure.wav",
       "start": 333.21,
-      "end": 413.42,
-      "gain": 1,
+      "end": 346.17,
+      "gain": 0.6,
       "bus": "music",
-      "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Internal compromise becomes clear"
     },
     {
-      "id": "ambience-8",
+      "id": "ambience-7-0",
       "kind": "room",
       "file": "room.wav",
       "start": 333.21,
-      "end": 413.42,
-      "gain": 0.58,
+      "end": 357.89,
+      "gain": 0.3,
       "bus": "sfx",
       "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Physical room room tone"
     },
     {
       "id": "S08_VEX_001-carrier",
@@ -3579,43 +3452,46 @@
       "file": "intrusion.wav",
       "start": 333.85999999999996,
       "end": 335.15999999999997,
-      "gain": 0.6,
+      "gain": 0.37,
       "bus": "sfx",
-      "pan": -0.15,
-      "duck": true
+      "pan": -0.1,
+      "duck": true,
+      "purpose": "Incoming public carrier; avoid a notification after every sentence"
     },
     {
-      "id": "S08_VEX_001-carrier-end",
-      "kind": "message",
-      "file": "message.wav",
-      "start": 340.17,
-      "end": 340.82,
-      "gain": 0.25,
+      "id": "ambience-8-0",
+      "kind": "gateway",
+      "file": "gateway.wav",
+      "start": 357.89,
+      "end": 362.01,
+      "gain": 0.3,
       "bus": "sfx",
-      "pan": 0.1,
-      "duck": true
+      "loop": true,
+      "duck": true,
+      "purpose": "Physical gateway room tone"
     },
     {
-      "id": "S08_KERNEL_003-click",
-      "kind": "click",
-      "file": "click.wav",
-      "start": 347.21,
-      "end": 347.37,
-      "gain": 0.35,
+      "id": "ambience-9-0",
+      "kind": "room",
+      "file": "room.wav",
+      "start": 362.01,
+      "end": 382.48,
+      "gain": 0.3,
       "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "loop": true,
+      "duck": true,
+      "purpose": "Physical room room tone"
     },
     {
-      "id": "S08_NARRATOR_005-contain",
-      "kind": "contain",
-      "file": "contain.wav",
-      "start": 364.51,
-      "end": 365.65999999999997,
-      "gain": 0.4,
-      "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "id": "score-last-response",
+      "kind": "score",
+      "file": "score-response.wav",
+      "start": 373.02,
+      "end": 392.26,
+      "gain": 0.82,
+      "bus": "music",
+      "duck": true,
+      "purpose": "Final response builds, then cuts with the blackout"
     },
     {
       "id": "S08_VEX_006-carrier",
@@ -3623,21 +3499,23 @@
       "file": "intrusion.wav",
       "start": 373.02,
       "end": 374.32,
-      "gain": 0.6,
+      "gain": 0.37,
       "bus": "sfx",
-      "pan": -0.15,
-      "duck": true
+      "pan": -0.1,
+      "duck": true,
+      "purpose": "Incoming public carrier; avoid a notification after every sentence"
     },
     {
-      "id": "S08_VEX_006-carrier-end",
-      "kind": "message",
-      "file": "message.wav",
-      "start": 375.49,
-      "end": 376.14,
-      "gain": 0.25,
+      "id": "ambience-10-0",
+      "kind": "gateway",
+      "file": "gateway.wav",
+      "start": 382.48,
+      "end": 385.68,
+      "gain": 0.3,
       "bus": "sfx",
-      "pan": 0.1,
-      "duck": true
+      "loop": true,
+      "duck": true,
+      "purpose": "Physical gateway room tone"
     },
     {
       "id": "final-gate-strain",
@@ -3645,10 +3523,11 @@
       "file": "gate.wav",
       "start": 382.48,
       "end": 384.08000000000004,
-      "gain": 0.6,
+      "gain": 0.48,
       "bus": "sfx",
-      "pan": -0.3,
-      "duck": true
+      "pan": -0.35,
+      "duck": true,
+      "purpose": "Cut to Firewall holding the gate"
     },
     {
       "id": "last-tick-0",
@@ -3656,10 +3535,11 @@
       "file": "tick.wav",
       "start": 382.48,
       "end": 382.62,
-      "gain": 0.35,
+      "gain": 0.22,
       "bus": "sfx",
       "pan": 0,
-      "duck": false
+      "duck": true,
+      "purpose": "One tick per displayed countdown second"
     },
     {
       "id": "last-tick-1",
@@ -3667,10 +3547,11 @@
       "file": "tick.wav",
       "start": 383.48,
       "end": 383.62,
-      "gain": 0.37,
+      "gain": 0.232,
       "bus": "sfx",
       "pan": 0,
-      "duck": false
+      "duck": true,
+      "purpose": "One tick per displayed countdown second"
     },
     {
       "id": "last-tick-2",
@@ -3678,10 +3559,11 @@
       "file": "tick.wav",
       "start": 384.48,
       "end": 384.62,
-      "gain": 0.38999999999999996,
+      "gain": 0.244,
       "bus": "sfx",
       "pan": 0,
-      "duck": false
+      "duck": true,
+      "purpose": "One tick per displayed countdown second"
     },
     {
       "id": "last-tick-3",
@@ -3689,21 +3571,35 @@
       "file": "tick.wav",
       "start": 385.48,
       "end": 385.62,
-      "gain": 0.41,
+      "gain": 0.256,
       "bus": "sfx",
       "pan": 0,
-      "duck": false
+      "duck": true,
+      "purpose": "One tick per displayed countdown second"
+    },
+    {
+      "id": "ambience-11-0",
+      "kind": "room",
+      "file": "room.wav",
+      "start": 385.68,
+      "end": 392.26,
+      "gain": 0.3,
+      "bus": "sfx",
+      "loop": true,
+      "duck": true,
+      "purpose": "Physical room room tone"
     },
     {
       "id": "final-isolation",
       "kind": "contain",
       "file": "contain.wav",
-      "start": 385.88,
-      "end": 387.03,
-      "gain": 0.6,
+      "start": 385.68,
+      "end": 386.83,
+      "gain": 0.42,
       "bus": "sfx",
-      "pan": 0.3,
-      "duck": true
+      "pan": 0.25,
+      "duck": true,
+      "purpose": "Exact cut to Patch isolating the service"
     },
     {
       "id": "last-tick-4",
@@ -3711,10 +3607,11 @@
       "file": "tick.wav",
       "start": 386.48,
       "end": 386.62,
-      "gain": 0.43,
+      "gain": 0.268,
       "bus": "sfx",
       "pan": 0,
-      "duck": false
+      "duck": true,
+      "purpose": "One tick per displayed countdown second"
     },
     {
       "id": "last-tick-5",
@@ -3722,10 +3619,11 @@
       "file": "tick.wav",
       "start": 387.48,
       "end": 387.62,
-      "gain": 0.44999999999999996,
+      "gain": 0.28,
       "bus": "sfx",
       "pan": 0,
-      "duck": false
+      "duck": true,
+      "purpose": "One tick per displayed countdown second"
     },
     {
       "id": "last-tick-6",
@@ -3733,21 +3631,23 @@
       "file": "tick.wav",
       "start": 388.48,
       "end": 388.62,
-      "gain": 0.47,
+      "gain": 0.29200000000000004,
       "bus": "sfx",
       "pan": 0,
-      "duck": false
+      "duck": true,
+      "purpose": "One tick per displayed countdown second"
     },
     {
       "id": "final-transfer",
       "kind": "scan",
       "file": "scan.wav",
-      "start": 389.48,
-      "end": 390.38,
-      "gain": 0.5,
+      "start": 389.28000000000003,
+      "end": 390.18,
+      "gain": 0.28,
       "bus": "sfx",
-      "pan": 0.2,
-      "duck": true
+      "pan": -0.1,
+      "duck": true,
+      "purpose": "Exact cut to standby preparation"
     },
     {
       "id": "last-tick-7",
@@ -3755,10 +3655,11 @@
       "file": "tick.wav",
       "start": 389.48,
       "end": 389.62,
-      "gain": 0.49,
+      "gain": 0.304,
       "bus": "sfx",
       "pan": 0,
-      "duck": false
+      "duck": true,
+      "purpose": "One tick per displayed countdown second"
     },
     {
       "id": "last-tick-8",
@@ -3766,10 +3667,11 @@
       "file": "tick.wav",
       "start": 390.48,
       "end": 390.62,
-      "gain": 0.51,
+      "gain": 0.316,
       "bus": "sfx",
       "pan": 0,
-      "duck": false
+      "duck": true,
+      "purpose": "One tick per displayed countdown second"
     },
     {
       "id": "last-tick-9",
@@ -3777,21 +3679,35 @@
       "file": "tick.wav",
       "start": 391.48,
       "end": 391.62,
-      "gain": 0.53,
+      "gain": 0.328,
       "bus": "sfx",
       "pan": 0,
-      "duck": false
+      "duck": true,
+      "purpose": "One tick per displayed countdown second"
     },
     {
       "id": "essential-services-restored",
       "kind": "restore",
       "file": "restore.wav",
-      "start": 392.48,
-      "end": 394.18,
-      "gain": 0.55,
+      "start": 392.6,
+      "end": 394.3,
+      "gain": 0.26,
       "bus": "sfx",
       "pan": 0.1,
-      "duck": true
+      "duck": true,
+      "purpose": "Small relay confirmation; recovery is incomplete"
+    },
+    {
+      "id": "ambience-11-1",
+      "kind": "room",
+      "file": "room.wav",
+      "start": 392.83000000000004,
+      "end": 413.42,
+      "gain": 0.3,
+      "bus": "sfx",
+      "loop": true,
+      "duck": true,
+      "purpose": "Physical room room tone"
     },
     {
       "id": "S08_VEX_010-carrier",
@@ -3799,54 +3715,34 @@
       "file": "intrusion.wav",
       "start": 401.40999999999997,
       "end": 402.71,
-      "gain": 0.6,
+      "gain": 0.37,
       "bus": "sfx",
-      "pan": -0.15,
-      "duck": true
+      "pan": -0.1,
+      "duck": true,
+      "purpose": "Incoming public carrier; avoid a notification after every sentence"
     },
     {
-      "id": "S08_VEX_010-carrier-end",
-      "kind": "message",
-      "file": "message.wav",
-      "start": 404.24,
-      "end": 404.89,
-      "gain": 0.25,
-      "bus": "sfx",
-      "pan": 0.1,
-      "duck": true
-    },
-    {
-      "id": "score-9",
-      "kind": "score",
-      "file": "score-dawn.wav",
-      "start": 413.42,
-      "end": 474.92,
-      "gain": 1,
-      "bus": "music",
-      "loop": true,
-      "duck": true
-    },
-    {
-      "id": "ambience-9",
+      "id": "ambience-12-0",
       "kind": "dawn",
       "file": "dawn.wav",
       "start": 413.42,
       "end": 474.92,
-      "gain": 0.58,
+      "gain": 0.3,
       "bus": "sfx",
       "loop": true,
-      "duck": true
+      "duck": true,
+      "purpose": "Physical dawn room tone"
     },
     {
-      "id": "S09_AXIOM_002-scan",
-      "kind": "scan",
-      "file": "scan.wav",
-      "start": 430.52000000000004,
-      "end": 431.42,
-      "gain": 0.2,
-      "bus": "sfx",
-      "pan": 0,
-      "duck": true
+      "id": "score-city-survives",
+      "kind": "score",
+      "file": "score-dawn.wav",
+      "start": 458.59,
+      "end": 474.92,
+      "gain": 0.62,
+      "bus": "music",
+      "duck": true,
+      "purpose": "Restrained recovery; no instant-victory fanfare"
     }
   ]
 }

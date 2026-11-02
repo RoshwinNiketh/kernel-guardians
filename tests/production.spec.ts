@@ -1,7 +1,8 @@
 import {test,expect,type Page} from '@playwright/test';
 import {scheduled,chapters,duration,climaxStart,blackoutAt} from '../src/story/production/timeline';
+import {soundCues} from '../src/cinematic/soundDesign';
 const readAudio=(page:Page)=>page.evaluate(()=>(window as any).__KG.audio);
-const seek=async(page:Page,t:number)=>page.getByRole('slider',{name:'Story timeline'}).fill(String(Number(t.toFixed(3))));
+const seek=async(page:Page,t:number)=>page.getByRole('slider',{name:'Story timeline'}).fill(String(Number((t+26).toFixed(3))));
 async function start(page:Page){await page.goto('/');await page.getByRole('button',{name:'START STORY'}).click();await expect(page.getByText('Local narration · 66 cues',{exact:true})).toBeVisible({timeout:45000});await page.getByRole('button',{name:'Pause',exact:true}).click();}
 
 test('all 66 real voices, exact speaker ownership, pause, seek, mix and rate',async({page})=>{
@@ -16,7 +17,7 @@ test('all 66 real voices, exact speaker ownership, pause, seek, mix and rate',as
   await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(66);const playing=await readAudio(page);expect(playing.active.some((s:any)=>s.id===`voice:${c.id}`)).toBe(true);expect(await page.evaluate(id=>(window as any).__starts.some((s:any)=>s.id===`voice:${id}`&&Math.abs(s.offset-.2)<.004),c.id)).toBe(true);await page.getByRole('button',{name:'Pause',exact:true}).click();expect((await readAudio(page)).active).toEqual([]);
  }
  for(const scene of chapters){const cue=scheduled.find(c=>c.scene===scene.id)!;await seek(page,cue.start+.7);await page.screenshot({path:`docs/verification/cinematic/scene-${scene.id}.png`});}
- await seek(page,250.123);await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(80);await page.getByRole('button',{name:'Open settings and pause'}).click();
+ await seek(page,scheduled.find(c=>c.id==='S03_PATCH_002')!.start+1);await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(80);await page.getByRole('button',{name:'Open settings and pause'}).click();
  const paused=await page.locator('.full-story').getAttribute('data-time'),camera=await page.locator('.cine-world').getAttribute('style');await page.waitForTimeout(220);await expect(page.locator('.full-story')).toHaveAttribute('data-time',paused!);await expect(page.locator('.cine-world')).toHaveAttribute('style',camera!);expect((await readAudio(page)).active).toEqual([]);
  await page.getByRole('combobox',{name:'Playback speed'}).selectOption('1.25');await page.getByLabel('narration volume').fill('30');await page.getByLabel('music volume').fill('20');await page.getByLabel('sfx volume').fill('40');await page.getByRole('button',{name:'Resume story'}).click();await page.waitForTimeout(80);
  const mixed=await readAudio(page);expect(mixed.rate).toBe(1.25);expect(mixed.voiceGain).toBeCloseTo(.3);expect(mixed.musicGain).toBeCloseTo(.2);expect(mixed.sfxGain).toBeCloseTo(.4);expect(mixed.active.map((s:any)=>s.bus)).toEqual(expect.arrayContaining(['voice','music','sfx']));expect(mixed.active.find((s:any)=>s.bus==='music').gain).toBeLessThan(.3);
@@ -43,6 +44,15 @@ test('private-media fallback and portrait subtitles',async({page})=>{
 
 test('missing soundtrack reports the failure while preserving narration',async({page})=>{
  await page.route('**/local-sound/**',route=>route.fulfill({status:404,body:'Missing soundtrack'}));await page.goto('/');await page.getByRole('button',{name:'START STORY'}).click();await expect(page.getByText('Local narration · Soundtrack unavailable',{exact:true})).toBeVisible({timeout:45000});const audio=await readAudio(page);expect(audio.loadedVoices).toBe(66);expect(audio.loadedSounds).toBe(0);
+});
+
+test('selective score, physical ambience and blackout dropout survive seeks',async({page})=>{
+ await start(page);
+ for(const id of ['S05_MIRA_001','S05_ELARA_003','S04_FIREWALL_007','S09_AXIOM_002']){
+  const cue=scheduled.find(c=>c.id===id)!;await seek(page,cue.start+.25);await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(70);const audio=await readAudio(page);expect(audio.active.filter((s:any)=>s.bus==='music')).toHaveLength(0);expect(audio.active.some((s:any)=>s.id===`voice:${id}`)).toBe(true);await page.getByRole('button',{name:'Pause',exact:true}).click();
+ }
+ const score=soundCues.find(c=>c.id==='score-last-response')!;await seek(page,score.start+1);await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(70);expect((await readAudio(page)).active.some((s:any)=>s.id===score.id)).toBe(true);await page.getByRole('button',{name:'Pause',exact:true}).click();
+ await seek(page,blackoutAt-.15);await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(25);const dark=await readAudio(page);expect(dark.active.filter((s:any)=>s.bus==='music')).toHaveLength(0);expect(dark.active.every((s:any)=>s.gain===0)).toBe(true);await page.getByRole('button',{name:'Pause',exact:true}).click();
 });
 
 test('only current edition is served and the archive is discovered on an existing TV',async({page})=>{

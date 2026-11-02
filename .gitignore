@@ -161,3 +161,6 @@ kg-master-handoff/
 # Regenerable frame-by-frame visual review sheets
 docs/verification/cinematic/frames/
 docs/verification/cinematic/contact-*.jpg
+
+# User-supplied local theme attachments
+.codex-remote-attachments/

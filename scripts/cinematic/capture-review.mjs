@@ -19,7 +19,7 @@ try{
  for(let i=0;i<shots.length;i++){
   if(filter&&!filter.test(shots[i].id))continue;
   const shot=shots[i],time=Number(((shot.start+shot.end)/2).toFixed(3));
-  await slider.fill(String(time));
+  await slider.fill(String(Number((time+26).toFixed(3))));
   await page.locator('.cinematic-stage').evaluate(async el=>{await Promise.all([...el.querySelectorAll('img')].map(img=>img.decode().catch(()=>{})));});
   const file=`${directory}/frames/${String(i+1).padStart(3,'0')}-${shot.id}.png`;
   await page.locator('.stage-container').screenshot({path:file});
