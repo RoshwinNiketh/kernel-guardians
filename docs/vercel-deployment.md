@@ -1,5 +1,7 @@
 # Vercel deployment
 
+Update: the user authorized deploying the supplied menu/intro theme. `public/local-music/intro-theme.mp3` is now the sole allowed audio file in the static build, verified by SHA-256. Menu and intro music work on Vercel after this update. Voice recordings and the story score/SFX remain local and excluded. The earlier exclusion description below applies to those recordings; the menu theme is now an explicit exception.
+
 After merging `rn/master-story-build-v2` into `main`, import `RoshwinNiketh/kernel-guardians` into Vercel, or use the existing connected project. Set the production branch to `main`.
 
 | Setting | Value |
