@@ -7,3 +7,4 @@ createRoot(document.getElementById('root')!).render(<React.StrictMode><App /></R
 import './styles/production.css';
 
 import './styles/cinematic.css';
+import './styles/intro.css';

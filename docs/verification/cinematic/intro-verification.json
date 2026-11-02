@@ -1,0 +1,32 @@
+{
+  "branch": "rn/master-story-build-v2",
+  "intro_duration": 26,
+  "experience_duration": 500.92,
+  "story_duration": 474.92,
+  "cast_cards": 8,
+  "unit_tests_passed": 18,
+  "distinct_browser_checks_passed": 11,
+  "build": "passed",
+  "theme_sha256": "c97f0f8a344d619d383e83f8a126c8a2ef6524a0e8f0cd3dfaaae3f159b64a87",
+  "theme_in_public_build": false,
+  "dialogue_cues_unchanged": 66,
+  "hero_art_files_unchanged": 24,
+  "background_visibility_check": "simulated visibility event in real Chrome",
+  "visual_review": [
+    "desktop cast card",
+    "portrait cast card"
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": false,
+  "title_card_interval": [
+    20,
+    26
+  ],
+  "title_extension_seconds": 4,
+  "title_extension_checks": {
+    "unit_tests": 18,
+    "focused_browser_checks": 2,
+    "includes_all_66_voice_offsets": true
+  }
+}

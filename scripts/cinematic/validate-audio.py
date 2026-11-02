@@ -9,6 +9,7 @@ WORK=Path(os.environ.get('KG_VOICE_WORKSPACE','G:/Workspace/AI/tools/chatterbox/
 FFMPEG=os.environ.get('KG_FFMPEG') or json.loads((WORK/'summary.json').read_text())['ffmpeg_path']
 PRIVATE=ROOT/'.local-media';OUT=PRIVATE/'review';OUT.mkdir(exist_ok=True)
 edit=json.loads((PRIVATE/'cinematic-edit.json').read_text())
+envelopes=json.loads((PRIVATE/'cinematic-envelopes.json').read_text())
 retakes=json.loads((WORK/'production/cinematic/retakes.json').read_text())
 files=list((PRIVATE/'dialogue').glob('*.wav'))+list((PRIVATE/'sound').glob('*.wav'))
 def validate(path):
@@ -37,14 +38,16 @@ assert all(r['ffmpeg_valid'] and r['finite'] and r['full_scale_samples']==0 and 
 SR=24000;mix=np.zeros((round((edit['duration']+.1)*SR),2),np.float32)
 speech=np.zeros(len(mix),bool)
 for c in edit['scheduled']:speech[round(c['start']*SR):round(c['end']*SR)]=True
-def add_audio(path,start,end,gain,loop=False,pan=0,duck=None):
+def add_audio(path,start,end,gain,loop=False,pan=0,duck=None,automation=None):
     audio,sr=sf.read(path,dtype='float32',always_2d=True);assert sr==SR
     begin=round(start*SR);length=round((end-start)*SR);length=min(length,len(mix)-begin)
     if loop:audio=np.tile(audio,(math.ceil(length/len(audio)),1))[:length]
     else:length=min(length,len(audio));audio=audio[:length]
     if audio.shape[1]==1:audio=np.concatenate([audio*math.cos((pan+1)*math.pi/4),audio*math.sin((pan+1)*math.pi/4)],axis=1)
     levels=np.full(length,gain,np.float32)
-    if duck is not None:
+    if automation is not None:
+        levels*=np.interp(np.arange(length)/SR,np.arange(len(automation))*.01,automation)
+    elif duck is not None:
         levels[speech[begin:begin+length]]*=duck
         t=np.arange(length)/SR;levels*=np.minimum(1,t/.05)*np.minimum(1,(end-start-t)/.12)
     mix[begin:begin+length]+=audio*levels[:,None]
@@ -52,7 +55,7 @@ for c in edit['scheduled']:
     path=PRIVATE/'dialogue'/f"{c['id']}.wav";data,_=sf.read(path,dtype='float32');rms=float(np.sqrt(np.mean(data*data)));peak=float(np.max(abs(data)));gain=min(2,.1/max(rms,.001),.96/max(peak,.001))
     add_audio(path,c['start'],c['end'],gain*.85)
 for c in edit['soundCues']:
-    add_audio(PRIVATE/'sound'/c['file'],c['start'],c['end'],c['gain']*(.32 if c['bus']=='music' else .46),c.get('loop',False),c.get('pan',0),(.23 if c['bus']=='music' else .45) if c.get('duck') else None)
+    add_audio(PRIVATE/'sound'/c['file'],c['start'],c['end'],(.32 if c['bus']=='music' else .46),c.get('loop',False),c.get('pan',0),automation=envelopes[c['id']])
 mix*=.88
 peak=float(np.max(abs(mix)));assert peak<1,'Default mix exceeds full scale before compressor'
 sf.write(OUT/'cinematic-default-mix.wav',mix[:round(edit['duration']*SR)],SR,subtype='PCM_24')

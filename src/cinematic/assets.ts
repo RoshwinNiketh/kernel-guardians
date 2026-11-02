@@ -1,4 +1,4 @@
-import metrics from './art-metrics.json';
+import metrics from './art-metrics.json' with {type:'json'};
 export interface ArtMetric {file:string;width:number;height:number;anchorX:number;footY:number;top:number;bodyHeight:number;sha256:string;transparentFraction:number}
 export const artMetrics:Record<string,ArtMetric>=metrics;
 export const environmentArt={city:'/assets/backgrounds/city_panorama.png',command:'/assets/cinematic/environments/command-center.png',street:'/assets/backgrounds/program_street.webp',gateway:'/assets/cinematic/environments/gateway.png',apartment:'/assets/cinematic/environments/mira-apartment.png',dawn:'/assets/cinematic/environments/city-dawn.png'};
