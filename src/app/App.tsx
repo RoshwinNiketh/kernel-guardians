@@ -1,3 +1,4 @@
+import { ArtworkContext, useArtworkPreload } from "../cinematic/stage/artworkLoader";
 import { useEffect, useRef, useState } from "react";
 import { StoryEngine } from "../playback/StoryEngine";
 import { ExperienceAudio } from "../playback/audio/ExperienceAudio";
@@ -16,9 +17,8 @@ export default function App() {
   const [modal, setModal] = useState<"settings" | "credits" | null>(null);
   const [confirm, setConfirm] = useState<StoryAction | null>(null);
   const [settings, setSettings] = useState(initialSettings);
-  const [loaded, setLoaded] = useState(0);
-  const [failed, setFailed] = useState(false);
   const [loadAttempt, setLoadAttempt] = useState(0);
+  const { loaded, failed, images } = useArtworkPreload(loadAttempt);
   const resumeAfterModal = useRef(false);
   const [fullscreenError, setFullscreenError] = useState("");
   const [audioError, setAudioError] = useState(false);
@@ -87,25 +87,6 @@ export default function App() {
     );
   }, [settings.narration, settings.music, settings.sfx, muted]);
   useEffect(() => {
-    let active = true;
-    setLoaded(0);
-    setFailed(false);
-    const assets = artworkUrls;
-    assets.forEach((asset) => {
-      const img = new Image();
-      img.onload = () => {
-        if (active) setLoaded((n) => n + 1);
-      };
-      img.onerror = () => {
-        if (active) setFailed(true);
-      };
-      img.src = asset;
-    });
-    return () => {
-      active = false;
-    };
-  }, [loadAttempt]);
-  useEffect(() => {
     engine.speed(settings.speed);
   }, [settings.speed, engine]);
   useEffect(() => {
@@ -133,6 +114,7 @@ export default function App() {
     if (resumeAfterModal.current && screen === "story") engine.play();
   };
   const start = async () => {
+    if (images.size !== artworkUrls.length) return;
     engine.pause();
     engine.seek(0);
     setScreen("loading");
@@ -213,6 +195,7 @@ export default function App() {
     }
   };
   return (
+    <ArtworkContext.Provider value={images}>
     <main
       onClickCapture={(event) => {
         const target = (event.target as Element).closest(
@@ -281,5 +264,6 @@ export default function App() {
       )}
       {modal === "credits" && <CreditsDialog closeModal={closeModal} />}
     </main>
+    </ArtworkContext.Provider>
   );
 }

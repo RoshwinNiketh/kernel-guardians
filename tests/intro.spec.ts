@@ -152,3 +152,24 @@ test("backgrounding stops the menu theme and pauses the intro", async ({
   ).toBeVisible();
   expect((await audio(page)).introActive).toBe(false);
 });
+
+test("blocks playback until failed artwork is fetched and decoded", async ({ page }) => {
+  let attempts = 0;
+  await page.route("**/assets/characters/kernel/point.png?*", async (route) => {
+    attempts++;
+    if (attempts === 1) {
+      await route.fulfill({ status: 200, contentType: "image/png", body: "invalid image" });
+    } else {
+      await route.continue();
+    }
+  });
+  await page.goto("/");
+  await expect(page.getByRole("button", { name: "ASSET LOAD FAILED" })).toBeDisabled();
+  await expect(page.locator(".cast-intro")).toHaveCount(0);
+  await page.getByRole("button", { name: "Retry loading artwork" }).click();
+  await page.getByRole("button", { name: "START STORY" }).click();
+  const portrait = page.getByRole("img", { name: "Commander Kernel", exact: true });
+  await expect(portrait).toHaveAttribute("src", /^blob:/);
+  await expect.poll(() => portrait.evaluate((img: HTMLImageElement) => img.naturalWidth)).toBeGreaterThan(0);
+  expect(attempts).toBe(2);
+});

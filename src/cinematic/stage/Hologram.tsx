@@ -1,3 +1,4 @@
+import { useArtwork } from "./artworkLoader";
 import { cueAt, blackoutAt, climaxStart } from "../timeline/edit";
 import type { Shot } from "../timeline/types";
 const cyan = "#54e9fa",
@@ -69,9 +70,10 @@ function Image({
   w?: number;
   h?: number;
 }) {
+  const artwork = useArtwork();
   return (
     <image
-      href={propArt(name)}
+      href={artwork(propArt(name))}
       x={x - w / 2}
       y={y - h / 2}
       width={w}

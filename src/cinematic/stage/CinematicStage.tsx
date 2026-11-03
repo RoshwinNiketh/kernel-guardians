@@ -1,3 +1,4 @@
+import { useArtwork } from "./artworkLoader";
 import {
   actorFramesAt,
   cameraAt,
@@ -35,6 +36,7 @@ export function CinematicStage({
   reduced: boolean;
   subtitles: boolean;
 }) {
+  const artwork = useArtwork();
   const shot = f.shot,
     camera = cameraAt(shot, time, reduced),
     actors = actorFramesAt(time, reduced),
@@ -113,7 +115,7 @@ export function CinematicStage({
           {broadcast && (
             <>
               <img
-                src={actorArt("vex", broadcast.pose).file}
+                src={artwork(actorArt("vex", broadcast.pose).file)}
                 alt="Vex Null speaking through a public transmission"
                 style={{
                   transform: `translateX(-50%) translateY(${reduced ? 0 : Math.sin(time * 1.7) * 2}px)`,
