@@ -17,7 +17,7 @@ Only the current cinematic edition is served. The former pilot and v1 selectors 
 
 Start Story now plays a **30-second intro**, with Skip Intro available, before the existing film. Total experience: **8:24.92**. The menu loops the supplied theme separately. The intro uses the same theme with a timed fade into the story, in the track that also carries dialogue.
 
-The selective sound pass uses music for 28.64% of the film. Personal scenes, Elara's archive and most teaching passages retain quiet room tone. Effects follow visible actions, with smooth dialogue ducking and a brief blackout dropout. See [sound direction, research and cue sheet](docs/sound-direction.md). The dedicated audio-enabled preview for this pass is http://127.0.0.1:5183/; set `KG_PORT=5183` when testing that server.
+The score covers 28.64% of the film. The story uses eight short effects to mark specific actions, with the rest of the effects track silent. The archive and quiet dialogue scenes have no looping ambience. [Sound direction](docs/sound-direction.md) records the mix decisions.
 
 Start Story waits for all three tracks to download and decode before the intro appears. If a track fails to load, retry from the loading screen. Space toggles playback; left/right arrows and the transport buttons seek five seconds. The slider reconstructs any frame. Settings freezes actors, camera, effects, dialogue and every audio bus at the same master time, and resumes the prior playing/paused state.
 
@@ -25,9 +25,31 @@ Settings provides narration, music and SFX levels, subtitles, reduced motion, an
 
 The eight-minute countdown is fictional story time. Authored location cuts skip forward, while each uninterrupted sequence advances normally. The final ten seconds run continuously, ending at story time 6:31.12. Essential services return; the script explicitly leaves recovery incomplete.
 
-## Structure and art
+## Project structure
 
-React, TypeScript, Vite, GSAP and Web Audio drive the experience. `src/cinematic/edit.ts` sequences measured recordings and short editorial beats; `director.ts` defines 92 shots and scene-long actor presence. Pose changes reuse measured foot anchors and never restart an entrance. Narration has no character avatar. Spoken text remains in `src/story/production/dialogue_cues.json` and matches `docs/story/FINAL_LOCKED_SCREENPLAY.md` exactly.
+| Location | Responsibility |
+| --- | --- |
+| `src/app/` | Menu, soundtrack loading, playback controls, and settings |
+| `src/cinematic/` | Cast intro, story timing and dialogue data, shot direction, and stage rendering |
+| `src/playback/` | Master playhead, audio cue design, audio loading, and synchronized playback |
+| `src/components/`, `src/styles/` | Shared UI and styles |
+| `public/assets/` | Artwork and menu theme served by the site |
+| `assets/audio/` | Editable dialogue, score, and effects WAVs used by the build |
+| `scripts/audio/`, `scripts/build/`, `scripts/review/` | Audio preparation, production audit, and capture tools |
+| `tests/` | Browser regressions. Unit tests live beside the code they cover. |
+| `docs/kit/` | Original pilot art and design references |
+
+## Asset layout
+
+- `public/assets/characters/<character>/<pose>.png` holds every active character pose.
+- `public/assets/backgrounds/` holds the menu poster and story locations.
+- `public/assets/props/` holds the CRT and artwork used in story diagrams.
+- `public/assets/audio/menu-theme.mp3` is the standalone menu theme.
+- `assets/audio/dialogue/` and `assets/audio/sound/` hold the editable WAVs. The build renders the playback tracks from these sources.
+
+## Art and story
+
+React, TypeScript, Vite, GSAP and Web Audio drive the experience. `src/cinematic/timeline/edit.ts` sequences measured recordings and short editorial beats; `director.ts` defines 93 shots and scene-long actor presence. Pose changes reuse measured foot anchors and never restart an entrance. Narration has no character avatar. Spoken text remains in `src/cinematic/timeline/data/dialogue_cues.json` and matches `docs/story/FINAL_LOCKED_SCREENPLAY.md` exactly.
 
 All 24 hero poses use higher-resolution artwork regenerated from their original pose references. Fifteen detailed new illustrations provide four environments, individual supporting poses, two background characters and a physical CRT. Flat illustrations support camera movement, lighting, particles and pose swaps; they do not provide mouth or independent limb rigs.
 
@@ -49,8 +71,8 @@ Chrome is used through the installed Playwright test package. No browser downloa
 ```powershell
 npm run cinematic:export
 npm run cinematic:capture
-& 'G:/Workspace/AI/tools/chatterbox/venv/Scripts/python.exe' scripts/cinematic/contact-sheets.py
-& 'G:/Workspace/AI/tools/chatterbox/venv/Scripts/python.exe' scripts/cinematic/validate-audio.py
+& 'G:/Workspace/AI/tools/chatterbox/venv/Scripts/python.exe' scripts/review/contact-sheets.py
+& 'G:/Workspace/AI/tools/chatterbox/venv/Scripts/python.exe' scripts/audio/validate-audio.py
 ```
 
 The review captures every authored shot. Audio validation checks the 66 selected voices and 25 soundtrack assets with FFmpeg and writes an offline reference mix and listening excerpts to ignored `.local-media/review`. Set `KG_FFMPEG` to override the existing FFmpeg binary. These files stay local and uncommitted. Nothing is deployed automatically.

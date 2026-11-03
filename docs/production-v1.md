@@ -12,7 +12,7 @@ AudioContext sources are reconstructed from the master time. Seeking stops the p
 
 Actual runtime: **575.12 seconds (9:35.12)**. Selected speech totals 409.35 seconds. Normal-rate speech is preserved; inter-cue gaps fill early editorial scene windows. Chapter starts in seconds: 0, 15, 65, 145, 225, 275, 350, 415, 515.65. The countdown is clamped to eight minutes before 0:15, runs to zero at 8:15, and then holds zero. The last scene starts at 8:35.65 and runs through 9:33.12, followed by the end card. The estimate of a 9:05 total was extended to retain the post-zero recovery lines and the complete debrief. No locked dialogue was removed or rewritten.
 
-The exact screenplay is retained in `docs/story/FINAL_LOCKED_SCREENPLAY.md`; production cue IDs and shot references are under `src/story/production`. Dialogue directions never enter the spoken text.
+The exact screenplay is retained in `docs/story/FINAL_LOCKED_SCREENPLAY.md`; v1 timing and shot references are retained in Git history. Dialogue directions never enter the spoken text.
 
 ## Local voices and privacy
 
@@ -26,7 +26,7 @@ Rights for preset-reference reuse remain unverified. No audio was committed, upl
 
 ## Artwork and limitations
 
-`docs/production-assets.json` records provenance. All three supplied supporting-character boards were used as generation references. A transparent atlas was generated and visually inspected, then exported to two separate PNG poses each for Vex, Mira, Elara and Axiom. Empty cell margins were cropped using an alpha threshold for display sizing; image content was not upscaled to invent detail. The exported art is provisional: about 430px figure height, lower detail than the original 637px hero art, with small rim/alpha and pose-continuity differences. In-scene captures were reviewed at matching actor heights. Original boards are preserved in the handoff; no whole board or baked label is used as an actor.
+All three supplied supporting-character boards were used as generation references. A transparent atlas was generated and visually inspected, then exported to two separate PNG poses each for Vex, Mira, Elara and Axiom. Empty cell margins were cropped using an alpha threshold for display sizing; image content was not upscaled to invent detail. The exported art is provisional: about 430px figure height, lower detail than the original 637px hero art, with small rim/alpha and pose-continuity differences. In-scene captures were reviewed at matching actor heights. Original boards are preserved in the handoff; no whole board or baked label is used as an actor.
 
 Scenes rely on a limited number of backgrounds and two supporting poses per character. No independent hair/limb rigging, mouth animation, new music or bespoke sound effects are included. Diagram/pose choreography is simplified relative to every visual direction in the screenplay. These are explicit art/polish limits rather than missing dialogue.
 
@@ -36,7 +36,7 @@ No listening or ASR approval is claimed. FFmpeg decoding, sample rate, finite wa
 
 Baseline build passed. Baseline unit tests passed outside the Windows sandbox after its temporary-file rename restriction blocked Vitest. Final build passes; 9 unit/React tests cover pilot rendering, production cue order/count, no speech overlap, nine chapters, countdown, final-ten-second silence and deterministic reconstruction.
 
-Four browser regression tests passed: original pilot full playback and controls; original mobile/reduced motion; full story local loading/65 cue source starts/nine scene captures/pause/seek/rate/ending; and missing-audio portrait fallback. Browser snapshots are `docs/verification/full-scene-1.png` through `full-scene-9.png`, plus `full-mobile.png`. All 65 voices were decoded in Chrome and each was started at a seeked offset. This is technical playback evidence, not listening approval.
+Four browser regression tests passed: original pilot full playback and controls; original mobile/reduced motion; full story local loading/65 cue source starts/nine scene captures/pause/seek/rate/ending; and missing-audio portrait fallback. The v1 snapshots are retained in Git history. All 65 voices were decoded in Chrome and each was started at a seeked offset. This is technical playback evidence, not listening approval.
 
 An opt-in uninterrupted pass is available with PowerShell `$env:KG_FULL_PLAYBACK='1'; npm run test:browser -- tests/continuous.spec.ts --workers=1`. It plays the full story at the supported 1.25× rate and verifies all 65 cues and completion. Its final result is recorded below after completion.
 

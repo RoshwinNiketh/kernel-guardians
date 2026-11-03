@@ -1,27 +1,154 @@
-import {test,expect} from '@playwright/test';
-import {cast} from '../src/cinematic/Intro';
-const audio=(page:any)=>page.evaluate(()=>(window as any).__KG.audio);
-test('menu loop, cards, exact pause and skip use the supplied private theme',async({page})=>{
- test.setTimeout(100000);await page.goto('/');await page.getByRole('button',{name:'Settings',exact:true}).click();await page.getByRole('button',{name:'Done',exact:true}).click();await expect.poll(async()=>(await audio(page)).themeLoaded).toBe(true);await page.waitForTimeout(31000);expect((await audio(page)).menuSources).toBeGreaterThan(0);
- await page.getByRole('button',{name:'START STORY'}).click();await expect(page.getByText('Full narration · 66 cues',{exact:true})).toBeVisible({timeout:45000});await expect(page.locator('.cast-intro')).toBeVisible();expect((await audio(page)).introOffset).toBeLessThan(1);await page.getByRole('button',{name:'Pause',exact:true}).click();
- const slider=page.getByRole('slider',{name:'Story timeline'});await expect(slider).toHaveAttribute('max','504.92');
- for(const [i,c]of cast.entries()){await slider.fill(String(i*3+.4));await expect(page.locator('.cast-intro')).toHaveAttribute('data-character',c[0]);await expect(page.locator('.intro-name h1')).toHaveText(c[1]);}
- await slider.fill('24');await expect(page.locator('.intro-title')).toBeVisible();await slider.fill('5.123');await page.getByRole('button',{name:'Open settings and pause'}).click();await page.waitForTimeout(150);await expect(page.locator('.cast-intro')).toHaveAttribute('data-time','5.123');await page.getByRole('button',{name:'Resume story'}).click();await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(100);expect((await audio(page)).introActive).toBe(true);await page.getByRole('button',{name:'Skip Intro'}).click();await expect(page.locator('.cinematic-stage')).toBeVisible();expect((await audio(page)).introActive).toBe(false);expect((await audio(page)).menuSources).toBe(0);
- await page.getByRole('button',{name:'Pause',exact:true}).click();await slider.fill('12');await page.screenshot({path:'.local-media/review/intro-desktop.png'});
+import { test, expect } from "@playwright/test";
+import { cast } from "../src/cinematic/intro/Intro";
+const audio = (page: any) => page.evaluate(() => (window as any).__KG.audio);
+test("menu loop, cards, exact pause and skip use the supplied private theme", async ({
+  page,
+}) => {
+  test.setTimeout(100000);
+  await page.goto("/");
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
+  await page.getByRole("button", { name: "Done", exact: true }).click();
+  await expect.poll(async () => (await audio(page)).themeLoaded).toBe(true);
+  await page.waitForTimeout(31000);
+  expect((await audio(page)).menuSources).toBeGreaterThan(0);
+  await page.getByRole("button", { name: "START STORY" }).click();
+  await expect(
+    page.getByRole("slider", { name: "Story timeline" }),
+  ).toBeVisible({ timeout: 45000 });
+  await expect(page.locator(".cast-intro")).toBeVisible();
+  expect((await audio(page)).introOffset).toBeLessThan(1);
+  await page.getByRole("button", { name: "Pause", exact: true }).click();
+  const slider = page.getByRole("slider", { name: "Story timeline" });
+  await expect(slider).toHaveAttribute("max", "504.92");
+  for (const [i, c] of cast.entries()) {
+    await slider.fill(String(i * 3 + 0.4));
+    await expect(page.locator(".cast-intro")).toHaveAttribute(
+      "data-character",
+      c[0],
+    );
+    await expect(page.locator(".intro-name h1")).toHaveText(c[1]);
+  }
+  await slider.fill("24");
+  await expect(page.locator(".intro-title")).toBeVisible();
+  await slider.fill("5.123");
+  await page.getByRole("button", { name: "Open settings and pause" }).click();
+  await page.waitForTimeout(150);
+  await expect(page.locator(".cast-intro")).toHaveAttribute(
+    "data-time",
+    "5.123",
+  );
+  await page.getByRole("button", { name: "Resume story" }).click();
+  await page.getByRole("button", { name: "Play", exact: true }).click();
+  await page.waitForTimeout(100);
+  expect((await audio(page)).introActive).toBe(true);
+  await page.getByRole("button", { name: "Skip Intro" }).click();
+  await expect(page.locator(".cinematic-stage")).toBeVisible();
+  expect((await audio(page)).introActive).toBe(false);
+  expect((await audio(page)).menuSources).toBe(0);
+  await page.getByRole("button", { name: "Pause", exact: true }).click();
+  await slider.fill("12");
+  await page.screenshot({ path: ".local-media/review/intro-desktop.png" });
 });
-test('automatic handoff preserves story zero and missing theme does not block playback',async({page})=>{
- test.setTimeout(60000);await page.route('**/local-music/**',r=>r.fulfill({status:404,body:'Missing'}));await page.goto('/');await page.getByRole('button',{name:'START STORY'}).click();await expect(page.locator('.cast-intro')).toBeVisible();await expect(page.locator('.cinematic-stage')).toBeVisible({timeout:35000});expect((await audio(page)).themeUnavailable).toBe(true);await expect(page.getByText('Full narration · 66 cues',{exact:true})).toBeVisible();
+test("automatic handoff preserves story zero and missing theme does not block playback", async ({
+  page,
+}) => {
+  test.setTimeout(60000);
+  await page.route("**/assets/audio/menu-theme.mp3", (r) =>
+    r.fulfill({ status: 404, body: "Missing" }),
+  );
+  await page.goto("/");
+  await page.getByRole("button", { name: "START STORY" }).click();
+  await expect(page.locator(".cast-intro")).toBeVisible();
+  await expect(page.locator(".cinematic-stage")).toBeVisible({
+    timeout: 35000,
+  });
+  expect((await audio(page)).themeUnavailable).toBe(true);
+  await expect(
+    page.getByRole("slider", { name: "Story timeline" }),
+  ).toBeVisible();
 });
-test('portrait role labels and reduced motion stay readable',async({page})=>{
- await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');await page.getByRole('button',{name:'START STORY'}).click();await expect(page.getByText('Full narration · 66 cues',{exact:true})).toBeVisible({timeout:45000});await page.getByRole('button',{name:'Pause',exact:true}).click();await page.getByRole('slider',{name:'Story timeline'}).fill('12.5');await expect(page.locator('.mobile-story')).toContainText('Security Researcher');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.screenshot({path:'.local-media/review/intro-mobile.png'});
+test("portrait role labels and reduced motion stay readable", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/");
+  await page.getByRole("button", { name: "START STORY" }).click();
+  await expect(
+    page.getByRole("slider", { name: "Story timeline" }),
+  ).toBeVisible({ timeout: 45000 });
+  await page.getByRole("button", { name: "Pause", exact: true }).click();
+  await page.getByRole("slider", { name: "Story timeline" }).fill("12.5");
+  await expect(page.locator(".mobile-story")).toContainText(
+    "Security Researcher",
+  );
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.screenshot({ path: ".local-media/review/intro-mobile.png" });
 });
 
-test('real theme ends at handoff and replay starts directly in the story',async({page})=>{
- await page.goto('/');await page.getByRole('button',{name:'START STORY'}).click();await expect(page.getByText('Full narration · 66 cues',{exact:true})).toBeVisible({timeout:45000});await page.getByRole('button',{name:'Pause',exact:true}).click();const seek=page.getByRole('slider',{name:'Story timeline'});await seek.fill('27.5');await expect(page.locator('.intro-title')).toBeVisible();await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(80);expect((await audio(page)).introActive).toBe(true);await page.getByRole('button',{name:'Pause',exact:true}).click();await seek.fill('29.7');await page.getByRole('button',{name:'Play',exact:true}).click();await expect(page.locator('.cinematic-stage')).toBeVisible();expect((await audio(page)).introActive).toBe(false);await page.getByRole('button',{name:'Pause',exact:true}).click();await seek.fill('504.92');await page.getByRole('button',{name:'Replay story'}).click();await expect(page.locator('.cinematic-stage')).toBeVisible();await expect(page.locator('.cast-intro')).toHaveCount(0);
+test("real theme ends at handoff and replay starts directly in the story", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "START STORY" }).click();
+  await expect(
+    page.getByRole("slider", { name: "Story timeline" }),
+  ).toBeVisible({ timeout: 45000 });
+  await page.getByRole("button", { name: "Pause", exact: true }).click();
+  const seek = page.getByRole("slider", { name: "Story timeline" });
+  await seek.fill("27.5");
+  await expect(page.locator(".intro-title")).toBeVisible();
+  await page.getByRole("button", { name: "Play", exact: true }).click();
+  await page.waitForTimeout(80);
+  expect((await audio(page)).introActive).toBe(true);
+  await page.getByRole("button", { name: "Pause", exact: true }).click();
+  await seek.fill("29.7");
+  await page.getByRole("button", { name: "Play", exact: true }).click();
+  await expect(page.locator(".cinematic-stage")).toBeVisible();
+  expect((await audio(page)).introActive).toBe(false);
+  await page.getByRole("button", { name: "Pause", exact: true }).click();
+  await seek.fill("504.92");
+  await page.getByRole("button", { name: "Replay story" }).click();
+  await expect(page.locator(".cinematic-stage")).toBeVisible();
+  await expect(page.locator(".cast-intro")).toHaveCount(0);
 });
 
-test('backgrounding stops the menu theme and pauses the intro',async({page})=>{
- await page.goto('/');await page.getByRole('button',{name:'Settings',exact:true}).click();await page.getByRole('button',{name:'Done',exact:true}).click();await expect.poll(async()=>(await audio(page)).menuSources).toBeGreaterThan(0);
- const hide=async()=>page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'));});
- await hide();expect((await audio(page)).menuSources).toBe(0);await page.evaluate(()=>Object.defineProperty(document,'hidden',{configurable:true,value:false}));await page.getByRole('button',{name:'START STORY'}).click();await expect(page.getByText('Full narration · 66 cues',{exact:true})).toBeVisible({timeout:45000});await hide();await expect(page.getByRole('button',{name:'Play',exact:true})).toBeVisible();expect((await audio(page)).introActive).toBe(false);
+test("backgrounding stops the menu theme and pauses the intro", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
+  await page.getByRole("button", { name: "Done", exact: true }).click();
+  await expect
+    .poll(async () => (await audio(page)).menuSources)
+    .toBeGreaterThan(0);
+  const hide = async () =>
+    page.evaluate(() => {
+      Object.defineProperty(document, "hidden", {
+        configurable: true,
+        value: true,
+      });
+      document.dispatchEvent(new Event("visibilitychange"));
+    });
+  await hide();
+  expect((await audio(page)).menuSources).toBe(0);
+  await page.evaluate(() =>
+    Object.defineProperty(document, "hidden", {
+      configurable: true,
+      value: false,
+    }),
+  );
+  await page.getByRole("button", { name: "START STORY" }).click();
+  await expect(
+    page.getByRole("slider", { name: "Story timeline" }),
+  ).toBeVisible({ timeout: 45000 });
+  await hide();
+  await expect(
+    page.getByRole("button", { name: "Play", exact: true }),
+  ).toBeVisible();
+  expect((await audio(page)).introActive).toBe(false);
 });

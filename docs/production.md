@@ -4,7 +4,7 @@ Patch now confirms “Eight minutes.” before Firewall responds. This is the us
 
 # Cinematic edition: implementation and listening review
 
-Reviewed 2 November 2026 on `rn/main-story-build-v1`, based on `1d26f2f` plus the uncommitted cinematic changes. No commit, upload or deployment is part of this revision. The prior implementation and its measured timings remain in `src/legacyV1` and `production-v1.md`.
+Reviewed 2 November 2026 on `rn/main-story-build-v1`, based on `1d26f2f` plus the uncommitted cinematic changes. No commit, upload or deployment is part of this revision. The previous edition is documented in `production-v1.md`, with timing and shot references retained in Git history.
 
 ## Editorial and cinematography changes
 
@@ -37,7 +37,7 @@ All 24 approved hero PNG files match the supplied pack byte for byte. The pilot 
 - One citizen and one technician (1024×1536 RGBA) for scene scale and repair activity.
 - One physical CRT television (1536×1024 RGBA).
 
-The supplied approved supporting reference boards remain the design references. `cinematic-assets-provenance.json` records source paths and the eleven persisted generation prompts. The four environment prompts were not persisted by the first batch and are explicitly marked absent, rather than reconstructed as exact prompts. `src/cinematic/art-metrics.json` records sizes, alpha-derived anchors and SHA-256 checksums for all 34 active actor poses.
+The supplied approved supporting reference boards remain the design references. `cinematic-assets-provenance.json` records source paths and the eleven persisted generation prompts. The four environment prompts were not persisted by the first batch and are explicitly marked absent, rather than reconstructed as exact prompts. `src/cinematic/stage/art-metrics.json` records sizes, alpha-derived anchors and SHA-256 checksums for all 34 active actor poses.
 
 These are detailed flattened illustrations with 2.5D motion graphics. Independent limb/hair rigs, mouth animation, and newly drawn intermediate acting frames are not present. The four generated environments and original city/street art provide six distinct locations; the film does not claim nine completely different backgrounds.
 
@@ -63,13 +63,13 @@ Seed 164 is used throughout. Nano reuses zero-exaggeration, normalized reference
 
 Installed model package: `chatterbox-tts` 0.1.7, recorded by pip as installed from Resemble AI commit `5de7a54aa4e5e2baadb0182dde554908b48b85c2`. CUDA verification: PyTorch 2.10.0+cu128, CUDA 12.8, RTX 5060 Laptop GPU, compute capability 12.0. A real 512×512 GPU matrix multiplication completed with finite output on `cuda:0`. All thirteen generation jobs completed; highest PyTorch-reserved memory was 3,776,970,752 bytes (3.518 GiB), below 8 GiB. This is PyTorch's allocator peak, not a measurement of every desktop process's VRAM.
 
-Twenty-five original synthesized local assets provide six atmospheric score beds, five location ambiences and fourteen foley/transient sounds. The source is `scripts/cinematic/render-sound.py` (seed 420164); there are no external recordings or music downloads. Seventy-three sound events cover chapter beds, intrusion carriers, scans, locks, gate strain, the flood, CRT spool/static, ten final ticks and restoration. Music and effects duck beneath dialogue.
+Twenty-five original synthesized local assets provide six atmospheric score beds, five location ambiences and fourteen foley/transient sounds. The source is `scripts/audio/render-sound.py` (seed 420164); there are no external recordings or music downloads. Seventy-three sound events cover chapter beds, intrusion carriers, scans, locks, gate strain, the flood, CRT spool/static, ten final ticks and restoration. Music and effects duck beneath dialogue.
 
 The Web Audio mixer has independent narration, music and SFX buses, a master mute and protective compressor. Defaults are 85%, 32% and 46%. Seeking reconstructs only sounds active at the destination; expired ticks/effects are not replayed. Pause stops every active source; resume uses the precise cue offset. Speed applies to the same master clock and audio sources.
 
 ## Technical audio results and listening priorities
 
-`scripts/cinematic/validate-audio.py` validated all 65 selected voice WAVs and 25 soundtrack WAVs through FFmpeg: 90 successful decodes, all 24 kHz, finite data, zero full-scale samples. No edge/silence heuristic indicated a truncated tail. The default offline reference mix peaks at 0.5151 before the live protective compressor. It is a mathematical reference mix; it is not a recording of the browser output.
+`scripts/audio/validate-audio.py` validated all 65 selected voice WAVs and 25 soundtrack WAVs through FFmpeg: 90 successful decodes, all 24 kHz, finite data, zero full-scale samples. No edge/silence heuristic indicated a truncated tail. The default offline reference mix peaks at 0.5151 before the live protective compressor. It is a mathematical reference mix; it is not a recording of the browser output.
 
 Sixteen voice files triggered low-confidence review flags: fifteen have large sample-to-sample changes, and two have high fractions of quiet 20 ms frames (one overlaps both categories). These flags do not establish audible clicks or defective speech. They have not been silently removed by destructive filtering. Most transient flags involve the inherited Standard/Grady Kernel takes; two involve Patch. Prioritize Kernel's dialogue, the new emergency command, Firewall's serious flood reaction (which includes a roughly 0.9-second internal pause after “Right”), and Kernel's short final reply. The flags and exact waveform measurements are retained in ignored `.local-media/review/audio-validation.json`.
 

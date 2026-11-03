@@ -1,10 +1,13 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import './styles/main.css';
-createRoot(document.getElementById('root')!).render(<React.StrictMode><App /></React.StrictMode>);
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./app/App";
+import "./styles/main.css";
+import "./styles/production.css";
+import "./styles/cinematic.css";
+import "./styles/intro.css";
 
-import './styles/production.css';
-
-import './styles/cinematic.css';
-import './styles/intro.css';
+createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);

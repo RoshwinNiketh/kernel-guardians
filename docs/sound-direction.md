@@ -1,5 +1,10 @@
 # Selective sound pass — 2 November 2026
 
+The current effects pass removes all looping ambience, carrier buzzes, traffic washes, and countdown ticks. Eight short tonal cues mark the first outage, the updater click, the buffer overflow, the CRT boot, three final response actions, and service restoration. The menu click, slider, and toggle also use soft tonal cues. Dialogue and the nine score cues retain their previous timing and mix. Run `python scripts/audio/render-clean-effects.py` to regenerate the tonal source WAVs.
+
+The report below describes the earlier sound pass and its verification.
+
+
 Main was fast-forwarded to the merged `bd7cb59`, then work returned to `rn/master-story-build-v2`. No dialogue, voice recordings or artwork changed in this pass.
 
 ## Research and decisions
@@ -30,7 +35,7 @@ Mira's distress, the entire Elara archive, most technical explanations and the h
 
 ## Effects and physical space
 
-The mix has 59 authored entries: nine music cues, 14 physical ambience segments and 36 effects. Each entry records its purpose in `src/cinematic/soundDesign.ts` and the exported edit sheet. Ambience follows the actual shot location, including command-to-gateway cross-cuts, rather than staying a command-room bed for the whole eighth chapter.
+The mix has 59 authored entries: nine music cues, 14 physical ambience segments and 36 effects. Each entry records its purpose in `src/playback/audio/soundDesign.ts` and the exported edit sheet. Ambience follows the actual shot location, including command-to-gateway cross-cuts, rather than staying a command-room bed for the whole eighth chapter.
 
 Effects are tied to events, not every diagram or line: CIA pillar illumination at one-third/two-thirds of its cue; payload reveal at one-third; first overflow cell at two-thirds; CRT archive detection at 1.85 seconds before Elara and screen boot at 1.05 seconds before; gate/service/standby cuts at climax +0/+3.2/+6.8 seconds. Ten restrained ticks correspond to the displayed final seconds. The visible blackout cuts score/effects 220 ms before zero, followed by a quiet relay confirmation 120 ms after zero. Dialogue is never cut by the blackout envelope.
 
@@ -38,11 +43,11 @@ Foley sources now distinguish a metallic gate resonance/motor, traffic-noise sur
 
 ## Local files and reproducibility
 
-Run the existing CPU Python with `scripts/cinematic/render-sound.py` to recreate the 25 original soundtrack WAV assets. The previous files were preserved at ignored `.local-media/sound-before-spotting`; selected files remain `.local-media/sound`. Seed 420164, 24 kHz PCM16; no downloaded samples or dependencies are needed. The private voices were not regenerated.
+Run the existing CPU Python with `scripts/audio/render-sound.py` to recreate the 25 original soundtrack WAV assets. The previous files were preserved at ignored `.local-media/sound-before-spotting`; selected files remain `.local-media/sound`. Seed 420164, 24 kHz PCM16; no downloaded samples or dependencies are needed. The private voices were not regenerated.
 
-`node scripts/cinematic/export-edit.mjs` exports the cue sheet and 100 Hz automation derived from the same live envelope. `scripts/cinematic/validate-audio.py` renders a normal-speed reference mix using that automation. It is an offline approximation, not a browser loopback recording. Local listening files are `.local-media/review/cinematic-default-mix.wav`, `firewall-humor-to-alert.wav`, `elara-archive.wav`, and `final-response.wav`.
+`node scripts/review/export-edit.mjs` exports the cue sheet and 100 Hz automation derived from the same live envelope. `scripts/audio/validate-audio.py` renders a normal-speed reference mix using that automation. It is an offline approximation, not a browser loopback recording. Local listening files are `.local-media/review/cinematic-default-mix.wav`, `firewall-humor-to-alert.wav`, `elara-archive.wav`, and `final-response.wav`.
 
-For actual browser output, `node scripts/cinematic/record-audio.mjs` taps the final master output into a local MediaRecorder. Three normal-speed Chrome recordings were captured and decoded successfully with FFmpeg: `.local-media/review/browser-firewall.webm`, `browser-archive.webm`, and `browser-response.webm`. These include the live smoothing and compressor, and remain local. They are listening-review material, not a claim that acting or balance has been approved by ear.
+For actual browser output, `node scripts/review/record-audio.mjs` taps the final master output into a local MediaRecorder. Three normal-speed Chrome recordings were captured and decoded successfully with FFmpeg: `.local-media/review/browser-firewall.webm`, `browser-archive.webm`, and `browser-response.webm`. These include the live smoothing and compressor, and remain local. They are listening-review material, not a claim that acting or balance has been approved by ear.
 
 The audio-enabled development preview is **http://127.0.0.1:5183/**. Existing port 5182 returned HTML for private WAV URLs, so it was left alone. Use `$env:KG_PORT='5183'` for browser tests against the dedicated server. A static preview intentionally has no private recordings or soundtrack middleware.
 
