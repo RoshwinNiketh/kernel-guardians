@@ -1,3 +1,4 @@
+import { useArtwork } from "./artworkLoader";
 import { actorArt, televisionArt } from "./assets";
 import { cueById } from "../timeline/edit";
 import type { ActorFrame } from "../timeline/types";
@@ -12,6 +13,7 @@ export function Television({
   close: boolean;
   reduced: boolean;
 }) {
+  const artwork = useArtwork();
   const cue = cueById("S05_ELARA_003"),
     running = time >= cue.start && time < cue.end;
   const foundAt = cue.start - 1.05,
@@ -31,7 +33,7 @@ export function Television({
     >
       <img
         className="tv-housing"
-        src={televisionArt}
+        src={artwork(televisionArt)}
         alt="Illustrated cathode ray television"
       />
       <div
@@ -44,7 +46,7 @@ export function Television({
             <img
               className="archive-portrait"
               style={{ opacity: boot }}
-              src={actorArt("elara", actor.pose).file}
+              src={artwork(actorArt("elara", actor.pose).file)}
               alt="Dr. Elara Trace, recorded archive"
             />
             <div

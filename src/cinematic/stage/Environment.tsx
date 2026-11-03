@@ -1,3 +1,4 @@
+import { useArtwork } from "./artworkLoader";
 import { environmentArt } from "./assets";
 import { blackoutAt, chapters, cueById } from "../timeline/edit";
 import type { Shot } from "../timeline/types";
@@ -10,6 +11,7 @@ export function Environment({
   time: number;
   reduced: boolean;
 }) {
+  const artwork = useArtwork();
   const phase = reduced ? 0 : time;
   const beforeZero = time >= blackoutAt - 0.22 && time < blackoutAt;
   const outage =
@@ -18,7 +20,7 @@ export function Environment({
     <>
       <img
         className="cine-environment"
-        src={environmentArt[shot.location]}
+        src={artwork(environmentArt[shot.location])}
         alt={`${shot.location === "command" ? "Command Central" : shot.location === "apartment" ? "Mira’s apartment" : shot.location === "gateway" ? "Public network gateway" : shot.location === "dawn" ? "OS City at dawn" : "OS City"} illustrated environment`}
       />
       <svg

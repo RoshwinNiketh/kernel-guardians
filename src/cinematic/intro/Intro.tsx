@@ -1,3 +1,4 @@
+import { useArtwork } from "../stage/artworkLoader";
 import { actorArt, environmentArt } from "../stage/assets";
 import { introDuration } from "./introTiming";
 export { introDuration };
@@ -18,6 +19,7 @@ export function introCardAt(t: number) {
     : undefined;
 }
 export function Intro({ time, reduced }: { time: number; reduced: boolean }) {
+  const artwork = useArtwork();
   const card = introCardAt(time),
     p = (time % cardDuration) / cardDuration;
   return (
@@ -27,7 +29,7 @@ export function Intro({ time, reduced }: { time: number; reduced: boolean }) {
       data-character={card?.[0] ?? "title"}
       style={{ "--cast-color": card?.[4] ?? "#ffe64a" } as React.CSSProperties}
     >
-      <img className="intro-city" src={environmentArt.city} alt="" />
+      <img className="intro-city" src={artwork(environmentArt.city)} alt="" />
       <div className="intro-ink" />
       <span className="intro-series">KERNEL GUARDIANS / THE CAST</span>
       {card ? (
@@ -38,7 +40,7 @@ export function Intro({ time, reduced }: { time: number; reduced: boolean }) {
           {card[0] !== "narrator" ? (
             <img
               className={`intro-portrait portrait-${card[0]}`}
-              src={actorArt(card[0], card[3]).file}
+              src={artwork(actorArt(card[0], card[3]).file)}
               alt={card[1]}
               style={{
                 transform: `translateX(${reduced ? 0 : (1 - p) * 25}px) scale(${reduced ? 1 : 1 + p * 0.025})`,

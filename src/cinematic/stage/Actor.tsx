@@ -1,3 +1,4 @@
+import { useArtwork } from "./artworkLoader";
 import { actorArt } from "./assets";
 import { actorColors } from "../timeline/director";
 import { names } from "../timeline/edit";
@@ -5,6 +6,7 @@ import type { ActorFrame } from "../timeline/types";
 
 /** Image swaps never own entrance animation. The feet are measured per pose. */
 export function Actor({ actor }: { actor: ActorFrame }) {
+  const artwork = useArtwork();
   const art = actorArt(actor.actor, actor.pose),
     scale = actor.height / art.bodyHeight;
   const mirror = actor.gaze === "left";
@@ -34,7 +36,7 @@ export function Actor({ actor }: { actor: ActorFrame }) {
       <div className="actor-ground" />
       <img
         className="actor-art"
-        src={art.file}
+        src={artwork(art.file)}
         alt={`${names[actor.actor]} — ${actor.pose}`}
         draggable={false}
         style={{
@@ -60,6 +62,7 @@ export function Comms({
   time: number;
   reduced: boolean;
 }) {
+  const artwork = useArtwork();
   const art = actorArt(actor.actor, actor.pose);
   return (
     <aside
@@ -81,7 +84,7 @@ export function Comms({
         className="comms-feed"
         style={{ backgroundPositionY: reduced ? 0 : time * 8 }}
       >
-        <img src={art.file} alt={names[actor.actor]} />
+        <img src={artwork(art.file)} alt={names[actor.actor]} />
         <span className="comms-raster" />
       </div>
       <div className="comms-identity">
