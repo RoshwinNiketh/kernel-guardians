@@ -166,4 +166,4 @@ docs/verification/cinematic/contact-*.jpg
 .codex-remote-attachments/
 
 # Build-rendered playback stems
-src/engine/generated-audio/
+src/playback/audio/generated-audio/

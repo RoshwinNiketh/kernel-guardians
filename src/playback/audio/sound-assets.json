@@ -1,0 +1,106 @@
+{
+  "score-city": {
+    "file": "score-city.wav",
+    "duration": 64.0,
+    "sampleRate": 24000,
+    "channels": 2,
+    "peak": 0.17000000178813934,
+    "origin": "Original arranged synthesis v2, seed 420164; no external recordings"
+  },
+  "score-investigation": {
+    "file": "score-investigation.wav",
+    "duration": 64.0,
+    "sampleRate": 24000,
+    "channels": 2,
+    "peak": 0.17000000178813934,
+    "origin": "Original arranged synthesis v2, seed 420164; no external recordings"
+  },
+  "score-pressure": {
+    "file": "score-pressure.wav",
+    "duration": 64.0,
+    "sampleRate": 24000,
+    "channels": 2,
+    "peak": 0.17000000178813934,
+    "origin": "Original arranged synthesis v2, seed 420164; no external recordings"
+  },
+  "score-response": {
+    "file": "score-response.wav",
+    "duration": 64.0,
+    "sampleRate": 24000,
+    "channels": 2,
+    "peak": 0.17000000178813934,
+    "origin": "Original arranged synthesis v2, seed 420164; no external recordings"
+  },
+  "score-dawn": {
+    "file": "score-dawn.wav",
+    "duration": 64.0,
+    "sampleRate": 24000,
+    "channels": 2,
+    "peak": 0.17000000178813934,
+    "origin": "Original arranged synthesis v2, seed 420164; no external recordings"
+  },
+  "impact": {
+    "file": "impact.wav",
+    "duration": 0.42,
+    "sampleRate": 24000,
+    "channels": 1,
+    "peak": 0.23,
+    "origin": "Original short tonal synthesis; no noise or samples"
+  },
+  "click": {
+    "file": "click.wav",
+    "duration": 0.09,
+    "sampleRate": 24000,
+    "channels": 1,
+    "peak": 0.12,
+    "origin": "Original short tonal synthesis; no noise or samples"
+  },
+  "crt": {
+    "file": "crt.wav",
+    "duration": 0.42,
+    "sampleRate": 24000,
+    "channels": 1,
+    "peak": 0.2,
+    "origin": "Original short tonal synthesis; no noise or samples"
+  },
+  "gate": {
+    "file": "gate.wav",
+    "duration": 0.48,
+    "sampleRate": 24000,
+    "channels": 1,
+    "peak": 0.23,
+    "origin": "Original short tonal synthesis; no noise or samples"
+  },
+  "contain": {
+    "file": "contain.wav",
+    "duration": 0.26,
+    "sampleRate": 24000,
+    "channels": 1,
+    "peak": 0.19,
+    "origin": "Original short tonal synthesis; no noise or samples"
+  },
+  "scan": {
+    "file": "scan.wav",
+    "duration": 0.23,
+    "sampleRate": 24000,
+    "channels": 1,
+    "peak": 0.14,
+    "origin": "Original short tonal synthesis; no noise or samples"
+  },
+  "restore": {
+    "file": "restore.wav",
+    "duration": 0.6,
+    "sampleRate": 24000,
+    "channels": 1,
+    "peak": 0.18,
+    "origin": "Original short tonal synthesis; no noise or samples"
+  },
+  "tick": {
+    "file": "tick.wav",
+    "duration": 0.09,
+    "sampleRate": 24000,
+    "channels": 1,
+    "peak": 0.08,
+    "origin": "Original short tonal synthesis; no noise or samples"
+  }
+}

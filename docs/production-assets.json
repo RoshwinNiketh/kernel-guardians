@@ -1,6 +1,0 @@
-{
- "originalHeroes":"public/assets/characters/*: original approved pilot PNGs, unmodified",
- "supporting":{"source":"kg-master-handoff/reference-images/new_cast_approved_ref_01.png through _03.png","method":"New transparent generated atlas derived from all three boards, split into eight individual RGBA poses without upscaling","actors":["vex","mira","elara","axiom"],"poses":["idle","talk"],"directory":"public/assets/supporting","status":"Provisional illustrations; 443px cell height, less detail than original pilot sprites. Some generated alpha rims and pose continuity need art review."},
- "backgrounds":{"city_panorama":"approved original pilot panorama","program_street":"Optional handoff legacy_expansion/program_street.webp, visually inspected: illustrated street; provisional supplemental background"},
- "rejected":"Flat security-center/network-gateway backgrounds inspected and not used; no legacy extracted actors used"
-}
