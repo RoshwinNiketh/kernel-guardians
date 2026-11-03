@@ -1,5 +1,6 @@
 import {actorArt} from './assets';
-export const introDuration=26;
+import { introDuration } from './introTiming';
+export { introDuration };
 export const cast=[
  ['kernel','Commander Kernel','Security Commander','point','#32e2f4'],
  ['patch','Agent Patch','Threat Investigator','point','#ff70b9'],
@@ -10,9 +11,10 @@ export const cast=[
  ['vex','Vex Null','Cyber Attacker','command','#d584ff'],
  ['narrator','Narrator','Your Guide to OS City','','#f8f1e6'],
 ];
-export function introCardAt(t:number){return t<20?cast[Math.min(7,Math.max(0,Math.floor(t/2.5)))]:undefined;}
+const cardDuration = 3;
+export function introCardAt(t:number){return t<cast.length*cardDuration?cast[Math.min(7,Math.max(0,Math.floor(t/cardDuration)))]:undefined;}
 export function Intro({time,reduced}:{time:number;reduced:boolean}){
- const card=introCardAt(time),p=(time%2.5)/2.5;
+ const card=introCardAt(time),p=(time%cardDuration)/cardDuration;
  return <div className="stage cast-intro" data-time={time.toFixed(3)} data-character={card?.[0]??'title'} style={{'--cast-color':card?.[4]??'#ffe64a'} as React.CSSProperties}>
   <img className="intro-city" src="/assets/backgrounds/city_panorama.png" alt=""/>
   <div className="intro-ink"/><span className="intro-series">KERNEL GUARDIANS / THE CAST</span>
