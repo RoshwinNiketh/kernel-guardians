@@ -1,31 +1,25 @@
 # Kernel Guardians
 
-**OS City: Eight Minutes to Blackout** is a locally narrated educational motion comic about operating system security. The cinematic edition preserves all 66 locked dialogue cues across nine chapters. Runtime: **7:54.92** at normal speed.
+**OS City: Eight Minutes to Blackout** is a narrated educational motion comic about operating system security. The cinematic edition preserves all 66 locked dialogue cues across nine chapters. Runtime: **7:54.92** at normal speed.
 
 ## Run locally
 
 ```powershell
 npm ci
-npm run prepare:voices
-& 'G:/Workspace/AI/tools/chatterbox/venv/Scripts/python.exe' scripts/cinematic/render-sound.py
 npm run dev -- --port 5182 --strictPort
 ```
 
-Open [the local preview](http://127.0.0.1:5182/). Existing local media is already prepared on the development machine; it does not need to be regenerated to play the film.
-
-`prepare:voices` reads the existing private Chatterbox production manifest and overlays the 14 selected cinematic candidates. It copies local playback WAVs into ignored `.local-media/dialogue`; original takes and floating-point outputs remain intact. Set `KG_VOICE_WORKSPACE` to override the source workspace. The existing CPU Python environment supplies NumPy, SciPy and SoundFile for the original synthesized score and foley; no model download is required.
-
-The development server serves private audio only from strict local WAV allowlists. **Private media is never copied into `dist`.** Missing recordings fall back to captions; missing score files produce a separate soundtrack warning. `npm run preview` serves a public build with captions and artwork, without private voices or the local soundtrack.
+Open [the local preview](http://127.0.0.1:5182/). Use Node 22.18 or later. Development and production builds render the three compressed tracks from the individual audio files in the repository. See [Vercel deployment](docs/vercel-deployment.md) for the build and audio update workflow.
 
 Only the current cinematic edition is served. The former pilot and v1 selectors have been removed.
 
 ## Playback
 
-Start Story now plays a **26-second cast intro**, with Skip Intro available, before the existing film. Total experience: **8:20.92**. Default-enabled menu music plays the supplied local theme; Start Story restarts it for the cards and fades it out before the story soundtrack. See [cast intro and local theme](docs/cast-intro.md). The supplied MP3 remains local and is absent from public builds.
+Start Story now plays a **30-second intro**, with Skip Intro available, before the existing film. Total experience: **8:24.92**. The menu loops the supplied theme separately. The intro uses the same theme with a timed fade into the story, in the track that also carries dialogue.
 
 The selective sound pass uses music for 28.64% of the film. Personal scenes, Elara's archive and most teaching passages retain quiet room tone. Effects follow visible actions, with smooth dialogue ducking and a brief blackout dropout. See [sound direction, research and cue sheet](docs/sound-direction.md). The dedicated audio-enabled preview for this pass is http://127.0.0.1:5183/; set `KG_PORT=5183` when testing that server.
 
-Start Story preloads the cinematic artwork, then prepares local audio. Space toggles playback; left/right arrows and the transport buttons seek five seconds. The slider reconstructs any frame. Settings freezes actors, camera, effects, dialogue and every audio bus at the same master time, and resumes the prior playing/paused state.
+Start Story waits for all three tracks to download and decode before the intro appears. If a track fails to load, retry from the loading screen. Space toggles playback; left/right arrows and the transport buttons seek five seconds. The slider reconstructs any frame. Settings freezes actors, camera, effects, dialogue and every audio bus at the same master time, and resumes the prior playing/paused state.
 
 Settings provides narration, music and SFX levels, subtitles, reduced motion, and 0.75×/1×/1.25× playback. Mute affects all audio. Portrait phones show readable dialogue beneath the artwork. Leaving the browser pauses the story. Fullscreen remains browser dependent.
 
@@ -35,7 +29,7 @@ The eight-minute countdown is fictional story time. Authored location cuts skip 
 
 React, TypeScript, Vite, GSAP and Web Audio drive the experience. `src/cinematic/edit.ts` sequences measured recordings and short editorial beats; `director.ts` defines 92 shots and scene-long actor presence. Pose changes reuse measured foot anchors and never restart an entrance. Narration has no character avatar. Spoken text remains in `src/story/production/dialogue_cues.json` and matches `docs/story/FINAL_LOCKED_SCREENPLAY.md` exactly.
 
-All 24 original hero PNGs are byte-identical to the supplied artwork. Fifteen detailed new illustrations provide four environments, individual supporting poses, two background characters and a physical CRT. Flat illustrations support camera movement, lighting, particles and pose swaps; they do not provide mouth or independent limb rigs.
+All 24 hero poses use higher-resolution artwork regenerated from their original pose references. Fifteen detailed new illustrations provide four environments, individual supporting poses, two background characters and a physical CRT. Flat illustrations support camera movement, lighting, particles and pose swaps; they do not provide mouth or independent limb rigs.
 
 See [the cinematic implementation and review report](docs/production.md), [asset provenance](docs/cinematic-assets-provenance.json), and [the preserved v1 report](docs/production-v1.md). Voice identity, pronunciation and emotional performance still require human listening. Technical validation does not establish those qualities.
 

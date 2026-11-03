@@ -13,13 +13,13 @@ try{
  await page.getByRole('button',{name:'START STORY'}).waitFor();
  if(!filter)await page.screenshot({path:`${directory}/menu-desktop.png`});
  await page.getByRole('button',{name:'START STORY'}).click();
- await page.getByText('Local narration · 66 cues',{exact:true}).waitFor({timeout:45000});
+ await page.getByText('Full narration · 66 cues',{exact:true}).waitFor({timeout:45000});
  await page.getByRole('button',{name:'Pause',exact:true}).click();
  const slider=page.getByRole('slider',{name:'Story timeline'}),frames=[];
  for(let i=0;i<shots.length;i++){
   if(filter&&!filter.test(shots[i].id))continue;
   const shot=shots[i],time=Number(((shot.start+shot.end)/2).toFixed(3));
-  await slider.fill(String(Number((time+26).toFixed(3))));
+  await slider.fill(String(Number((time+30).toFixed(3))));
   await page.locator('.cinematic-stage').evaluate(async el=>{await Promise.all([...el.querySelectorAll('img')].map(img=>img.decode().catch(()=>{})));});
   const file=`${directory}/frames/${String(i+1).padStart(3,'0')}-${shot.id}.png`;
   await page.locator('.stage-container').screenshot({path:file});

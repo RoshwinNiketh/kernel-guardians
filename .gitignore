@@ -164,3 +164,6 @@ docs/verification/cinematic/contact-*.jpg
 
 # User-supplied local theme attachments
 .codex-remote-attachments/
+
+# Build-rendered playback stems
+src/engine/generated-audio/

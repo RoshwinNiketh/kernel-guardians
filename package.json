@@ -12,7 +12,10 @@
     "prepare:voices": "node scripts/prepare-voices.mjs",
     "audit:production": "node scripts/audit-production.mjs",
     "cinematic:export": "node scripts/cinematic/export-edit.mjs",
-    "cinematic:capture": "node scripts/cinematic/capture-review.mjs"
+    "cinematic:capture": "node scripts/cinematic/capture-review.mjs",
+    "audio:render": "node scripts/render-playback-audio.mjs",
+    "predev": "npm run audio:render",
+    "prebuild": "npm run audio:render"
   },
   "dependencies": {
     "gsap": "^3.14.0",
@@ -20,6 +23,7 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "1.1.0",
     "@playwright/test": "^1.56.0",
     "@types/node": "^26.6.6",
     "@types/react": "^19.2.0",
